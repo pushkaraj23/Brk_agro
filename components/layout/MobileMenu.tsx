@@ -55,6 +55,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   width={110}
                   height={38}
                   className="h-9 w-auto object-contain"
+                  style={{ width: "auto" }}
                 />
               </Link>
 

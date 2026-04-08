@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
-import { ProductsSection } from "@/components/sections/ProductsSection";
+import { ProductsHero } from "./ProductsHero";
+import { ProductShowcase } from "./ProductShowcase";
 import { ProductQuality } from "./ProductQuality";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -13,13 +13,8 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <PageHero
-        badge="Our Products"
-        title="Premium Frozen Product Range"
-        subtitle="Each product is individually quick frozen using advanced IQF technology, preserving natural taste, vibrant color, and nutritional value for global markets."
-        breadcrumb={[{ label: "Products", href: "/products" }]}
-      />
-      <ProductsSection />
+      <ProductsHero />
+      <ProductShowcase />
       <ProductQuality />
       <CTASection />
     </>

@@ -46,6 +46,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="flex min-h-screen flex-col">
         <Header />

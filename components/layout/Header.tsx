@@ -76,6 +76,7 @@ export function Header() {
                   width={130}
                   height={44}
                   className="h-11 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+                  style={{ width: "auto" }}
                   priority
                 />
               </Link>

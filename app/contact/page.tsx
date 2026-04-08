@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
+import { ContactHero } from "./ContactHero";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
@@ -11,12 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        badge="Contact Us"
-        title="Let's Start a Conversation"
-        subtitle="Reach out for product details, pricing, samples, or partnership opportunities. Our export team is ready to help."
-        breadcrumb={[{ label: "Contact", href: "/contact" }]}
-      />
+      <ContactHero />
       <ContactSection />
     </>
   );

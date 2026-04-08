@@ -7,9 +7,9 @@ import { trustStats, trustPoints } from "@/lib/constants";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { CheckCircle } from "lucide-react";
 
-export function TrustSection() {
+export function InfrastructureAssurance() {
   return (
-    <section id="trust" className="relative overflow-hidden" style={{ backgroundColor: "#2A4E1E" }}>
+    <section className="relative overflow-hidden" style={{ backgroundColor: "#2A4E1E" }}>
       <WaveDivider fill="var(--color-cream-dark)" />
 
       <div className="relative bg-cream-dark py-20 lg:py-28">
@@ -29,10 +29,7 @@ export function TrustSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              ease: [0.16, 1, 0.3, 1] as const,
-            }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-12 text-center"
           >
             <div className="mb-4 flex items-center justify-center gap-3">
@@ -74,7 +71,9 @@ export function TrustSection() {
                 className="rounded-3xl border border-border-soft bg-warm-white p-6 text-center shadow-card"
               >
                 <div
-                  className={`font-display mb-1 text-3xl font-bold sm:text-4xl ${i % 2 === 0 ? "text-brand-green" : "text-brand-red"}`}
+                  className={`font-display mb-1 text-3xl font-bold sm:text-4xl ${
+                    i % 2 === 0 ? "text-brand-green" : "text-brand-red"
+                  }`}
                 >
                   {stat.value}
                 </div>
@@ -101,7 +100,9 @@ export function TrustSection() {
                 >
                   <CheckCircle
                     size={18}
-                    className={`mt-0.5 flex-shrink-0 ${i % 2 === 0 ? "text-brand-green" : "text-brand-red"}`}
+                    className={`mt-0.5 flex-shrink-0 ${
+                      i % 2 === 0 ? "text-brand-green" : "text-brand-red"
+                    }`}
                   />
                   <span className="text-sm font-medium text-text-dark">
                     {point}

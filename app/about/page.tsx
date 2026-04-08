@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
+import { AboutHero } from "./AboutHero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { MissionVisionSection } from "@/components/sections/MissionVisionSection";
 import { CompanyStats } from "./CompanyStats";
@@ -14,12 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        badge="About Us"
-        title="Leading Processor & Exporter of Premium Frozen Produce"
-        subtitle="With state-of-the-art infrastructure and a commitment to quality, BRK Agro delivers export-grade frozen fruits and vegetables to global markets."
-        breadcrumb={[{ label: "About", href: "/about" }]}
-      />
+      <AboutHero />
       <AboutSection />
       <MissionVisionSection />
       <CompanyStats />

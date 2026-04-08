@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
+import { QualityHero } from "./QualityHero";
 import { WhyBrkSection } from "@/components/sections/WhyBrkSection";
-import { TrustSection } from "@/components/sections/TrustSection";
+import { QualityAssuranceSection } from "./QualityAssuranceSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -13,14 +13,9 @@ export const metadata: Metadata = {
 export default function QualityPage() {
   return (
     <>
-      <PageHero
-        badge="Quality & Standards"
-        title="Your Trusted Partner in Frozen Produce"
-        subtitle="From trusted farm sourcing to reliable global delivery — discover what sets BRK Agro apart as a frozen food partner for buyers, distributors, and HoReCa worldwide."
-        breadcrumb={[{ label: "Quality", href: "/quality" }]}
-      />
+      <QualityHero />
       <WhyBrkSection />
-      <TrustSection />
+      <QualityAssuranceSection />
       <CTASection />
     </>
   );

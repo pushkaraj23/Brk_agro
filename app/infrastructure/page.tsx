@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
+import { InfrastructureHero } from "./InfrastructureHero";
 import { InfrastructureSection } from "@/components/sections/InfrastructureSection";
-import { ProcessFlowSection } from "@/components/sections/ProcessFlowSection";
-import { TrustSection } from "@/components/sections/TrustSection";
+import { InfrastructureProcess } from "./InfrastructureProcess";
+import { InfrastructureAssurance } from "./InfrastructureAssurance";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -14,15 +14,10 @@ export const metadata: Metadata = {
 export default function InfrastructurePage() {
   return (
     <>
-      <PageHero
-        badge="Our Infrastructure"
-        title="World-Class Processing Facility"
-        subtitle="A modern, hygienic, and technology-driven facility designed to deliver premium frozen produce that meets the highest international standards."
-        breadcrumb={[{ label: "Infrastructure", href: "/infrastructure" }]}
-      />
+      <InfrastructureHero />
       <InfrastructureSection />
-      <ProcessFlowSection />
-      <TrustSection />
+      <InfrastructureProcess />
+      <InfrastructureAssurance />
       <CTASection />
     </>
   );
