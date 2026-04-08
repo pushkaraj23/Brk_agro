@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CursorFollower } from "@/components/ui/CursorFollower";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -49,6 +50,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="flex min-h-screen flex-col">
+        <CursorFollower />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
