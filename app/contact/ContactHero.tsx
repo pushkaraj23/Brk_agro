@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { contactInfo } from "@/lib/constants";
@@ -23,6 +24,7 @@ export function ContactHero() {
       />
       <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
       <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -130,7 +132,7 @@ export function ContactHero() {
                 >
                   <Image
                     src="/home/sweet_corn.png"
-                    alt="Sweet corn"
+                    alt="Frozen corn"
                     width={120}
                     height={120}
                     className="h-20 w-20 object-contain sm:h-24 sm:w-24"

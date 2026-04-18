@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { CheckCircle } from "lucide-react";
 
@@ -108,6 +109,7 @@ export function CompanyStats() {
         />
         <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-brand-green/[.05] blur-[80px]" />
         <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-brand-red/[.03] blur-[60px]" />
+        <SectionLeafAccents />
 
         <Container className="relative">
           {/* ── Stats heading ── */}

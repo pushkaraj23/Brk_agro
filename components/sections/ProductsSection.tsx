@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { LeafDecor } from "@/components/decorative/LeafDecor";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { products } from "@/lib/constants";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { ArrowUpRight } from "lucide-react";
@@ -12,14 +12,13 @@ export function ProductsSection() {
   return (
     <section id="products" className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 bg-soft-green/50" />
-      <LeafDecor className="absolute top-16 left-12 h-14 w-9 -rotate-[15deg] text-brand-green/8 hidden lg:block" />
-      <LeafDecor className="absolute bottom-20 right-10 h-10 w-6 rotate-[30deg] text-brand-green/6 hidden lg:block" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <SectionHeading
           badge="Our Products"
-          title="Premium Frozen Product Range"
-          subtitle="Export-grade frozen fruits and vegetables processed with advanced IQF technology for consistent quality and nutrition retention."
+          title="Frozen Corn & Retort Corn"
+          subtitle="Export-grade IQF kernels and retort corn on the cob — processed for consistent quality, shelf life, and nutrition retention."
         />
 
         <motion.div

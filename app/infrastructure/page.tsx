@@ -4,11 +4,26 @@ import { InfrastructureSection } from "@/components/sections/InfrastructureSecti
 import { InfrastructureProcess } from "./InfrastructureProcess";
 import { InfrastructureAssurance } from "./InfrastructureAssurance";
 import { CTASection } from "@/components/sections/CTASection";
+import { pageSocialMetadata } from "@/lib/seo";
+
+const title = "Infrastructure - IQF & Retort Corn Processing Facility";
+const description =
+  "BRK Agro processing infrastructure in Nashik: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, and cold storage.";
 
 export const metadata: Metadata = {
-  title: "Infrastructure — BRK Agro | World-Class Processing Facility",
-  description:
-    "Explore BRK Agro's state-of-the-art processing infrastructure — IQF technology, retort processing, temperature-controlled storage, and export-ready packaging.",
+  title,
+  description,
+  keywords: [
+    "iqf corn processing facility",
+    "retort processing plant india",
+    "frozen corn infrastructure",
+    "cold chain frozen foods",
+    "nashik iqf plant",
+  ],
+  alternates: {
+    canonical: "/infrastructure",
+  },
+  ...pageSocialMetadata({ title, description, path: "/infrastructure" }),
 };
 
 export default function InfrastructurePage() {

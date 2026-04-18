@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
-import { QualityHero } from "./QualityHero";
-import { WhyBrkSection } from "@/components/sections/WhyBrkSection";
 import { QualityAssuranceSection } from "./QualityAssuranceSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { pageSocialMetadata } from "@/lib/seo";
+
+const title = "Quality Standards - Frozen Corn & Retort Corn";
+const description =
+  "BRK Agro quality systems for Frozen Corn and Retort Corn: microbiological testing, process control, traceability, documentation, and export-aligned food safety practices.";
 
 export const metadata: Metadata = {
-  title: "Quality — BRK Agro | Trusted Frozen Food Partner",
-  description:
-    "Discover why buyers, distributors, and HoReCa partners trust BRK Agro for premium frozen produce. Quality certifications, traceability, and consistent standards.",
+  title,
+  description,
+  keywords: [
+    "frozen corn quality testing",
+    "retort corn quality standards",
+    "microbiological testing frozen foods",
+    "food safety frozen corn",
+    "haccp frozen corn india",
+  ],
+  alternates: {
+    canonical: "/quality",
+  },
+  ...pageSocialMetadata({ title, description, path: "/quality" }),
 };
 
 export default function QualityPage() {
   return (
     <>
-      <QualityHero />
-      <WhyBrkSection />
       <QualityAssuranceSection />
-      <CTASection />
+      <div className="-translate-y-1"><CTASection /></div>
+
     </>
   );
 }

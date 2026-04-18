@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { Handshake, BarChart3, Headphones, FileCheck } from "lucide-react";
 import type { ReactNode } from "react";
@@ -44,6 +45,7 @@ export function PartnershipApproach() {
     <section className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 bg-soft-green/40" />
       <div className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-green/[.04] blur-[100px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <SectionHeading

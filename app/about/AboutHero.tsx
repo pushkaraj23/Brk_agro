@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { ChevronRight } from "lucide-react";
+import { aboutContent } from "@/lib/constants";
 
 export function AboutHero() {
   return (
@@ -23,6 +25,7 @@ export function AboutHero() {
       />
       <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
       <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -54,18 +57,14 @@ export function AboutHero() {
               variants={heroItem}
               className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
-              Leading Processor{" "}
-              <span className="text-brand-green">&amp;</span> Exporter of
-              Premium Frozen Produce
+              {aboutContent.headline}
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              With state-of-the-art infrastructure and a commitment to quality,
-              BRK Agro delivers export-grade frozen fruits and vegetables to
-              global markets.
+              {aboutContent.heroIntro}
             </motion.p>
           </motion.div>
 
@@ -102,7 +101,7 @@ export function AboutHero() {
               </div>
             </motion.div>
 
-            {/* Floating Green Peas — top left */}
+            {/* Floating Retort Corn — top left */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -118,8 +117,8 @@ export function AboutHero() {
                 style={{ animationDuration: "8s" }}
               >
                 <Image
-                  src="/home/green_peas.png"
-                  alt="Frozen Green Peas"
+                  src="/home/mixed_veggies.png"
+                  alt="Retort Corn"
                   width={140}
                   height={140}
                   className="h-20 w-20 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
@@ -127,7 +126,7 @@ export function AboutHero() {
               </div>
             </motion.div>
 
-            {/* Floating Sweet Corn — bottom right */}
+            {/* Floating Frozen Corn — bottom right */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -144,7 +143,7 @@ export function AboutHero() {
               >
                 <Image
                   src="/home/sweet_corn.png"
-                  alt="Frozen Sweet Corn"
+                  alt="Frozen Corn"
                   width={140}
                   height={140}
                   className="h-20 w-20 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"

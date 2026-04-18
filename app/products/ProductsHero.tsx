@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { ChevronRight } from "lucide-react";
@@ -22,6 +23,7 @@ export function ProductsHero() {
       />
       <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
       <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -53,17 +55,17 @@ export function ProductsHero() {
               variants={heroItem}
               className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
-              Premium Frozen{" "}
-              <span className="text-brand-red">Product Range</span>
+              Frozen Corn{" "}
+              <span className="text-brand-red">&amp; Retort Corn</span>
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              Each product is individually quick frozen using advanced IQF
-              technology, preserving natural taste, vibrant color, and
-              nutritional value for global markets.
+              Our Frozen Corn and Retort Corn are processed with advanced IQF
+              and retort technologies, preserving natural taste, quality, and
+              shelf stability for global markets.
             </motion.p>
           </motion.div>
 
@@ -98,8 +100,8 @@ export function ProductsHero() {
                   style={{ animationDuration: "8s" }}
                 >
                   <Image
-                    src="/home/mixed_veggies.png"
-                    alt="Mixed Vegetables"
+                    src="/home/sweet_corn.png"
+                    alt="Frozen Corn"
                     width={320}
                     height={320}
                     className="h-44 w-44 object-contain sm:h-56 sm:w-56 lg:h-64 lg:w-64"
@@ -108,7 +110,7 @@ export function ProductsHero() {
                 </div>
               </motion.div>
 
-              {/* Sweet corn — top right */}
+              {/* Retort corn — top right */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -123,65 +125,16 @@ export function ProductsHero() {
                   className="animate-float rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
                   style={{ animationDuration: "7s", animationDelay: "1s" }}
                 >
-                  <Image
-                    src="/home/sweet_corn.png"
-                    alt="Sweet Corn"
-                    width={140}
-                    height={140}
-                    className="h-20 w-20 object-contain sm:h-24 sm:w-24"
-                  />
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-brand-red/20 bg-brand-red/10 sm:h-24 sm:w-24">
+                    <span className="text-center font-display text-[10px] leading-tight font-black text-brand-red sm:text-xs">
+                      RETORT
+                      <br />
+                      CORN
+                    </span>
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Green peas — top left */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  delay: 0.8,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="absolute top-0 left-4 z-20 sm:left-8 lg:left-4"
-              >
-                <div
-                  className="animate-float-delayed -rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                  style={{ animationDuration: "8.5s", animationDelay: "0.5s" }}
-                >
-                  <Image
-                    src="/home/green_peas.png"
-                    alt="Green Peas"
-                    width={140}
-                    height={140}
-                    className="h-20 w-20 object-contain sm:h-24 sm:w-24"
-                  />
-                </div>
-              </motion.div>
-
-              {/* French fries — bottom right */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  delay: 0.9,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="absolute -bottom-4 right-8 z-20 sm:right-16 lg:right-10"
-              >
-                <div
-                  className="animate-float-slow rotate-3 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                  style={{ animationDuration: "7.5s", animationDelay: "1.5s" }}
-                >
-                  <Image
-                    src="/home/french-fries.png"
-                    alt="French Fries"
-                    width={140}
-                    height={140}
-                    className="h-20 w-20 object-contain sm:h-24 sm:w-24"
-                  />
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* IQF badge */}
@@ -197,7 +150,7 @@ export function ProductsHero() {
             >
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
                 <span className="font-display text-xs font-black text-brand-green sm:text-sm">
-                  7+
+                  2+
                 </span>
               </div>
               <div className="pr-1">

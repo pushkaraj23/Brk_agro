@@ -5,8 +5,10 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { Leaf, Palette, Heart, Clock, ArrowRight } from "lucide-react";
+import { aboutContent } from "@/lib/constants";
 
 const features = [
   { icon: Leaf,    label: "Natural Taste",      color: "green" },
@@ -33,6 +35,7 @@ export function AboutBrief() {
       {/* Soft background blobs */}
       <div className="absolute top-0 left-0 h-80 w-80 rounded-full bg-brand-green/[.04] blur-[80px]" />
       <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-brand-red/[.03] blur-[70px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24">
@@ -118,14 +121,12 @@ export function AboutBrief() {
 
             {/* Headline */}
             <h2 className="font-display mb-5 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
-              Leading Processor{" "}
-              <span className="text-brand-green">&amp; Exporter</span>{" "}
-              of Premium Frozen Produce
+              {aboutContent.headline}
             </h2>
 
             {/* Short description — one paragraph, trimmed */}
             <p className="mb-8 text-base leading-relaxed text-text-muted lg:text-lg">
-              From trusted Indian farms to global markets — we process fresh produce with advanced IQF technology, locking in taste, color, and nutrition at peak freshness.
+              {aboutContent.briefLead}
             </p>
 
             {/* Feature chips */}

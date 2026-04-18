@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer } from "@/lib/animations";
 import { Sprout, Snowflake, ShieldCheck, Package, BarChart3, Award, ArrowRight } from "lucide-react";
 
 const features = [
-  { icon: Sprout,      title: "Trusted Farm Sourcing",        desc: "Direct relationships with selected farmers for the freshest raw produce.",     color: "white" },
+  { icon: Sprout,      title: "Trusted Farm Sourcing",        desc: "Direct relationships with growers for sweet corn harvested at the right stage for IQF or retort.",     color: "white" },
   { icon: Snowflake,   title: "Advanced Freezing Technology",  desc: "JBT's latest IQF technology — individual quick freezing at peak freshness.",  color: "red"   },
   { icon: ShieldCheck, title: "Hygienic Processing",           desc: "State-of-the-art sanitized facility with strict hygiene protocols.",           color: "white" },
   { icon: Package,     title: "Export-Ready Packaging",        desc: "International-standard packaging for safe transit and extended shelf life.",   color: "red"   },
-  { icon: BarChart3,   title: "Strict Sorting & Grading",      desc: "Advanced sorting systems ensuring only the finest produce is processed.",      color: "white" },
+  { icon: BarChart3,   title: "Strict Sorting & Grading",      desc: "Sorting and grading so only suitable cobs and kernels move forward in the line.",      color: "white" },
   { icon: Award,       title: "Consistent Quality",            desc: "Rigorous checks at every stage guarantee batch-to-batch uniformity.",          color: "red"   },
 ];
 
@@ -43,6 +44,7 @@ export function WhyBrkBrief() {
         />
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
         <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
+        <SectionLeafAccents />
 
         <Container className="relative">
 
@@ -68,7 +70,7 @@ export function WhyBrkBrief() {
             </h2>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-white/60">
-              Modern infrastructure, strict quality standards, and a reliable farm-to-export supply chain — built for global buyers.
+              IQF and retort lines, disciplined QC, and a farm-to-export mindset — built for importers, distributors, and food brands that need dependable corn supply.
             </p>
           </motion.div>
 
@@ -122,8 +124,8 @@ export function WhyBrkBrief() {
             transition={{ delay: 0.3, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="flex justify-center"
           >
-            <Button href="/quality" variant="accent" iconRight={<ArrowRight size={16} />}>
-              Our Quality Promise
+            <Button href="/why-brk-agro" variant="accent" iconRight={<ArrowRight size={16} />}>
+              Why BRK Agro
             </Button>
           </motion.div>
 

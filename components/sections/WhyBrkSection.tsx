@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { whyBrkFeatures } from "@/lib/constants";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import {
@@ -40,6 +41,7 @@ export function WhyBrkSection() {
         />
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/[.04] blur-[80px]" />
         <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-brand-red/[.03] blur-[70px]" />
+        <SectionLeafAccents />
 
         <Container className="relative">
           <motion.div

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer } from "@/lib/animations";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 
@@ -24,6 +25,7 @@ export function CTASection() {
         {/* Depth blobs */}
         <div className="absolute top-0 right-0 h-80 w-80 rounded-full bg-brand-green/25 blur-[100px]" />
         <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-black/20 blur-[80px]" />
+        <SectionLeafAccents />
 
         <Container className="relative">
           <motion.div

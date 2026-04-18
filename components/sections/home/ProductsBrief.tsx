@@ -7,11 +7,12 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { staggerContainer } from "@/lib/animations";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const featured = [
   {
-    name: "Frozen Sweet Corn Kernels",
+    name: "Frozen Corn",
     tag: "IQF Frozen",
     image: "/home/sweet_corn.png",
     color: "green",
@@ -20,31 +21,13 @@ const featured = [
     rotate: "-rotate-3",
   },
   {
-    name: "Frozen Green Peas",
-    tag: "Export Grade",
-    image: "/home/green_peas.png",
+    name: "Retort Corn",
+    tag: "Retort Processed",
+    image: "/home/mixed_veggies.png",
     color: "red",
     animDuration: "8.5s",
     animDelay: "0.8s",
     rotate: "rotate-2",
-  },
-  {
-    name: "Frozen Mixed Vegetables",
-    tag: "Farm Fresh",
-    image: "/home/mixed_veggies.png",
-    color: "green",
-    animDuration: "9s",
-    animDelay: "0.4s",
-    rotate: "rotate-3",
-  },
-  {
-    name: "Frozen French Fries",
-    tag: "Retort Processed",
-    image: "/home/french-fries.png",
-    color: "red",
-    animDuration: "7.5s",
-    animDelay: "1.2s",
-    rotate: "-rotate-2",
   },
 ];
 
@@ -76,6 +59,7 @@ export function ProductsBrief() {
       {/* Subtle blobs */}
       <div className="absolute top-20 right-0 h-72 w-72 rounded-full bg-brand-green/[.04] blur-[80px]" />
       <div className="absolute bottom-20 left-0 h-64 w-64 rounded-full bg-brand-red/[.03] blur-[70px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
 
@@ -95,11 +79,11 @@ export function ProductsBrief() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
-              Premium Frozen{" "}
-              <span className="text-brand-red">Range</span>
+              Frozen Corn{" "}
+              <span className="text-brand-red">&amp; Retort Corn</span>
             </h2>
-            <p className="max-w-xs text-sm leading-relaxed text-text-muted sm:text-right">
-              Export-ready quality, locked in at peak freshness with advanced IQF technology.
+            <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
+              IQF kernels and retort corn on the cob — processed for export-grade consistency and dependable supply.
             </p>
           </div>
         </motion.div>
@@ -110,7 +94,7 @@ export function ProductsBrief() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
-          className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:gap-5"
         >
           {featured.map((product) => {
             const isGreen = product.color === "green";
@@ -122,9 +106,9 @@ export function ProductsBrief() {
                 whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 22 } }}
                 className="group flex cursor-default flex-col overflow-hidden rounded-3xl bg-warm-white shadow-card transition-shadow duration-300 hover:shadow-elevated"
               >
-                {/* ── Image area ── */}
+                {/* ── Image area — taller stage so packs read larger ── */}
                 <div
-                  className={`relative flex items-center justify-center overflow-hidden px-6 pb-2 pt-8 transition-colors duration-300 ${
+                  className={`relative flex min-h-[220px] items-center justify-center overflow-hidden px-6 py-10 transition-colors duration-300 sm:min-h-[260px] lg:min-h-[300px] lg:py-12 ${
                     isGreen
                       ? "bg-brand-green/[.07] group-hover:bg-brand-green/[.12]"
                       : "bg-brand-red/[.06] group-hover:bg-brand-red/[.10]"
@@ -132,14 +116,14 @@ export function ProductsBrief() {
                 >
                   {/* Glow behind image */}
                   <div
-                    className={`absolute bottom-0 left-1/2 h-16 w-28 -translate-x-1/2 rounded-full blur-2xl transition-opacity duration-500 group-hover:opacity-80 opacity-30 ${
+                    className={`absolute bottom-2 left-1/2 h-24 w-36 -translate-x-1/2 rounded-full blur-2xl transition-opacity duration-500 group-hover:opacity-80 opacity-30 ${
                       isGreen ? "bg-brand-green/40" : "bg-brand-red/30"
                     }`}
                   />
 
                   {/* Product image */}
                   <div
-                    className={`animate-float-slow relative z-10 ${product.rotate} drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]`}
+                    className={`animate-float-slow relative z-10 ${product.rotate} drop-shadow-[0_16px_36px_rgba(0,0,0,0.15)]`}
                     style={{
                       animationDuration: product.animDuration,
                       animationDelay: product.animDelay,
@@ -148,15 +132,15 @@ export function ProductsBrief() {
                     <Image
                       src={product.image}
                       alt={product.name}
-                      width={160}
-                      height={160}
-                      className="h-32 w-32 object-contain sm:h-36 sm:w-36"
+                      width={320}
+                      height={320}
+                      className="h-44 w-44 object-contain sm:h-52 sm:w-52 lg:h-56 lg:w-56 xl:h-[15rem] xl:w-[15rem]"
                     />
                   </div>
                 </div>
 
                 {/* ── Text area ── */}
-                <div className="flex flex-1 flex-col justify-between gap-3 p-4 sm:p-5">
+                <div className="flex flex-col gap-3 p-4 sm:p-5">
                   <div>
                     {/* Tag */}
                     <span

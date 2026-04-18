@@ -4,7 +4,7 @@ import { type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { LeafDecor } from "@/components/decorative/LeafDecor";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { processSteps } from "@/lib/constants";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { Sprout, BarChart3, Settings, Snowflake, Package, Truck } from "lucide-react";
@@ -22,8 +22,7 @@ export function ProcessFlowSection() {
   return (
     <section className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-b from-cream via-soft-amber/30 to-cream" />
-      <LeafDecor className="absolute top-16 right-8 h-12 w-8 rotate-[22deg] text-brand-green/7 hidden lg:block" />
-      <LeafDecor className="absolute bottom-16 left-16 h-10 w-6 -rotate-[15deg] text-brand-green/5 hidden lg:block" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <SectionHeading

@@ -5,17 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
-import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Button } from "@/components/ui/Button";
 import { heroStagger, heroItem, staggerContainer, fadeUp } from "@/lib/animations";
-import {
-  ChevronRight,
-  ArrowRight,
-  Check,
-  Snowflake,
-  Mail,
-} from "lucide-react";
+import { ChevronRight, Check, Snowflake, Mail } from "lucide-react";
 import { products } from "@/lib/constants";
+import { ProductEnquiryForm } from "@/components/products/ProductEnquiryForm";
 
 type Product = (typeof products)[number];
 
@@ -39,8 +34,9 @@ export function ProductDetail({ product }: { product: Product }) {
         />
         <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
         <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
+        <SectionLeafAccents />
 
-        <Container className="relative">
+        <Container className="relative sm:mb-12">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
             {/* Text */}
             <motion.div
@@ -205,26 +201,34 @@ export function ProductDetail({ product }: { product: Product }) {
         </Container>
       </section>
 
-      {/* ═══════════════════════════════
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 sm:px-10 lg:flex-row-reverse lg:items-start lg:gap-8 lg:px-16 xl:gap-10 xl:px-20">
+        <aside className="w-full shrink-0 self-start lg:sticky lg:top-20 lg:z-10 lg:w-[min(100%,20rem)] lg:pb-10 xl:w-[22rem]">
+          <ProductEnquiryForm
+            productName={product.name}
+            productShortName={product.shortName}
+            variant={isGreen ? "green" : "red"}
+          />
+        </aside>
+
+        <div className="min-w-0 flex-1 space-y-6 lg:space-y-8">
+          {/* ═══════════════════════════════
           OVERVIEW + SPECIFICATIONS
       ═══════════════════════════════ */}
-      <section className="relative overflow-hidden bg-cream">
-        <WaveDivider fill="var(--color-warm-white)" />
+          <section className="relative bg-cream">
+            <div className="overflow-hidden rounded-2xl border border-border-soft/90 bg-warm-white shadow-elevated ring-1 ring-black/[0.04] sm:rounded-3xl">
+              <div className="relative px-5 py-14 sm:px-7 sm:py-16 lg:px-9 lg:py-20 xl:px-10 xl:py-24">
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.015]"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, #7A6230 1px, transparent 1px)",
+                    backgroundSize: "28px 28px",
+                  }}
+                />
+                <div className="pointer-events-none absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/[.05] blur-[80px]" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-brand-red/[.03] blur-[70px]" />
 
-        <div className="relative bg-warm-white py-20 lg:py-28">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.015]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #7A6230 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
-            }}
-          />
-          <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/[.05] blur-[80px]" />
-          <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-brand-red/[.03] blur-[70px]" />
-
-          <Container className="relative">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+                <div className="relative grid min-w-0 gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
               {/* Long description + features */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -323,7 +327,7 @@ export function ProductDetail({ product }: { product: Product }) {
                     ([key, value], i) => (
                       <div
                         key={key}
-                        className={`flex items-start gap-4 px-5 py-4 ${
+                        className={`flex min-w-0 flex-col gap-1 px-4 py-4 sm:flex-row sm:items-start sm:gap-4 sm:px-5 ${
                           i <
                           Object.entries(product.specifications)
                             .length -
@@ -336,10 +340,10 @@ export function ProductDetail({ product }: { product: Product }) {
                             : "bg-cream/40"
                         }`}
                       >
-                        <span className="min-w-[120px] text-sm font-semibold text-text-dark">
+                        <span className="min-w-0 shrink-0 text-sm font-semibold text-text-dark sm:min-w-[120px]">
                           {key}
                         </span>
-                        <span className="text-sm text-text-muted">
+                        <span className="min-w-0 break-words text-sm text-text-muted">
                           {value}
                         </span>
                       </div>
@@ -347,138 +351,108 @@ export function ProductDetail({ product }: { product: Product }) {
                   )}
                 </div>
               </motion.div>
+                </div>
+              </div>
             </div>
-          </Container>
-        </div>
-      </section>
+          </section>
 
-      {/* ═══════════════════════════════
+          {/* ═══════════════════════════════
           APPLICATIONS — Dark panel
       ═══════════════════════════════ */}
-      <section className="relative overflow-hidden bg-warm-white">
-        <WaveDivider fill="#2A4E1E" />
-
-        <div
-          className="relative py-20 lg:py-28"
-          style={{ backgroundColor: "#2A4E1E" }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #ffffff 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
-            }}
-          />
-          <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
-          <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
-
-          <Container className="relative">
-            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-              {/* Left — heading + list */}
-              <motion.div
-                initial={{ opacity: 0, x: -24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.65,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+          <section className="relative mb-10">
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-[#2A4E1E] shadow-[0_28px_90px_rgba(20,40,15,0.35)] ring-1 ring-white/10 sm:rounded-3xl">
+              <div
+                className="relative px-5 py-14 sm:px-7 sm:py-16 lg:px-9 xl:px-10"
+                style={{ backgroundColor: "#2A4E1E" }}
               >
-                <div className="mb-4 flex items-center gap-3">
-                  <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
-                    Applications
-                  </span>
-                  <span className="h-px w-8 bg-white/25" />
-                </div>
-
-                <h2 className="font-display mb-6 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
-                  Where It&apos;s{" "}
-                  <span className="text-brand-red">Used</span>
-                </h2>
-
-                <p className="mb-8 max-w-md text-base leading-relaxed text-white/60">
-                  Our {product.shortName} is trusted across diverse markets and
-                  applications worldwide.
-                </p>
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.06]"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, #ffffff 1px, transparent 1px)",
+                    backgroundSize: "28px 28px",
+                  }}
+                />
+                <div className="pointer-events-none absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
 
                 <motion.div
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-30px" }}
-                  className="flex flex-col gap-3"
+                  initial={{ opacity: 0, x: -24 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.65,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                 >
-                  {product.applications.map((app, i) => (
-                    <motion.div
-                      key={app}
-                      variants={fadeUp}
-                      className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.06] px-5 py-3.5 backdrop-blur-sm"
-                    >
-                      <span
-                        className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
-                          i % 2 === 0
-                            ? "bg-brand-green/25 text-brand-green"
-                            : "bg-brand-red/25 text-brand-red"
-                        }`}
-                      >
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-sm font-medium text-white/80">
-                        {app}
-                      </span>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+                      Applications
+                    </span>
+                    <span className="h-px w-8 bg-white/25" />
+                  </div>
 
-              {/* Right — CTA card */}
-              <motion.div
-                initial={{ opacity: 0, x: 24, scale: 0.96 }}
-                whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.15,
-                  duration: 0.65,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="rounded-3xl border border-white/10 bg-white/[.07] p-7 backdrop-blur-sm lg:p-8"
-              >
-                <div className="mb-6">
-                  <h3 className="font-display mb-2 text-xl font-bold text-white">
-                    Interested in {product.shortName}?
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/55">
-                    Get in touch with our export team for samples,
-                    specifications, pricing, and custom packaging options.
+                  <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
+                    Where It&apos;s{" "}
+                    <span className="text-brand-red">Used</span>
+                  </h2>
+
+                  <p className="mb-10 max-w-2xl text-base leading-relaxed text-white/60">
+                    Our {product.shortName} is trusted across diverse markets worldwide.
+                    Each use case below is paired with a visual snapshot so you can scan
+                    where your product fits.
                   </p>
-                </div>
 
-                <div className="mb-6 h-px bg-white/10" />
+                  <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-40px" }}
+                    className="grid gap-5 sm:grid-cols-2"
+                  >
+                    {product.applications.map((app, i) => {
+                      const n = product.applications.length;
+                      const lastOdd = n % 2 === 1 && i === n - 1;
 
-                <div className="flex flex-col gap-3">
-                  <Link
-                    href="/contact"
-                    className="group flex w-full items-center justify-center gap-2 rounded-xl bg-brand-red px-6 py-3.5 text-sm font-bold text-white shadow-glow-red transition-all duration-300 hover:bg-brand-red-dark"
-                  >
-                    Send an Enquiry
-                    <ArrowRight
-                      size={15}
-                      className="transition-transform duration-200 group-hover:translate-x-1"
-                    />
-                  </Link>
-                  <Link
-                    href="/products"
-                    className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/[.06] px-6 py-3.5 text-sm font-semibold text-white/85 transition-all duration-300 hover:bg-white/[.12] hover:text-white"
-                  >
-                    View All Products
-                  </Link>
-                </div>
-              </motion.div>
+                      return (
+                        <motion.article
+                          key={app.title}
+                          variants={fadeUp}
+                          className={`group overflow-hidden rounded-2xl border border-white/10 bg-white/[.05] shadow-[0_20px_50px_rgba(0,0,0,0.2)] backdrop-blur-sm transition-shadow duration-300 hover:border-white/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.28)] ${
+                            lastOdd ? "sm:col-span-2 sm:mx-auto sm:max-w-lg" : ""
+                          }`}
+                        >
+                          <div className="relative aspect-[16/11] w-full overflow-hidden">
+                            <Image
+                              src={app.image}
+                              alt={app.title}
+                              fill
+                              className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f0c]/95 via-[#0f1f0c]/35 to-transparent" />
+                            <div className="absolute left-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg bg-black/35 text-[11px] font-bold text-white ring-1 ring-white/15 backdrop-blur-sm">
+                              {String(i + 1).padStart(2, "0")}
+                            </div>
+                            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                              <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/55">
+                                Application
+                              </p>
+                              <h3 className="font-display text-base font-bold leading-snug text-white sm:text-lg">
+                                {app.title}
+                              </h3>
+                            </div>
+                          </div>
+                        </motion.article>
+                      );
+                    })}
+                  </motion.div>
+                </motion.div>
+              </div>
             </div>
-          </Container>
+          </section>
         </div>
-      </section>
+      </div>
     </>
   );
 }

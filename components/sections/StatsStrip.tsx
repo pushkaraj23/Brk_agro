@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 
 const stats = [
   { numericTo: 100, suffix: "%",  label: "Export Grade Quality",  color: "green" },
@@ -69,6 +70,7 @@ export function StatsStrip() {
             backgroundSize: "28px 28px",
           }}
         />
+        <SectionLeafAccents />
 
       <Container className="relative py-12 lg:py-16">
 

@@ -4,11 +4,26 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { MissionVisionSection } from "@/components/sections/MissionVisionSection";
 import { CompanyStats } from "./CompanyStats";
 import { CTASection } from "@/components/sections/CTASection";
+import { pageSocialMetadata } from "@/lib/seo";
+
+const title = "About BRK Agro - Frozen Corn Processing Company";
+const description =
+  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Nashik, India — mission, vision, IQF and retort focus, hygiene, and export partnerships.";
 
 export const metadata: Metadata = {
-  title: "About BRK Agro — Leading Frozen Food Manufacturer & Exporter",
-  description:
-    "Learn about BRK Agro's journey as a leading processor and exporter of premium frozen fruits and vegetables. Our mission, vision, and commitment to quality.",
+  title,
+  description,
+  keywords: [
+    "about brk agro",
+    "frozen corn company india",
+    "retort corn supplier",
+    "frozen food exporter india",
+    "nashik frozen food manufacturer",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  ...pageSocialMetadata({ title, description, path: "/about" }),
 };
 
 export default function AboutPage() {

@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { ChevronRight, Snowflake } from "lucide-react";
+import { SITE_VIDEOS } from "@/lib/siteMedia";
 
 export function InfrastructureHero() {
   return (
@@ -22,6 +23,7 @@ export function InfrastructureHero() {
       />
       <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
       <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
+      <SectionLeafAccents />
 
       <Container className="relative">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -62,9 +64,9 @@ export function InfrastructureHero() {
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              A modern, hygienic, and technology-driven facility designed to
-              deliver premium frozen produce that meets the highest international
-              standards.
+              A modern, hygienic, and technology-driven facility built around IQF
+              Frozen Corn and Retort Corn — engineered to meet demanding
+              international food safety and quality expectations.
             </motion.p>
           </motion.div>
 
@@ -79,14 +81,16 @@ export function InfrastructureHero() {
               }}
               className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated"
             >
-              <Image
-                src="https://images.unsplash.com/photo-1661319615776-946158744a29?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="BRK Agro processing facility"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+              <video
+                className="h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src={SITE_VIDEOS.facilityProcessingMp4} type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="inline-flex items-center gap-2 rounded-xl bg-white/15 px-4 py-2 backdrop-blur-sm">

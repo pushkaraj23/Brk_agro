@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { products } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
 
@@ -23,6 +24,7 @@ export function ProductShowcase() {
             backgroundSize: "28px 28px",
           }}
         />
+        <SectionLeafAccents />
 
         {products.map((product, index) => {
           const isReversed = index % 2 !== 0;

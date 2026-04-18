@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { processSteps } from "@/lib/constants";
 import { staggerContainer } from "@/lib/animations";
 import { Sprout, BarChart3, Settings, Snowflake, Package, Truck } from "lucide-react";
@@ -46,6 +47,7 @@ export function InfrastructureProcess() {
         />
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
         <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
+        <SectionLeafAccents />
 
         <Container className="relative">
           <motion.div

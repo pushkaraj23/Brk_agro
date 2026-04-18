@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
-import { LeafDecor } from "@/components/decorative/LeafDecor";
+import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { ChevronRight } from "lucide-react";
 
@@ -22,9 +22,7 @@ export function PageHero({ badge, title, subtitle, breadcrumb }: PageHeroProps) 
       <div className="absolute top-10 right-1/4 h-80 w-80 rounded-full bg-brand-green/[.06] blur-[80px]" />
       <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-brand-red/[.03] blur-[60px]" />
 
-      {/* Decorative leaves */}
-      <LeafDecor className="absolute top-24 right-16 h-10 w-7 rotate-[30deg] text-brand-green/10 hidden lg:block" />
-      <LeafDecor className="absolute bottom-12 left-20 h-8 w-5 -rotate-[20deg] text-brand-green/8 hidden lg:block" />
+      <SectionLeafAccents />
       <div className="absolute top-32 right-1/3 h-4 w-4 rounded-full bg-brand-red/10" />
       <div className="absolute bottom-20 right-20 h-3 w-3 rounded-full bg-brand-green/15" />
 
