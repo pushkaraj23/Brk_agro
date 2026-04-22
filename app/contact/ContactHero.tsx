@@ -8,7 +8,7 @@ import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
 import { contactInfo } from "@/lib/constants";
-import { ChevronRight, Mail, Clock } from "lucide-react";
+import { ChevronRight, Clock, Phone } from "lucide-react";
 
 export function ContactHero() {
   return (
@@ -27,7 +27,7 @@ export function ContactHero() {
       <SectionLeafAccents />
 
       <Container className="relative">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
           <motion.div
             variants={heroStagger}
             initial="hidden"
@@ -55,115 +55,68 @@ export function ContactHero() {
               variants={heroItem}
               className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
-              Let&apos;s Start a{" "}
-              <span className="text-brand-green">Conversation</span>
+              Let&apos;s build your next{" "}
+              <span className="text-brand-green">export order</span>
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              Reach out for product details, pricing, samples, or partnership
-              opportunities. Our export team is ready to help.
+              Connect with our team for product specs, packaging formats,
+              commercial details, and shipment planning. We respond quickly and
+              share clear next steps.
             </motion.p>
 
             <motion.div
               variants={heroItem}
-              className="mt-6 flex flex-wrap gap-3"
+              className="mt-6 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-2"
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-green/20 bg-brand-green/[.08] px-4 py-2 text-xs font-semibold text-brand-green-dark">
+              <span className="inline-flex items-center gap-2 rounded-xl border border-brand-green/20 bg-brand-green/[.08] px-4 py-3 text-xs font-semibold text-brand-green-dark">
                 <Clock size={14} />
                 Response within 24 hours
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-xl border border-brand-red/18 bg-brand-red/[.06] px-4 py-3 text-xs font-semibold text-brand-red-dark">
+                <Phone size={14} />
+                {contactInfo.phone}
               </span>
             </motion.div>
           </motion.div>
 
-          <div className="relative lg:py-4">
+          <div className="relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 16, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{
                 delay: 0.25,
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1] as const,
               }}
-              className="relative flex items-center justify-center"
+              className="relative overflow-hidden rounded-3xl border border-border-soft/80 bg-warm-white shadow-elevated"
             >
-              <div className="absolute h-64 w-64 rounded-full bg-brand-green/[.08] blur-3xl lg:h-72 lg:w-72" />
+              <div className="relative aspect-[5/4] overflow-hidden">
+                <Image
+                  src="/photos/Modern food packaging in action.png"
+                  alt="BRK Agro export packaging support"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.45,
-                  duration: 0.7,
-                  ease: [0.16, 1, 0.3, 1] as const,
-                }}
-                className="relative z-10"
-              >
-                <div
-                  className="animate-float-slow drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
-                  style={{ animationDuration: "8s" }}
-                >
-                  <Image
-                    src="/home/mixed_veggies.png"
-                    alt="BRK Agro products"
-                    width={320}
-                    height={320}
-                    className="h-44 w-44 object-contain sm:h-56 sm:w-56 lg:h-64 lg:w-64"
-                    priority
-                  />
+              <div className="grid grid-cols-2 gap-3 p-4 sm:p-5">
+                <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Direct email</p>
+                  <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.email}</p>
                 </div>
-              </motion.div>
+                <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Export desk</p>
+                  <p className="mt-1 text-sm font-semibold text-text-dark">MOQ &amp; docs support</p>
+                </div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  delay: 0.65,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1] as const,
-                }}
-                className="absolute top-4 right-2 z-20 sm:right-6"
-              >
-                <div
-                  className="animate-float rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                  style={{ animationDuration: "7s", animationDelay: "0.4s" }}
-                >
-                  <Image
-                    src="/home/sweet_corn.png"
-                    alt="Frozen corn"
-                    width={120}
-                    height={120}
-                    className="h-20 w-20 object-contain sm:h-24 sm:w-24"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 12, scale: 0.92 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{
-                  delay: 0.8,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1] as const,
-                }}
-                className="absolute -bottom-2 left-0 flex items-center gap-3 rounded-2xl border border-border-soft bg-warm-white p-3 shadow-elevated sm:left-2 sm:p-4"
-              >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-red">
-                  <Mail className="h-5 w-5 text-brand-red" />
-                </div>
-                <div className="pr-1">
-                  <p className="text-xs font-bold text-text-dark sm:text-sm">
-                    Export Team
-                  </p>
-                  <p className="text-[10px] text-text-muted sm:text-xs">
-                    {contactInfo.email}
-                  </p>
-                </div>
-              </motion.div>
-
-              <div className="absolute -top-1 right-1/3 h-4 w-4 rounded-full bg-brand-green/25 ring-4 ring-brand-green/10" />
             </motion.div>
           </div>
         </div>

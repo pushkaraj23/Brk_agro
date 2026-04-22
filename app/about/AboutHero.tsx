@@ -82,7 +82,7 @@ export function AboutHero() {
               className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated"
             >
               <Image
-                src="https://images.unsplash.com/photo-1661319615776-946158744a29?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/photos/Clean industrial food processing plant.png"
                 alt="BRK Agro processing facility"
                 fill
                 className="object-cover"
@@ -117,7 +117,7 @@ export function AboutHero() {
                 style={{ animationDuration: "8s" }}
               >
                 <Image
-                  src="/home/mixed_veggies.png"
+                  src="/products/mixed_veggies.png"
                   alt="Retort Corn"
                   width={140}
                   height={140}
@@ -142,7 +142,7 @@ export function AboutHero() {
                 style={{ animationDuration: "7s", animationDelay: "1s" }}
               >
                 <Image
-                  src="/home/sweet_corn.png"
+                  src="/products/sweet_corn.png"
                   alt="Frozen Corn"
                   width={140}
                   height={140}

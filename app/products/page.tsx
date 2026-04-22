@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ProductsHero } from "./ProductsHero";
 import { ProductShowcase } from "./ProductShowcase";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
@@ -29,7 +30,9 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsHero />
+      <SectionEdgeOrnament />
       <ProductShowcase />
+      <SectionEdgeOrnament />
       <CTASection />
     </>
   );

@@ -6,6 +6,7 @@ import { ProductsBrief } from "@/components/sections/home/ProductsBrief";
 import { WhyBrkBrief } from "@/components/sections/home/WhyBrkBrief";
 import { InfrastructureBrief } from "@/components/sections/home/InfrastructureBrief";
 import { CTASection } from "@/components/sections/CTASection";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { siteConfig } from "@/lib/constants";
 import { pageSocialMetadata } from "@/lib/seo";
 
@@ -80,11 +81,17 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <HeroSection />
+      <SectionEdgeOrnament />
       <StatsStrip />
+      <SectionEdgeOrnament />
       <AboutBrief />
+      <SectionEdgeOrnament />
       <ProductsBrief />
+      <SectionEdgeOrnament />
       <WhyBrkBrief />
+      <SectionEdgeOrnament />
       <InfrastructureBrief />
+      <SectionEdgeOrnament />
       <CTASection />
     </>
   );

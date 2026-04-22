@@ -53,7 +53,7 @@ export function Footer() {
         <SectionLeafAccents />
 
         <Container>
-          <div className="grid grid-cols-1 gap-12 pt-8 pb-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-12 pt-14 pb-12 md:grid-cols-2 lg:grid-cols-4">
             {/* Brand */}
             <div>
               <Link href="/" className="mb-5 inline-flex">

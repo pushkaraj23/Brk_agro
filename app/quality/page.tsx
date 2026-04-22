@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { QualityAssuranceSection } from "./QualityAssuranceSection";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
@@ -27,7 +28,8 @@ export default function QualityPage() {
   return (
     <>
       <QualityAssuranceSection />
-      <div className="-translate-y-1"><CTASection /></div>
+      <SectionEdgeOrnament />
+      <CTASection />
 
     </>
   );

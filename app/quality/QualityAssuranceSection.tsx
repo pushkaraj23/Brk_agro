@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { WaveDivider } from "@/components/decorative/WaveDivider";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import {
@@ -106,16 +106,14 @@ const assuranceRows = [
 
 /** Wave fills = destination section bg. Use hex in SVG fill (matches globals.css) — avoids var() quirks. Parent section paints behind the SVG’s transparent band. */
 const WAVE = {
-  toWarmWhite: "#FFFDF7",
   toForestGreen: "#2A4E1E",
-  toCreamDark: "#EFE5C8",
 } as const;
 
 export function QualityAssuranceSection() {
   return (
     <div className="relative overflow-hidden bg-warm-white">
       {/* ─── Hero ─── */}
-      <section className="relative overflow-hidden bg-cream-dark pt-24 pb-0 lg:pt-28">
+      <section className="relative overflow-hidden bg-cream-dark pt-24 pb-10 lg:pt-28 lg:pb-14">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.02]"
           style={{
@@ -128,15 +126,15 @@ export function QualityAssuranceSection() {
         <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-brand-red/[0.07] blur-[85px]" />
         <SectionLeafAccents />
 
-        <Container className="relative pb-16 lg:pb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto max-w-4xl text-center"
-          >
-            <nav className="mb-6 flex items-center justify-center gap-1.5 text-sm">
+        <Container className="relative">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            >
+            <nav className="mb-6 flex items-center gap-1.5 text-sm">
               <Link href="/" className="text-text-muted transition-colors hover:text-brand-green">
                 Home
               </Link>
@@ -151,25 +149,23 @@ export function QualityAssuranceSection() {
               </span>
             </div>
 
-            <h1 className="font-display text-[1.75rem] font-black leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-[2.85rem]">
+            <h1 className="font-display text-[1.75rem] font-black leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-[2.8rem]">
               Quality, testing &amp;{" "}
               <span className="bg-gradient-to-br from-brand-red to-brand-red-dark bg-clip-text text-transparent">
                 assurance
               </span>
             </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-text-muted sm:text-lg">
+            <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-text-muted sm:text-lg">
               On-line checks, microbiology, and digital QC — engineered for food safety,
               batch consistency, and export-ready documentation.
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-3 sm:gap-4"
-          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="mt-8 grid max-w-xl grid-cols-3 gap-3 sm:gap-4"
+            >
             {heroStats.map((s, i) => {
               const green = i !== 1;
               return (
@@ -201,14 +197,57 @@ export function QualityAssuranceSection() {
                 </div>
               );
             })}
-          </motion.div>
+            </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20, scale: 0.98 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-3xl border border-border-soft/80 bg-warm-white shadow-elevated">
+                <div className="relative aspect-[5/4]">
+                  <Image
+                    src="/photos/Modern food processing facility inspection.png"
+                    alt="Quality inspection in food processing facility"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
+                  <div className="absolute left-4 right-4 bottom-4 rounded-2xl border border-white/20 bg-black/30 px-4 py-3 backdrop-blur-sm">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/75">
+                      Quality intelligence
+                    </p>
+                    <p className="text-sm font-semibold text-white">
+                      Real-time checks and traceable batch records
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 border-t border-border-soft/80 p-4 sm:p-5">
+                  <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Safety Focus</p>
+                    <p className="mt-1 text-sm font-semibold text-text-dark">Microbiology validated</p>
+                  </div>
+                  <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Process Control</p>
+                    <p className="mt-1 text-sm font-semibold text-text-dark">Data-backed decisions</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </Container>
 
-        <WaveDivider fill={WAVE.toWarmWhite} />
       </section>
+      <SectionEdgeOrnament />
 
       {/* ─── Pillars ─── */}
-      <section className="relative border-y border-border-soft/60 bg-warm-white pt-16 pb-0 lg:pt-24 lg:pb-0">
+      <section className="relative border-y border-border-soft/60 bg-warm-white pt-16 pb-2 lg:pt-24 lg:pb-4">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(103,184,79,0.06),transparent)]" />
         <Container className="relative mb-14">
           <div className="mb-10 text-center lg:mb-14">
@@ -220,6 +259,10 @@ export function QualityAssuranceSection() {
               <span className="text-brand-green">precision</span>
               {" "}at every step
             </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-text-muted sm:text-base">
+              Every quality pillar combines practical plant operations with measurable controls, so outcomes stay
+              consistent from intake to dispatch.
+            </p>
           </div>
 
           <motion.div
@@ -239,23 +282,28 @@ export function QualityAssuranceSection() {
                   variants={fadeUp}
                   whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 380, damping: 26 }}
-                  className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-warm-white via-warm-white to-cream-light/50 p-5 shadow-[0_8px_32px_rgba(45,42,30,0.05)] ring-1 ring-black/[0.02] sm:rounded-3xl sm:p-6 ${
+                  className={`group relative overflow-hidden rounded-2xl border bg-warm-white shadow-[0_8px_32px_rgba(45,42,30,0.05)] ring-1 ring-black/[0.02] sm:rounded-3xl ${
                     isGreen
                       ? "border-border-soft/80 hover:border-brand-green/30"
                       : "border-border-soft/80 hover:border-brand-red/28"
                   }`}
                 >
-                  <div className="pointer-events-none absolute inset-0">
+                  <div className="relative h-36 overflow-hidden sm:h-40">
                     <Image
                       src={bgUrl}
-                      alt=""
-                      role="presentation"
+                      alt={item.title}
                       fill
-                      className="object-cover opacity-[0.38] transition-opacity duration-500 group-hover:opacity-[0.5]"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-warm-white/72 via-warm-white/55 to-cream-light/65" />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-warm-white/95 via-warm-white/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                    <div
+                      className={`absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/30 text-white backdrop-blur-sm ${
+                        isGreen ? "bg-brand-green/45" : "bg-brand-red/45"
+                      }`}
+                    >
+                      <Icon className="h-4.5 w-4.5" strokeWidth={2.2} />
+                    </div>
                   </div>
                   <div
                     className={`absolute inset-x-0 top-0 z-[1] h-1 bg-gradient-to-r ${
@@ -264,31 +312,22 @@ export function QualityAssuranceSection() {
                         : "from-brand-red/80 via-brand-red/35 to-transparent"
                     }`}
                   />
-                  <div
-                    className={`relative z-[1] mb-4 flex h-12 w-12 items-center justify-center rounded-2xl ring-1 transition-transform duration-300 group-hover:scale-105 ${
-                      isGreen
-                        ? "bg-gradient-to-br from-soft-green to-brand-green/15 text-brand-green-dark ring-brand-green/20"
-                        : "bg-gradient-to-br from-soft-red to-brand-red/12 text-brand-red ring-brand-red/18"
-                    }`}
-                  >
-                    <Icon className="h-5 w-5" strokeWidth={2.2} />
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-display text-lg font-bold text-text-dark">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-text-muted">{item.desc}</p>
                   </div>
-                  <h3 className="relative z-[1] font-display text-lg font-bold text-text-dark">
-                    {item.title}
-                  </h3>
-                  <p className="relative z-[1] mt-2 text-sm leading-relaxed text-text-muted">{item.desc}</p>
                 </motion.div>
               );
             })}
           </motion.div>
         </Container>
 
-        <WaveDivider fill={WAVE.toForestGreen} />
       </section>
+      <SectionEdgeOrnament />
 
       {/* ─── Lab & systems (dark) ─── */}
       <section
-        className="relative pb-0 pt-16 lg:pt-24 -translate-y-1"
+        className="relative pb-0 pt-16 lg:pt-24"
         style={{ backgroundColor: WAVE.toForestGreen }}
         aria-label="Testing and digital oversight"
       >
@@ -449,11 +488,11 @@ export function QualityAssuranceSection() {
           </div>
         </Container>
 
-        <WaveDivider fill={WAVE.toCreamDark} />
       </section>
+      <SectionEdgeOrnament />
 
       {/* ─── Trust & certifications ─── */}
-      <section className="relative bg-cream-dark py-16 -translate-y-1 lg:py-24">
+      <section className="relative bg-cream-dark py-16 lg:py-24">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.02]"
           style={{

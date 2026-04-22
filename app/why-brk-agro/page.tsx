@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
 import { WhyBrkSection } from "@/components/sections/WhyBrkSection";
 import { TrustSection } from "@/components/sections/TrustSection";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { PartnershipApproach } from "./PartnershipApproach";
+import { WhyBrkHero } from "./WhyBrkHero";
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
@@ -29,17 +30,14 @@ export const metadata: Metadata = {
 export default function WhyBrkAgroPage() {
   return (
     <>
-      <PageHero
-        badge="Why BRK Agro"
-        title="Your Trusted Partner in Frozen & Retort Corn"
-        subtitle="From trusted sweet corn sourcing to IQF and retort processing and reliable export execution — see what makes BRK Agro a strong partner for Frozen Corn and Retort Corn buyers, distributors, and HoReCa worldwide."
-        breadcrumb={[
-          { label: "Why BRK Agro", href: "/why-brk-agro" },
-        ]}
-      />
+      <WhyBrkHero />
+      <SectionEdgeOrnament />
       <WhyBrkSection />
+      <SectionEdgeOrnament />
       <PartnershipApproach />
+      <SectionEdgeOrnament />
       <TrustSection />
+      <SectionEdgeOrnament />
       <CTASection />
     </>
   );

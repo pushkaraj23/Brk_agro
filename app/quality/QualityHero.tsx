@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
-import { ChevronRight, ShieldCheck, Award } from "lucide-react";
+import { ChevronRight, Award } from "lucide-react";
 
 export function QualityHero() {
   return (
@@ -96,7 +96,7 @@ export function QualityHero() {
                   style={{ animationDuration: "8s" }}
                 >
                   <Image
-                    src="/home/mixed_veggies.png"
+                    src="/products/mixed_veggies.png"
                     alt="Premium frozen vegetables"
                     width={320}
                     height={320}
@@ -121,7 +121,7 @@ export function QualityHero() {
                   style={{ animationDuration: "7s", animationDelay: "0.5s" }}
                 >
                   <Image
-                    src="/home/green_peas.png"
+                    src="/products/green_peas.png"
                     alt="Green peas"
                     width={120}
                     height={120}
@@ -145,7 +145,7 @@ export function QualityHero() {
                   style={{ animationDuration: "8.5s", animationDelay: "0.3s" }}
                 >
                   <Image
-                    src="/home/sweet_corn.png"
+                    src="/products/sweet_corn.png"
                     alt="Sweet corn"
                     width={120}
                     height={120}
@@ -153,29 +153,6 @@ export function QualityHero() {
                   />
                 </div>
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12, scale: 0.92 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                delay: 0.85,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1] as const,
-              }}
-              className="absolute -bottom-4 right-0 flex items-center gap-3 rounded-2xl border border-border-soft bg-warm-white p-3 shadow-elevated sm:right-4 sm:p-4"
-            >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                <ShieldCheck className="h-5 w-5 text-brand-green" />
-              </div>
-              <div className="pr-1">
-                <p className="text-xs font-bold text-text-dark sm:text-sm">
-                  Export Grade
-                </p>
-                <p className="text-[10px] text-text-muted sm:text-xs">
-                  Certified Facility
-                </p>
-              </div>
             </motion.div>
 
             <motion.div

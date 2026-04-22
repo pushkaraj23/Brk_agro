@@ -2,6 +2,7 @@
 
 import { type ReactNode } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { infrastructure } from "@/lib/constants";
@@ -23,6 +24,15 @@ const icons: ReactNode[] = [
   <Package key="e" size={24} />,
   <BarChart3 key="f" size={24} />,
 ];
+
+const infrastructureImages = [
+  "/photos/Industrial food processing machine in factory.png",
+  "/photos/Modern food processing facility inspection.png",
+  "/photos/Sterile industrial food processing facility.png",
+  "/photos/Cold storage inventory check close-up.png",
+  "/photos/Industrial food packaging in action.png",
+  "/photos/Industrial warehouse with forklift operation.png",
+] as const;
 
 export function InfrastructureSection() {
   return (
@@ -83,13 +93,28 @@ export function InfrastructureSection() {
                 className={`group rounded-3xl border bg-warm-white p-7 shadow-card transition-all duration-300 hover:shadow-elevated ${i % 2 === 0 ? "border-border-soft hover:border-brand-green/25" : "border-border-soft hover:border-brand-red/25"}`}
               >
                 <div
-                  className={`relative mb-5 aspect-video overflow-hidden rounded-2xl bg-gradient-to-br ${i % 2 === 0 ? "from-soft-green to-cream-dark" : "from-soft-red to-cream-dark"}`}
+                  className="relative mb-5 aspect-video overflow-hidden rounded-2xl"
                 >
-                  <div className="flex h-full items-center justify-center">
+                  <Image
+                    src={infrastructureImages[i]}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                  <div className="absolute top-3 left-3 flex h-11 w-11 items-center justify-center rounded-xl border border-white/30 bg-white/20 text-white backdrop-blur-sm">
+                    {icons[i]}
+                  </div>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90">
+                      Facility highlight
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 flex h-full items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-2xl transition-colors duration-300 group-hover:text-white ${i % 2 === 0 ? "bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:shadow-glow-green" : "bg-brand-red/10 text-brand-red group-hover:bg-brand-red group-hover:shadow-glow-red"}`}
+                      className={`h-full w-full border ${i % 2 === 0 ? "border-brand-green/35" : "border-brand-red/35"}`}
                     >
-                      {icons[i]}
                     </div>
                   </div>
                 </div>

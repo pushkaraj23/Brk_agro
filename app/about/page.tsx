@@ -3,6 +3,7 @@ import { AboutHero } from "./AboutHero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { MissionVisionSection } from "@/components/sections/MissionVisionSection";
 import { CompanyStats } from "./CompanyStats";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
@@ -30,9 +31,13 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
+      <SectionEdgeOrnament />
       <AboutSection />
+      <SectionEdgeOrnament />
       <MissionVisionSection />
+      <SectionEdgeOrnament />
       <CompanyStats />
+      <SectionEdgeOrnament />
       <CTASection />
     </>
   );

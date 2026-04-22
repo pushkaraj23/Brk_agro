@@ -6,30 +6,20 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { staggerContainer } from "@/lib/animations";
+import { products } from "@/lib/constants";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-const featured = [
-  {
-    name: "Frozen Corn",
-    tag: "IQF Frozen",
-    image: "/home/sweet_corn.png",
-    color: "green",
-    animDuration: "7s",
-    animDelay: "0s",
-    rotate: "-rotate-3",
-  },
-  {
-    name: "Retort Corn",
-    tag: "Retort Processed",
-    image: "/home/mixed_veggies.png",
-    color: "red",
-    animDuration: "8.5s",
-    animDelay: "0.8s",
-    rotate: "rotate-2",
-  },
-];
+const featured = products.slice(0, 6).map((product, index) => ({
+  name: product.name,
+  tag: product.tagline,
+  image: product.image ?? "/products/sweet_corn.png",
+  color: product.color,
+  animDuration: `${7 + index * 0.45}s`,
+  animDelay: `${index * 0.15}s`,
+  rotate: index % 2 === 0 ? "-rotate-2" : "rotate-2",
+}));
 
 const cardVariants = {
   hidden: { opacity: 0, y: 28, scale: 0.95 },
@@ -79,11 +69,11 @@ export function ProductsBrief() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
-              Frozen Corn{" "}
-              <span className="text-brand-red">&amp; Retort Corn</span>
+              Explore Our{" "}
+              <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              IQF kernels and retort corn on the cob — processed for export-grade consistency and dependable supply.
+              From IQF vegetables to processed formats, discover export-ready products built for consistent quality.
             </p>
           </div>
         </motion.div>
@@ -94,7 +84,7 @@ export function ProductsBrief() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:gap-5"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5"
         >
           {featured.map((product) => {
             const isGreen = product.color === "green";

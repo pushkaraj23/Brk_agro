@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Sparkles } from "lucide-react";
 
 export function ProductsHero() {
   return (
@@ -26,7 +26,7 @@ export function ProductsHero() {
       <SectionLeafAccents />
 
       <Container className="relative">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
           {/* Text */}
           <motion.div
             variants={heroStagger}
@@ -55,113 +55,108 @@ export function ProductsHero() {
               variants={heroItem}
               className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
-              Frozen Corn{" "}
-              <span className="text-brand-red">&amp; Retort Corn</span>
+              Frozen &amp; Processed{" "}
+              <span className="text-brand-red">Product Range</span>
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              Our Frozen Corn and Retort Corn are processed with advanced IQF
-              and retort technologies, preserving natural taste, quality, and
-              shelf stability for global markets.
+              Explore our export-focused range including IQF vegetables and
+              processed formats, packed for dependable performance across retail
+              and foodservice channels.
             </motion.p>
+
+            <motion.div
+              variants={heroItem}
+              className="mt-7 grid max-w-xl grid-cols-3 gap-3"
+            >
+              <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3 text-center">
+                <p className="font-display text-xl font-black text-brand-green-dark">9</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Products</p>
+              </div>
+              <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3 text-center">
+                <p className="font-display text-xl font-black text-brand-red">IQF</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Tech Process</p>
+              </div>
+              <div className="rounded-xl border border-border-soft bg-cream/50 px-3 py-3 text-center">
+                <p className="font-display text-xl font-black text-text-dark">Global</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Export Ready</p>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Product image collage */}
-          <div className="relative lg:py-4">
+          <div className="relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 16, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative flex items-center justify-center"
+              className="relative overflow-hidden rounded-3xl border border-border-soft/80 bg-warm-white shadow-elevated"
             >
-              {/* Background glow */}
-              <div className="absolute h-64 w-64 rounded-full bg-brand-green/[.08] blur-3xl lg:h-80 lg:w-80" />
+              <div className="relative aspect-[5/4] overflow-hidden">
+                <Image
+                  src="/photos/Frozen mixed vegetables in packaging display.png"
+                  alt="BRK Agro product range display"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
 
-              {/* Main product — center */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.5,
-                  duration: 0.7,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="relative z-10"
-              >
-                <div
-                  className="animate-float-slow drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
-                  style={{ animationDuration: "8s" }}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.45, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute right-4 top-4 rounded-xl border border-white/25 bg-black/30 px-3 py-2 backdrop-blur-sm"
                 >
-                  <Image
-                    src="/home/sweet_corn.png"
-                    alt="Frozen Corn"
-                    width={320}
-                    height={320}
-                    className="h-44 w-44 object-contain sm:h-56 sm:w-56 lg:h-64 lg:w-64"
-                    priority
-                  />
-                </div>
-              </motion.div>
-
-              {/* Retort corn — top right */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  delay: 0.7,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="absolute -top-2 right-4 z-20 sm:right-8 lg:right-4"
-              >
-                <div
-                  className="animate-float rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                  style={{ animationDuration: "7s", animationDelay: "1s" }}
-                >
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-brand-red/20 bg-brand-red/10 sm:h-24 sm:w-24">
-                    <span className="text-center font-display text-[10px] leading-tight font-black text-brand-red sm:text-xs">
-                      RETORT
-                      <br />
-                      CORN
-                    </span>
+                  <div className="flex items-center gap-1.5 text-white/90">
+                    <Sparkles size={12} />
+                    <span className="text-[10px] font-bold uppercase tracking-[0.14em]">Curated Range</span>
                   </div>
+                </motion.div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 p-4 sm:p-5">
+                <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
+                  <Image
+                    src="/products/sweet_corn.png"
+                    alt="Sweet corn"
+                    width={38}
+                    height={38}
+                    className="h-9 w-9 object-contain"
+                  />
+                  <p className="text-xs font-semibold text-text-dark">Sweet Corn</p>
                 </div>
-              </motion.div>
-
-            </motion.div>
-
-            {/* IQF badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -12, scale: 0.92 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                delay: 1,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="absolute bottom-0 left-0 flex items-center gap-2.5 rounded-2xl border border-border-soft bg-warm-white p-3 shadow-elevated sm:left-4 sm:p-4"
-            >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                <span className="font-display text-xs font-black text-brand-green sm:text-sm">
-                  2+
-                </span>
-              </div>
-              <div className="pr-1">
-                <p className="text-xs font-bold text-text-dark sm:text-sm">
-                  Product Lines
-                </p>
-                <p className="text-[10px] text-text-muted sm:text-xs">
-                  Export Grade
-                </p>
+                <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
+                  <Image
+                    src="/products/mixed_veggies.png"
+                    alt="Mixed vegetables"
+                    width={38}
+                    height={38}
+                    className="h-9 w-9 object-contain"
+                  />
+                  <p className="text-xs font-semibold text-text-dark">Mixed Veg</p>
+                </div>
+                <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
+                  <Image
+                    src="/products/green_peas.png"
+                    alt="Green peas"
+                    width={38}
+                    height={38}
+                    className="h-9 w-9 object-contain"
+                  />
+                  <p className="text-xs font-semibold text-text-dark">Green Peas</p>
+                </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </Container>

@@ -343,7 +343,7 @@ export function ProductDetail({ product }: { product: Product }) {
                         <span className="min-w-0 shrink-0 text-sm font-semibold text-text-dark sm:min-w-[120px]">
                           {key}
                         </span>
-                        <span className="min-w-0 break-words text-sm text-text-muted">
+                        <span className="min-w-0 break-words whitespace-pre-line text-sm text-text-muted">
                           {value}
                         </span>
                       </div>

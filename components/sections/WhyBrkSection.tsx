@@ -2,6 +2,7 @@
 
 import { type ReactNode } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
@@ -24,6 +25,15 @@ const icons: ReactNode[] = [
   <BarChart3 key="e" size={24} />,
   <Award key="f" size={24} />,
 ];
+
+const featureImages = [
+  "/photos/Fresh frozen vegetables processing area.png",
+  "/photos/Industrial food processing in action.png",
+  "/photos/Food processing in a clean factory setting.png",
+  "/photos/Modern food packaging in action.png",
+  "/photos/Modern food processing facility inspection.png",
+  "/photos/Warehouse worker managing boxed cargo.png",
+] as const;
 
 export function WhyBrkSection() {
   return (
@@ -88,10 +98,20 @@ export function WhyBrkSection() {
                 transition={{ duration: 0.3 }}
                 className={`group rounded-3xl border bg-warm-white p-7 shadow-card transition-all duration-300 hover:shadow-elevated ${i % 2 === 0 ? "border-border-soft hover:border-brand-green/25" : "border-border-soft hover:border-brand-red/25"}`}
               >
-                <div
-                  className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:text-white ${i % 2 === 0 ? "bg-soft-green text-brand-green group-hover:bg-brand-green group-hover:shadow-glow-green" : "bg-soft-red text-brand-red group-hover:bg-brand-red group-hover:shadow-glow-red"}`}
-                >
-                  {icons[i]}
+                <div className="relative mb-4 h-40 overflow-hidden rounded-2xl">
+                  <Image
+                    src={featureImages[i]}
+                    alt={feature.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
+                  <div
+                    className={`absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/30 text-white backdrop-blur-sm ${i % 2 === 0 ? "bg-brand-green/35" : "bg-brand-red/35"}`}
+                  >
+                    {icons[i]}
+                  </div>
                 </div>
                 <h3 className="font-display mb-2 text-lg font-bold text-text-dark">
                   {feature.title}

@@ -112,7 +112,7 @@ export function AboutSection() {
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-elevated sm:aspect-[3/4]">
                 <Image
-                  src="https://images.unsplash.com/photo-1661319615776-946158744a29?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/photos/Industrial food processing machine in factory.png"
                   alt="BRK Agro processing facility"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"

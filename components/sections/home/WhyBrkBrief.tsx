@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
@@ -17,6 +18,15 @@ const features = [
   { icon: Award,       title: "Consistent Quality",            desc: "Rigorous checks at every stage guarantee batch-to-batch uniformity.",          color: "red"   },
 ];
 
+const featureImages = [
+  "/photos/Fresh frozen vegetables processing area.png",
+  "/photos/Frozen vegetable processing line in action.png",
+  "/photos/Sterile industrial food processing facility.png",
+  "/photos/Modern food packaging in action.png",
+  "/photos/Modern food processing facility inspection.png",
+  "/photos/Industrial warehouse with forklift operation.png",
+] as const;
+
 const cardVariants = {
   hidden: { opacity: 0, y: 24, scale: 0.96 },
   visible: {
@@ -27,14 +37,10 @@ const cardVariants = {
 
 export function WhyBrkBrief() {
   return (
-    <section className="relative overflow-hidden bg-warm-white">
-
-      {/* Wave in — cream → green */}
+    <section className="relative overflow-hidden bg-cream">
       <WaveDivider fill="#2A4E1E" />
 
-      <div className="relative py-14 lg:py-20" style={{ backgroundColor: "#2A4E1E" }}>
-
-        {/* Dot texture */}
+      <div className="relative py-20 lg:py-24" style={{ backgroundColor: "#2A4E1E" }}>
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -47,8 +53,6 @@ export function WhyBrkBrief() {
         <SectionLeafAccents />
 
         <Container className="relative">
-
-          {/* ── Heading block ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -66,23 +70,22 @@ export function WhyBrkBrief() {
 
             <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.6rem]">
               Why Partner with{" "}
-              <span className="text-brand-red">BRK Agro</span>
+              <span className="text-brand-green">BRK Agro</span>
             </h2>
 
-            <p className="mx-auto max-w-xl text-base leading-relaxed text-white/60">
-              IQF and retort lines, disciplined QC, and a farm-to-export mindset — built for importers, distributors, and food brands that need dependable corn supply.
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/60">
+              A cleaner supply chain, modern processing, and dependable execution from sourcing to shipment.
             </p>
           </motion.div>
 
-          {/* ── Feature cards ── */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            className="mb-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4"
+            className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {features.map((f) => {
+            {features.map((f, i) => {
               const Icon = f.icon;
               const isRed = f.color === "red";
 
@@ -91,32 +94,37 @@ export function WhyBrkBrief() {
                   key={f.title}
                   variants={cardVariants}
                   whileHover={{ y: -5, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-                  className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[.06] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-white/20 hover:bg-white/[.10]"
+                  className="group overflow-hidden rounded-3xl border border-border-soft bg-warm-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated"
                 >
-                  {/* Icon */}
-                  <div
-                    className={`mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
-                      isRed
-                        ? "bg-brand-red/25 text-brand-red group-hover:bg-brand-red group-hover:text-white"
-                        : "bg-white/10 text-white/70 group-hover:bg-white/20 group-hover:text-white"
-                    }`}
-                  >
-                    <Icon size={18} />
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={featureImages[i]}
+                      alt={f.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
+                    <div
+                      className={`absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/30 text-white backdrop-blur-sm ${
+                        isRed ? "bg-brand-red/45" : "bg-brand-green/45"
+                      }`}
+                    >
+                      <Icon size={18} />
+                    </div>
                   </div>
 
-                  {/* Text */}
-                  <div>
-                    <h3 className="font-display mb-1 text-sm font-bold text-white lg:text-base">
+                  <div className="p-5">
+                    <h3 className="font-display mb-2 text-base font-bold text-text-dark">
                       {f.title}
                     </h3>
-                    <p className="text-xs leading-relaxed text-white/55 sm:text-sm">{f.desc}</p>
+                    <p className="text-sm leading-relaxed text-text-muted">{f.desc}</p>
                   </div>
                 </motion.div>
               );
             })}
           </motion.div>
 
-          {/* ── CTA ── */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,14 +132,12 @@ export function WhyBrkBrief() {
             transition={{ delay: 0.3, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="flex justify-center"
           >
-            <Button href="/why-brk-agro" variant="accent" iconRight={<ArrowRight size={16} />}>
-              Why BRK Agro
+            <Button href="/why-brk-agro" iconRight={<ArrowRight size={16} />}>
+              Explore Why BRK Agro
             </Button>
           </motion.div>
-
         </Container>
       </div>
-
     </section>
   );
 }

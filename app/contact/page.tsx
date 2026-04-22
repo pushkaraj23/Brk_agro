@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactHero } from "./ContactHero";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const title = "Contact BRK Agro - Frozen Corn Export Enquiries";
@@ -27,6 +28,7 @@ export default function ContactPage() {
   return (
     <>
       <ContactHero />
+      <SectionEdgeOrnament />
       <ContactSection />
     </>
   );

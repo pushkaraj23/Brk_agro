@@ -11,8 +11,8 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const floatingImages = [
   {
-    src: "/home/sweet_corn.png",
-    alt: "Frozen Corn",
+    src: "/products/sweet_corn.png",
+    alt: "Sweet corn product",
     desktopClass: "absolute top-[6%] left-[4%] z-[1] md:w-40 lg:w-52 xl:w-64",
     animation: "animate-float-slow",
     animStyle: { animationDuration: "8s", animationDelay: "0.5s" },
@@ -20,8 +20,8 @@ const floatingImages = [
     rotate: "rotate-6",
   },
   {
-    src: "/home/mixed_veggies.png",
-    alt: "Retort corn on the cob — product visual",
+    src: "/products/mixed_veggies.png",
+    alt: "Mixed vegetables product",
     desktopClass: "absolute bottom-[6%] right-[4%] z-[1] md:w-36 lg:w-48 xl:w-60",
     animation: "animate-float-delayed",
     animStyle: { animationDuration: "7s", animationDelay: "2s" },

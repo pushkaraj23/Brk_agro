@@ -13,20 +13,12 @@ export function WaveDivider({
   className = "",
   flip = false,
 }: WaveDividerProps) {
-  return (
-    <div
-      className={`w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""} ${className}`}
-      aria-hidden
-    >
-      <svg
-        viewBox="0 0 1440 80"
-        preserveAspectRatio="none"
-        className="block h-8 w-full sm:h-12 md:h-16"
-      >
-        <path d={WAVE_PATH} fill={fill} />
-      </svg>
-    </div>
-  );
+  // Intentionally disabled globally: wave dividers removed from the site.
+  void fill;
+  void className;
+  void flip;
+
+  return null;
 }
 
 interface WaveDividerBottomProps {

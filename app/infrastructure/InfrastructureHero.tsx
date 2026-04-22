@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
-import { ChevronRight, Snowflake } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { SITE_VIDEOS } from "@/lib/siteMedia";
 
 export function InfrastructureHero() {
@@ -99,25 +99,6 @@ export function InfrastructureHero() {
                     IQF & Cold Chain Ready
                   </span>
                 </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16, scale: 0.92 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                delay: 0.55,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-border-soft bg-warm-white p-4 shadow-elevated sm:-left-5"
-            >
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                <Snowflake className="h-5 w-5 text-brand-green" />
-              </div>
-              <div className="pr-1">
-                <p className="text-sm font-bold text-text-dark">JBT IQF Line</p>
-                <p className="text-xs text-text-muted">Advanced Freezing</p>
               </div>
             </motion.div>
 
