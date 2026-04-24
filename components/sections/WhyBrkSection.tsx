@@ -27,12 +27,12 @@ const icons: ReactNode[] = [
 ];
 
 const featureImages = [
-  "/photos/Fresh frozen vegetables processing area.png",
-  "/photos/Industrial food processing in action.png",
+  "/photos/Handshake in the golden cornfield.png",
+  "/photos/Frozen vegetable processing line in action.png",
   "/photos/Food processing in a clean factory setting.png",
   "/photos/Modern food packaging in action.png",
   "/photos/Modern food processing facility inspection.png",
-  "/photos/Warehouse worker managing boxed cargo.png",
+  "/photos/Cold storage inventory check close-up.png",
 ] as const;
 
 export function WhyBrkSection() {

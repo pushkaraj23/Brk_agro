@@ -53,8 +53,8 @@ export function AboutBrief() {
             {/* Main image */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-elevated sm:aspect-[3/4]">
               <Image
-                src="/photos/Food processing in a clean factory setting.png"
-                alt="BRK Agro processing facility"
+                src="/photos/company-building.jpeg"
+                alt="BRK Agro company building"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -72,6 +72,25 @@ export function AboutBrief() {
                 </div>
               </div>
             </div>
+
+            {/* Inset company gate image */}
+            <motion.div
+              initial={{ opacity: 0, y: 16, scale: 0.92 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute -left-4 top-5 hidden overflow-hidden rounded-2xl border border-border-soft bg-warm-white p-1.5 shadow-elevated sm:block lg:-left-6"
+            >
+              <div className="relative h-24 w-36 overflow-hidden rounded-xl lg:h-28 lg:w-44">
+                <Image
+                  src="/photos/company-gate.jpeg"
+                  alt="BRK Agro company gate"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 144px, 176px"
+                />
+              </div>
+            </motion.div>
 
             {/* Floating badge — bottom right */}
             <motion.div

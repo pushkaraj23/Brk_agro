@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "retort corn enquiry",
     "frozen food export contact india",
     "brk agro contact",
-    "nashik corn exporter contact",
+    "pune shirur corn exporter contact",
   ],
   alternates: {
     canonical: "/contact",

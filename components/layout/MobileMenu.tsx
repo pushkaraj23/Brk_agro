@@ -129,7 +129,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </p>
               <div className="space-y-2">
                 <a
-                  href={`tel:${contactInfo.phone}`}
+                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
                   className="flex items-center gap-2.5 text-xs font-medium text-text-muted transition-colors hover:text-brand-green"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-soft-green">

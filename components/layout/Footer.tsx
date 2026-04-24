@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
-import { siteConfig, navLinks, contactInfo } from "@/lib/constants";
+import { siteConfig, navLinks, contactInfo, products } from "@/lib/constants";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 
 const socialIconClass =
@@ -44,6 +44,7 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const footerProducts = products;
 
   return (
     <footer className="relative bg-[#2D2A1E]">
@@ -96,8 +97,16 @@ export function Footer() {
                 Our Products
               </h3>
               <ul className="space-y-2.5 text-sm text-white/45">
-                <li>Frozen Corn</li>
-                <li>Retort Corn</li>
+                {footerProducts.map((product) => (
+                  <li key={product.slug}>
+                    <Link
+                      href={`/products/${product.slug}`}
+                      className="transition-colors hover:text-brand-green"
+                    >
+                      {product.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -117,7 +126,9 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail size={15} className="flex-shrink-0 text-brand-red" />
-                  <span>{contactInfo.email}</span>
+                  <span>
+                    {contactInfo.email} · {contactInfo.directEmail}
+                  </span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Globe size={15} className="flex-shrink-0 text-brand-green" />

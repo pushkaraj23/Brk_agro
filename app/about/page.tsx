@@ -5,11 +5,12 @@ import { MissionVisionSection } from "@/components/sections/MissionVisionSection
 import { CompanyStats } from "./CompanyStats";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { CTASection } from "@/components/sections/CTASection";
+import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSection";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const title = "About BRK Agro - Frozen Corn Processing Company";
 const description =
-  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Nashik, India — mission, vision, IQF and retort focus, hygiene, and export partnerships.";
+  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Shikrapur, Pune district, Maharashtra, India — mission, vision, IQF and retort focus, solar-installed infrastructure, cold room rental services, hygiene, and export partnerships.";
 
 export const metadata: Metadata = {
   title,
@@ -19,7 +20,9 @@ export const metadata: Metadata = {
     "frozen corn company india",
     "retort corn supplier",
     "frozen food exporter india",
-    "nashik frozen food manufacturer",
+    "pune shirur frozen food manufacturer",
+    "cold room on rent",
+    "solar powered cold storage",
   ],
   alternates: {
     canonical: "/about",
@@ -37,6 +40,8 @@ export default function AboutPage() {
       <MissionVisionSection />
       <SectionEdgeOrnament />
       <CompanyStats />
+      <SectionEdgeOrnament />
+      <ColdRoomRentalSection />
       <SectionEdgeOrnament />
       <CTASection />
     </>

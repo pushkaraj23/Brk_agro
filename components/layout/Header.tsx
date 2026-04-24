@@ -27,6 +27,37 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
+        {/* Fixed rental announcement marquee */}
+        <div className="relative h-7 overflow-hidden border-b border-brand-green/25 bg-text-dark text-white">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-text-dark to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-text-dark to-transparent" />
+          <div className="flex h-full w-max min-w-full items-center whitespace-nowrap animate-[marquee_30s_linear_infinite]">
+            {Array.from({ length: 2 }).map((_, idx) => (
+              <div key={idx} className="flex items-center gap-4 pr-4">
+                <span className="text-[10px] leading-none font-semibold uppercase tracking-[0.13em] text-brand-green-light">
+                  Cold Storage Rental Available
+                </span>
+                <span className="text-[10px] leading-none text-white/45">•</span>
+                <span className="text-[10px] leading-none font-medium uppercase tracking-[0.1em] text-white/90">
+                  Solar-Installed Facility
+                </span>
+                <span className="text-[10px] leading-none text-white/45">•</span>
+                <span className="text-[10px] leading-none font-medium uppercase tracking-[0.1em] text-white/85">
+                  7500 MT Capacity
+                </span>
+                <span className="text-[10px] leading-none text-white/45">•</span>
+                <span className="text-[10px] leading-none font-medium uppercase tracking-[0.1em] text-white/85">
+                  Packhouse | Blast Freezer | Ripening Chambers
+                </span>
+                <span className="text-[10px] leading-none text-white/45">•</span>
+                <span className="text-[10px] leading-none font-medium uppercase tracking-[0.1em] text-white">
+                  Contact BRK Agro for Cold Room Booking
+                </span>
+                <span className="inline-block w-8" />
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* ── Brand gradient strip — collapses on scroll ── */}
         <motion.div

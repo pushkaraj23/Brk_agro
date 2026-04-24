@@ -3,11 +3,11 @@ export const siteConfig = {
   tagline: "Frozen Corn & Retort Corn — From Farm to Export",
   description:
     "BRK Agro is an India-based manufacturer and exporter of Frozen Corn and Retort Corn — advanced IQF processing, retort technology, hygienic infrastructure, and export-ready packaging for global buyers.",
-  phone: "+91 98765 43210",
-  email: "exports@brkagro.com",
+  phone: "+91 70309 22272",
+  email: "customercare@brkagro.com",
   website: "www.brkagro.com",
   address:
-    "BRK Agro Processing Unit, Industrial Area, Nashik, Maharashtra, India",
+    "A/P, Rautwadi, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
 };
 
 export const navLinks = [
@@ -48,7 +48,7 @@ export const aboutContent = {
   briefLead:
     "From trusted Indian farms to global buyers — we specialize in Frozen Corn and Retort Corn using JBT IQF and advanced retort systems that lock in sweetness, color, and food safety at scale.",
   description:
-    "BRK Agro is a focused processor and exporter of Frozen Corn and Retort Corn from India. Our Nashik facility combines hygienic handling, JBT IQF freezing for kernels, and retort technology for shelf-stable corn on the cob — so every batch meets consistent export specifications, traceability, and international food safety expectations.",
+    "BRK Agro is a focused processor and exporter of Frozen Corn and Retort Corn from India. Our Shikrapur (Pune district) facility combines hygienic handling, JBT IQF freezing for kernels, and retort technology for shelf-stable corn on the cob — so every batch meets consistent export specifications, traceability, and international food safety expectations.",
   features: [
     {
       title: "Natural Taste",
@@ -224,37 +224,6 @@ export const products = [
     ] satisfies ProductApplication[],
   },
   {
-    name: "French Fries",
-    shortName: "Fries",
-    slug: "french-fries",
-    tagline: "Crisp-Cut Frozen Fries",
-    description: "Uniform frozen fries crafted for quick service, retail, and foodservice use.",
-    longDescription:
-      "Our frozen french fries are processed from quality raw material with strict sorting and process controls. They are built for consistent cooking performance, appealing color, and dependable texture for high-volume use.",
-    image: "/products/french-fries.png",
-    gradient: "from-amber-300 via-orange-300 to-yellow-400",
-    bgColor: "#FFF4DB",
-    color: "red" as const,
-    features: ["Uniform Cut", "Fast Cooking", "Consistent Texture", "Foodservice Ready"],
-    specifications: {
-      Product: "Frozen French Fries",
-      Brix: "N/A",
-      Quality: "Free of Insects, Pest Infestation and Foreign matter",
-      Processing: "Cut, Blanched, Frozen",
-      "Storage Temp": "-18°C or below",
-      "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
-      Certifications: "HACCP, ISO 22000",
-    },
-    applications: [
-      { title: "Quick service restaurants", image: "/photos/Industrial food processing in action.png" },
-      { title: "Retail freezer aisles", image: "/photos/Frozen mixed vegetables in packaging display.png" },
-      { title: "Institutional kitchens", image: "/photos/Industrial food packaging in action.png" },
-      { title: "Export distribution", image: "/photos/Warehouse worker managing boxed cargo.png" },
-      { title: "Foodservice supply chains", image: "/photos/Industrial warehouse with forklift operation.png" },
-    ] satisfies ProductApplication[],
-  },
-  {
     name: "Mixed Vegetables",
     shortName: "Mixed Veg",
     slug: "mixed-vegetables",
@@ -417,7 +386,7 @@ export const products = [
     description: "Retort-processed corn for ambient storage and reliable distribution.",
     longDescription:
       "Our retort corn line is designed for shelf-stable convenience while maintaining quality and taste. It is ideal for broad distribution where ambient handling and long shelf life are key requirements.",
-    image: "/products/retort-corn.png",
+    image: "/products/frozen-retort-corn.png",
     gradient: "from-yellow-300 via-amber-300 to-orange-300",
     bgColor: "#FFF7D6",
     color: "red" as const,
@@ -502,14 +471,17 @@ export const trustPoints = [
 
 export const contactInfo = {
   companyName: "BRK Agro",
-  address: "BRK Agro Processing Unit, Industrial Area, Nashik, Maharashtra, India",
-  phone: "+91 98765 43210",
-  email: "exports@brkagro.com",
+  address:
+    "A/P, Rautwadi, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
+  contactName: "Mr. Shrikant Magar",
+  phone: "+91 70309 22272",
+  email: "customercare@brkagro.com",
+  directEmail: "shrikant.magar@brkagro.com",
   website: "www.brkagro.com",
 };
 
 export const socialLinks = {
-  whatsapp: "https://wa.me/919876543210",
+  whatsapp: "https://wa.me/919703922272",
   instagram: "#",
   linkedin: "#",
 };

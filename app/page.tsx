@@ -5,14 +5,15 @@ import { AboutBrief } from "@/components/sections/home/AboutBrief";
 import { ProductsBrief } from "@/components/sections/home/ProductsBrief";
 import { WhyBrkBrief } from "@/components/sections/home/WhyBrkBrief";
 import { InfrastructureBrief } from "@/components/sections/home/InfrastructureBrief";
+import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
-import { siteConfig } from "@/lib/constants";
+import { siteConfig, contactInfo } from "@/lib/constants";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const homeTitle = "Frozen Corn & Retort Corn Exporter from India";
 const homeDescription =
-  "Premium Frozen Corn and Retort Corn from Nashik, India — IQF kernels, retort corn on the cob, hygienic processing, and export support for distributors and food brands.";
+  "Premium Frozen Corn and Retort Corn from Shikrapur, Pune district, Maharashtra, India — IQF kernels, retort corn on the cob, hygienic processing, solar-installed infrastructure, and cold room rental support.";
 
 export const metadata: Metadata = {
   title: homeTitle,
@@ -25,7 +26,10 @@ export const metadata: Metadata = {
     "iqf frozen corn",
     "corn on cobs vacuum packed",
     "sweet corn kernels iqf",
-    "brk agro nashik",
+    "brk agro pune shirur",
+    "shikrapur frozen corn",
+    "cold room rental facility",
+    "solar cold storage",
   ],
   alternates: {
     canonical: "/",
@@ -55,15 +59,17 @@ export default function HomePage() {
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Industrial Area",
-      addressLocality: "Nashik",
+      streetAddress: "A/P, Rautwadi, Shikrapur",
+      addressLocality: "Shirur",
       addressRegion: "Maharashtra",
+      postalCode: "412208",
       addressCountry: "IN",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+919876543210",
-      contactType: "sales",
+      telephone: contactInfo.phone.replace(/\s/g, ""),
+      email: contactInfo.email,
+      contactType: "customer service",
       areaServed: "Worldwide",
       availableLanguage: ["English"],
     },
@@ -91,6 +97,8 @@ export default function HomePage() {
       <WhyBrkBrief />
       <SectionEdgeOrnament />
       <InfrastructureBrief />
+      <SectionEdgeOrnament />
+      <ColdRoomRentalSection />
       <SectionEdgeOrnament />
       <CTASection />
     </>

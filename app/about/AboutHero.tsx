@@ -82,8 +82,8 @@ export function AboutHero() {
               className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated"
             >
               <Image
-                src="/photos/Clean industrial food processing plant.png"
-                alt="BRK Agro processing facility"
+                src="/photos/company-building.jpeg"
+                alt="BRK Agro company building"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -117,11 +117,11 @@ export function AboutHero() {
                 style={{ animationDuration: "8s" }}
               >
                 <Image
-                  src="/products/mixed_veggies.png"
-                  alt="Retort Corn"
+                  src="/photos/company-gate.jpeg"
+                  alt="BRK Agro company gate"
                   width={140}
                   height={140}
-                  className="h-20 w-20 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
+                  className="h-20 w-20 rounded-xl object-cover sm:h-24 sm:w-24 lg:h-28 lg:w-28"
                 />
               </div>
             </motion.div>

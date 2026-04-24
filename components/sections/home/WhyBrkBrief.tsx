@@ -19,7 +19,7 @@ const features = [
 ];
 
 const featureImages = [
-  "/photos/Fresh frozen vegetables processing area.png",
+  "/photos/Handshake in the golden cornfield.png",
   "/photos/Frozen vegetable processing line in action.png",
   "/photos/Sterile industrial food processing facility.png",
   "/photos/Modern food packaging in action.png",

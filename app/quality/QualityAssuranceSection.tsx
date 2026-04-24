@@ -399,10 +399,10 @@ export function QualityAssuranceSection() {
                 </p>
               </div>
               <div className="relative z-[1] mt-6 flex flex-wrap justify-center gap-2">
-                {["IQF-ready", "Export docs", "HACCP mindset"].map((tag) => (
+                {["JBT MACHINES", "IQF FACILITY", "RETORT FACILITY"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/15 bg-black/25 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/70"
+                    className="rounded-full border border-brand-red/30 bg-brand-red/15 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white"
                   >
                     {tag}
                   </span>

@@ -198,7 +198,7 @@ export function ContactSection() {
                     label="Phone"
                     color="green"
                   >
-                    {contactInfo.phone}
+                    {contactInfo.phone} ({contactInfo.contactName})
                   </InfoRow>
                   <InfoRow
                     icon={<Mail size={18} />}
@@ -206,6 +206,13 @@ export function ContactSection() {
                     color="red"
                   >
                     {contactInfo.email}
+                  </InfoRow>
+                  <InfoRow
+                    icon={<Mail size={18} />}
+                    label="Direct email"
+                    color="green"
+                  >
+                    {contactInfo.directEmail}
                   </InfoRow>
                   <InfoRow
                     icon={<Globe size={18} />}
@@ -224,7 +231,7 @@ export function ContactSection() {
                     <MapPin size={26} className="text-brand-green" />
                   </div>
                   <p className="font-display text-base font-bold text-text-dark">
-                    Nashik, Maharashtra
+                    Shikrapur, Tal. Shirur, Pune
                   </p>
                   <p className="mt-1 text-sm text-text-muted">India</p>
                   <p className="mt-4 max-w-[220px] text-xs leading-relaxed text-text-light">

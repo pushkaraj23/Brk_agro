@@ -7,6 +7,7 @@ import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer } from "@/lib/animations";
 import { ArrowRight, Mail, Phone } from "lucide-react";
+import { contactInfo } from "@/lib/constants";
 
 export function CTASection() {
   return (
@@ -75,25 +76,25 @@ export function CTASection() {
               {/* Contact info */}
               <div className="mb-6 flex flex-col gap-3">
                 <a
-                  href="mailto:info@brkagro.com"
+                  href={`mailto:${contactInfo.email}`}
                   className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.05] px-4 py-3 transition-colors duration-200 hover:bg-white/[.10]"
                 >
                   <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-green/20 text-brand-green">
                     <Mail size={15} />
                   </div>
                   <span className="text-sm font-medium text-white/80 group-hover:text-white">
-                    info@brkagro.com
+                    {contactInfo.email}
                   </span>
                 </a>
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
                   className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.05] px-4 py-3 transition-colors duration-200 hover:bg-white/[.10]"
                 >
                   <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-red/20 text-brand-red">
                     <Phone size={15} />
                   </div>
                   <span className="text-sm font-medium text-white/80 group-hover:text-white">
-                    +91 XXXX XXX XXX
+                    {contactInfo.phone} · {contactInfo.contactName}
                   </span>
                 </a>
               </div>

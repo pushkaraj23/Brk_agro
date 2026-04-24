@@ -29,6 +29,7 @@ export function ProductShowcase() {
         {products.map((product, index) => {
           const isReversed = index % 2 !== 0;
           const isGreen = product.color === "green";
+          const packagingDetails = product.specifications.Packaging?.split("\n") ?? [];
 
           return (
             <div
@@ -202,6 +203,34 @@ export function ProductShowcase() {
                         </span>
                       ))}
                     </div>
+
+                    {/* Packaging details */}
+                    {packagingDetails.length > 0 && (
+                      <div
+                        className={`mb-8 rounded-2xl border p-4 sm:p-5 ${
+                          isGreen
+                            ? "border-brand-green/15 bg-brand-green/[.04]"
+                            : "border-brand-red/12 bg-brand-red/[.04]"
+                        }`}
+                      >
+                        <p
+                          className={`mb-2 text-xs font-bold uppercase tracking-[0.18em] ${
+                            isGreen
+                              ? "text-brand-green-dark"
+                              : "text-brand-red-dark"
+                          }`}
+                        >
+                          Packaging
+                        </p>
+                        <ul className="space-y-1.5 text-sm text-text-dark">
+                          {packagingDetails.map((packDetail) => (
+                            <li key={packDetail} className="leading-relaxed">
+                              {packDetail}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
                     {/* CTA */}
                     <Link

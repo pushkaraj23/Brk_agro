@@ -3,13 +3,14 @@ import { InfrastructureHero } from "./InfrastructureHero";
 import { InfrastructureSection } from "@/components/sections/InfrastructureSection";
 import { InfrastructureProcess } from "./InfrastructureProcess";
 import { InfrastructureAssurance } from "./InfrastructureAssurance";
+import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSection";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const title = "Infrastructure - IQF & Retort Corn Processing Facility";
 const description =
-  "BRK Agro processing infrastructure in Nashik: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, and cold storage.";
+  "BRK Agro processing infrastructure in Shikrapur, Pune district: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, solar-installed utilities, and cold room rental capacity.";
 
 export const metadata: Metadata = {
   title,
@@ -19,7 +20,9 @@ export const metadata: Metadata = {
     "retort processing plant india",
     "frozen corn infrastructure",
     "cold chain frozen foods",
-    "nashik iqf plant",
+    "pune shirur iqf plant",
+    "cold room rental",
+    "solar installed facility",
   ],
   alternates: {
     canonical: "/infrastructure",
@@ -33,6 +36,8 @@ export default function InfrastructurePage() {
       <InfrastructureHero />
       <SectionEdgeOrnament />
       <InfrastructureSection />
+      <SectionEdgeOrnament />
+      <ColdRoomRentalSection />
       <SectionEdgeOrnament />
       <InfrastructureProcess />
       <SectionEdgeOrnament />
