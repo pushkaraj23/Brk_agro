@@ -108,12 +108,12 @@ export function ContactHero() {
 
               <div className="grid grid-cols-2 gap-3 p-4 sm:p-5">
                 <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Direct email</p>
-                  <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.directEmail}</p>
-                </div>
-                <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
                   <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Customer care</p>
                   <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.email}</p>
+                </div>
+                <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Direct email</p>
+                  <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.directEmail}</p>
                 </div>
               </div>
 

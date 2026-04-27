@@ -7,7 +7,7 @@ export const siteConfig = {
   email: "customercare@brkagro.com",
   website: "www.brkagro.com",
   address:
-    "A/P, Rautwadi, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
+    "A/P, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
 };
 
 export const navLinks = [
@@ -48,7 +48,7 @@ export const aboutContent = {
   briefLead:
     "From trusted Indian farms to global buyers — we specialize in Frozen Corn and Retort Corn using JBT IQF and advanced retort systems that lock in sweetness, color, and food safety at scale.",
   description:
-    "BRK Agro is a focused processor and exporter of Frozen Corn and Retort Corn from India. Our Shikrapur (Pune district) facility combines hygienic handling, JBT IQF freezing for kernels, and retort technology for shelf-stable corn on the cob — so every batch meets consistent export specifications, traceability, and international food safety expectations.",
+    "BRK Agro is a focused processor and exporter of Frozen Corn and Retort Corn from India. Our Pune district facility combines hygienic handling, JBT IQF freezing for kernels, and retort technology for shelf-stable corn on the cob — so every batch meets consistent export specifications, traceability, and international food safety expectations.",
   features: [
     {
       title: "Natural Taste",
@@ -149,7 +149,7 @@ export const products = [
       "Processing": "Individual Quick Freezing (IQF)",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      "Packaging": "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      "Packaging": "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       "Certifications": "HACCP, ISO 22000",
     },
     applications: [
@@ -197,7 +197,7 @@ export const products = [
       "Processing": "Advanced Retort Technology",
       "Storage": "Ambient (no refrigeration needed)",
       "Shelf Life": "18 months",
-      "Packaging": "4 Cobs x 12 Pkt = 48 Cobs / Carton",
+      "Packaging": "4 cobs x 12 pkt = 48 cobs / carton\nAvailable as per customer requirement",
       "Certifications": "HACCP, ISO 22000",
     },
     applications: [
@@ -243,7 +243,7 @@ export const products = [
       Processing: "Cleaned, Graded, IQF",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      Packaging: "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -274,7 +274,7 @@ export const products = [
       Processing: "Sorted, Blanched, IQF",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      Packaging: "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -305,7 +305,7 @@ export const products = [
       Processing: "Trimmed, Cut, Frozen",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      Packaging: "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -336,7 +336,7 @@ export const products = [
       Processing: "Washed, Diced, Frozen",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      Packaging: "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -367,7 +367,7 @@ export const products = [
       Processing: "Floret Cutting and Freezing",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
-      Packaging: "400 G x 20 Pkt = 8 Kg / Carton\n2.5 Kg x 4 Pkt = 10 Kg / Carton\n30kg Bulk PP Bags",
+      Packaging: "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -398,7 +398,7 @@ export const products = [
       Processing: "Retort Thermal Processing",
       Storage: "Ambient",
       "Shelf Life": "18 months",
-      Packaging: "4 Cobs x 12 Pkt = 48 Cobs / Carton",
+      Packaging: "4 cobs x 12 pkt = 48 cobs / carton\nAvailable as per customer requirement",
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
@@ -472,8 +472,8 @@ export const trustPoints = [
 export const contactInfo = {
   companyName: "BRK Agro",
   address:
-    "A/P, Rautwadi, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
-  contactName: "Mr. Shrikant Magar",
+    "A/P, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
+  contactName: "Mr. Shrikant Magar VP Marketing",
   phone: "+91 70309 22272",
   email: "customercare@brkagro.com",
   directEmail: "shrikant.magar@brkagro.com",
@@ -490,5 +490,6 @@ export const enquiryTypes = [
   "Product Enquiry",
   "Distribution / Partnership",
   "Export Enquiry",
+  "Private Labelling",
   "General Enquiry",
 ];

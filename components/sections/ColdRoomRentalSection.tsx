@@ -60,8 +60,8 @@ export function ColdRoomRentalSection() {
           <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
             <div>
               <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl">
-                Rent Our Solar-Installed{" "}
-                <span className="text-brand-green">Cold Rooms</span>
+                Rent Our Cold Storage{" "}
+                <span className="text-brand-green">Rooms</span>
               </h2>
               <p className="mb-7 max-w-2xl text-base leading-relaxed text-text-muted lg:text-lg">
                 BRK Agro now offers cold room rental for businesses that need

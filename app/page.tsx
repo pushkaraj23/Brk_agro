@@ -13,7 +13,7 @@ import { pageSocialMetadata } from "@/lib/seo";
 
 const homeTitle = "Frozen Corn & Retort Corn Exporter from India";
 const homeDescription =
-  "Premium Frozen Corn and Retort Corn from Shikrapur, Pune district, Maharashtra, India — IQF kernels, retort corn on the cob, hygienic processing, solar-installed infrastructure, and cold room rental support.";
+  "Premium Frozen Corn and Retort Corn from Pune district, Maharashtra, India — IQF kernels, retort corn on the cob, hygienic processing, solar-installed infrastructure, and cold room rental support.";
 
 export const metadata: Metadata = {
   title: homeTitle,
@@ -59,7 +59,7 @@ export default function HomePage() {
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "A/P, Rautwadi, Shikrapur",
+      streetAddress: "A/P, Shikrapur",
       addressLocality: "Shirur",
       addressRegion: "Maharashtra",
       postalCode: "412208",

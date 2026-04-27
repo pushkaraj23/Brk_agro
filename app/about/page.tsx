@@ -10,7 +10,7 @@ import { pageSocialMetadata } from "@/lib/seo";
 
 const title = "About BRK Agro - Frozen Corn Processing Company";
 const description =
-  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Shikrapur, Pune district, Maharashtra, India — mission, vision, IQF and retort focus, solar-installed infrastructure, cold room rental services, hygiene, and export partnerships.";
+  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Pune district, Maharashtra, India — mission, vision, IQF and retort focus, solar-installed infrastructure, cold room rental services, hygiene, and export partnerships.";
 
 export const metadata: Metadata = {
   title,

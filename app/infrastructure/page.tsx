@@ -10,7 +10,7 @@ import { pageSocialMetadata } from "@/lib/seo";
 
 const title = "Infrastructure - IQF & Retort Corn Processing Facility";
 const description =
-  "BRK Agro processing infrastructure in Shikrapur, Pune district: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, solar-installed utilities, and cold room rental capacity.";
+  "BRK Agro processing infrastructure in Pune district: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, solar-installed utilities, and cold room rental capacity.";
 
 export const metadata: Metadata = {
   title,

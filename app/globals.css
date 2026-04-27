@@ -36,7 +36,7 @@
   --shadow-glow-red: 0 4px 20px rgba(237, 28, 36, 0.15);
 
   /* ─── Fonts ─── */
-  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-manrope), var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 

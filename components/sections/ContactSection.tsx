@@ -11,6 +11,9 @@ import { MapPin, Phone, Mail, Globe, Send, CheckCircle, MessageSquare } from "lu
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const mapLink = "https://maps.app.goo.gl/zo1KK8XeTcgkcdU19?g_st=ic";
+  const mapEmbedUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.8446008052165!2d74.1499899!3d18.715774199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2d74ed2ef6595%3A0x5c60cb1d0b5d630!2sBRK%20Agro%20Cold%20Storages%20-%20Shikrapur%20Plant!5e0!3m2!1sen!2sin!4v1777272976661!5m2!1sen!2sin";
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -202,17 +205,17 @@ export function ContactSection() {
                   </InfoRow>
                   <InfoRow
                     icon={<Mail size={18} />}
-                    label="Email"
-                    color="red"
-                  >
-                    {contactInfo.email}
-                  </InfoRow>
-                  <InfoRow
-                    icon={<Mail size={18} />}
                     label="Direct email"
                     color="green"
                   >
                     {contactInfo.directEmail}
+                  </InfoRow>
+                  <InfoRow
+                    icon={<Mail size={18} />}
+                    label="Email"
+                    color="red"
+                  >
+                    {contactInfo.email}
                   </InfoRow>
                   <InfoRow
                     icon={<Globe size={18} />}
@@ -224,20 +227,37 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-3xl border border-border-soft bg-gradient-to-br from-brand-green/[.09] via-soft-green to-cream-dark/40 p-8 shadow-card">
+              <div className="relative overflow-hidden rounded-3xl border border-border-soft bg-gradient-to-br from-brand-green/[.09] via-soft-green to-cream-dark/40 p-4 shadow-card sm:p-5">
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-brand-green/15 blur-2xl" />
-                <div className="relative flex flex-col items-center text-center">
-                  <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-warm-white shadow-soft">
-                    <MapPin size={26} className="text-brand-green" />
+                <div className="relative">
+                  <div className="mb-3 flex items-center justify-between">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">
+                      Facility Location
+                    </p>
+                    <a
+                      href={mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-semibold text-brand-green underline-offset-4 hover:underline"
+                    >
+                      Open in Maps
+                    </a>
                   </div>
-                  <p className="font-display text-base font-bold text-text-dark">
-                    Shikrapur, Tal. Shirur, Pune
-                  </p>
-                  <p className="mt-1 text-sm text-text-muted">India</p>
-                  <p className="mt-4 max-w-[220px] text-xs leading-relaxed text-text-light">
-                    Processing unit visits by appointment for qualified buyers
-                    and partners.
-                  </p>
+
+                  <div className="overflow-hidden rounded-2xl border border-border-soft bg-warm-white shadow-soft">
+                    <iframe
+                      title="BRK Agro location map"
+                      src={mapEmbedUrl}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="h-56 w-full"
+                    />
+                  </div>
+
+                  <div className="mt-3 flex items-center gap-2 text-xs text-text-muted">
+                    <MapPin size={14} className="text-brand-green" />
+                    <span>Shikrapur, Tal. Shirur, Dist. Pune, Maharashtra</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
