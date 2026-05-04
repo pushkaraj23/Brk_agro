@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navLinks } from "@/lib/constants";
+import { brochureAsset, navLinks } from "@/lib/constants";
 import { MobileMenu } from "./MobileMenu";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -170,17 +170,27 @@ export function Header() {
                 })}
               </nav>
 
-              {/* ── Desktop CTA ── */}
-              <Link
-                href="/contact"
-                className="group hidden flex-shrink-0 items-center gap-2 rounded-xl border border-brand-red bg-brand-red px-5 py-2.5 text-sm font-bold text-white shadow-glow-red transition-all duration-300 hover:bg-brand-red-dark hover:shadow-elevated lg:inline-flex"
-              >
-                Enquire Now
-                <ArrowRight
-                  size={14}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </Link>
+              {/* ── Desktop CTA + brochure ── */}
+              <div className="hidden flex-shrink-0 items-center gap-2 lg:flex">
+                <a
+                  href={brochureAsset.href}
+                  download={brochureAsset.fileName}
+                  className="group inline-flex items-center gap-1.5 rounded-xl border border-brand-green/35 bg-brand-green/[.08] px-3.5 py-2.5 text-xs font-bold text-brand-green-dark transition-all duration-300 hover:border-brand-green/50 hover:bg-brand-green/[.14]"
+                >
+                  <FileDown size={14} className="opacity-80" />
+                  Brochure
+                </a>
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-2 rounded-xl border border-brand-red bg-brand-red px-5 py-2.5 text-sm font-bold text-white shadow-glow-red transition-all duration-300 hover:bg-brand-red-dark hover:shadow-elevated"
+                >
+                  Enquire Now
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
+              </div>
 
               {/* ── Mobile toggle ── */}
               <button

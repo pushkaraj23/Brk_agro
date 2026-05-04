@@ -7,7 +7,8 @@ import { Container } from "@/components/ui/Container";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
-import { ChevronRight, Sparkles } from "lucide-react";
+import { ChevronRight, FileDown, Sparkles } from "lucide-react";
+import { brochureAsset } from "@/lib/constants";
 
 export function ProductsHero() {
   return (
@@ -84,6 +85,17 @@ export function ProductsHero() {
                 <p className="font-display text-xl font-black text-text-dark">Global</p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Export Ready</p>
               </div>
+            </motion.div>
+
+            <motion.div variants={heroItem} className="mt-5">
+              <a
+                href={brochureAsset.href}
+                download={brochureAsset.fileName}
+                className="inline-flex items-center gap-2 rounded-xl border border-brand-green/30 bg-brand-green/[.08] px-4 py-2.5 text-sm font-bold text-brand-green-dark transition-colors hover:border-brand-green/45 hover:bg-brand-green/[.12]"
+              >
+                <FileDown size={16} />
+                Download product brochure
+              </a>
             </motion.div>
           </motion.div>
 

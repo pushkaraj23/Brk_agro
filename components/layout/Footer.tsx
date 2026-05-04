@@ -4,6 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { siteConfig, navLinks, contactInfo, products } from "@/lib/constants";
+import { BrochureDownloadLink } from "@/components/ui/BrochureDownloadLink";
+import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 
 const socialIconClass =
@@ -78,6 +80,11 @@ export function Footer() {
                 Quick Links
               </h3>
               <ul className="space-y-2.5">
+                <li>
+                  <BrochureDownloadLink className="text-sm text-white/45 transition-colors hover:text-brand-green">
+                    Download product brochure (PDF)
+                  </BrochureDownloadLink>
+                </li>
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -122,12 +129,31 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Phone size={15} className="flex-shrink-0 text-brand-green" />
-                  <span>{contactInfo.phone}</span>
+                  <a
+                    href={phoneTelHref(contactInfo.phone)}
+                    className="transition-colors hover:text-brand-green"
+                  >
+                    {contactInfo.phone}
+                  </a>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail size={15} className="flex-shrink-0 text-brand-red" />
-                  <span>
-                    {contactInfo.email} · {contactInfo.directEmail}
+                  <span className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+                    <a
+                      href={emailMailtoHref(contactInfo.email)}
+                      className="transition-colors hover:text-brand-green"
+                    >
+                      {contactInfo.email}
+                    </a>
+                    <span className="text-white/35" aria-hidden>
+                      ·
+                    </span>
+                    <a
+                      href={emailMailtoHref(contactInfo.directEmail)}
+                      className="transition-colors hover:text-brand-green"
+                    >
+                      {contactInfo.directEmail}
+                    </a>
                   </span>
                 </li>
                 <li className="flex items-center gap-2.5">

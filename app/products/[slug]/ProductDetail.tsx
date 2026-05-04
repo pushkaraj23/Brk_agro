@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/Badge";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Button } from "@/components/ui/Button";
 import { heroStagger, heroItem, staggerContainer, fadeUp } from "@/lib/animations";
-import { ChevronRight, Check, Snowflake, Mail } from "lucide-react";
-import { products } from "@/lib/constants";
+import { ChevronRight, Check, Snowflake, Mail, FileDown } from "lucide-react";
+import { brochureAsset, products } from "@/lib/constants";
 import { ProductEnquiryForm } from "@/components/products/ProductEnquiryForm";
 
 type Product = (typeof products)[number];
@@ -87,13 +87,22 @@ export function ProductDetail({ product }: { product: Product }) {
                 {product.description}
               </motion.p>
 
-              <motion.div variants={heroItem} className="mt-6">
+              <motion.div variants={heroItem} className="mt-6 flex flex-wrap gap-3">
                 <Button
                   href="/contact"
                   variant={isGreen ? "primary" : "accent"}
                   iconRight={<Mail size={16} />}
                 >
                   Enquire About This Product
+                </Button>
+                <Button
+                  href={brochureAsset.href}
+                  download={brochureAsset.fileName}
+                  variant="secondary"
+                  size="sm"
+                  iconRight={<FileDown size={15} />}
+                >
+                  Product brochure
                 </Button>
               </motion.div>
             </motion.div>

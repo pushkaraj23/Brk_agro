@@ -188,7 +188,7 @@ export const products = [
     gradient: "from-yellow-300 via-amber-400 to-yellow-500",
     bgColor: "#FEF9C3",
     color: "red" as const,
-    features: ["Retort Processed", "Vacuum Sealed", "Shelf Stable", "Heat & Eat"],
+    features: ["Shelf Stable", "Heat & Eat"],
     specifications: {
       "Product": "Retort Corn on Cobs",
       "Type": "Whole Cobs (2 per pack)",
@@ -224,13 +224,45 @@ export const products = [
     ] satisfies ProductApplication[],
   },
   {
+    name: "Retort Corn",
+    shortName: "Retort Corn",
+    slug: "retort-corn",
+    tagline: "Shelf-Stable Corn Format",
+    description: "Retort-processed corn for ambient storage and reliable distribution.",
+    longDescription:
+      "Our retort corn line is designed for shelf-stable convenience while maintaining quality and taste. It is ideal for broad distribution where ambient handling and long shelf life are key requirements.",
+    image: "/products/frozen-retort-corn.png",
+    gradient: "from-yellow-300 via-amber-300 to-orange-300",
+    bgColor: "#FFF7D6",
+    color: "red" as const,
+    features: ["Shelf Stable", "Vacuum Sealed", "Heat and Serve", "Retail Friendly"],
+    specifications: {
+      Product: "Retort Processed Corn",
+      Brix: "Min 9",
+      Quality: "Free of Insects, Pest Infestation and Foreign matter",
+      Processing: "Retort Thermal Processing",
+      Storage: "Ambient",
+      "Shelf Life": "18 months",
+      Packaging: "4 cobs x 12 pkt = 48 cobs / carton\nAvailable as per customer requirement",
+      Certifications: "HACCP, ISO 22000",
+    },
+    applications: [
+      { title: "Retail convenience packs", image: "/photos/Strawberry sorting in a modern factory.png" },
+      { title: "Ambient distribution", image: "/photos/Warehouse worker managing boxed cargo.png" },
+      { title: "Export orders", image: "/photos/Industrial warehouse with forklift operation.png" },
+      { title: "Processed food channels", image: "/photos/Industrial food processing machine in factory.png" },
+      { title: "Quality inspection flow", image: "/photos/Modern food processing facility inspection.png" },
+    ] satisfies ProductApplication[],
+  },
+  {
     name: "Mixed Vegetables",
     shortName: "Mixed Veg",
     slug: "mixed-vegetables",
     tagline: "Balanced Frozen Mix",
-    description: "A colorful blend of frozen vegetables for versatile cooking applications.",
+    description:
+      "A colorful blend of green peas, carrots, green cut beans, and cauliflower—frozen for versatile cooking applications.",
     longDescription:
-      "Our mixed vegetables are prepared in a clean, controlled facility with careful grading and process checks. The blend offers convenience, visual appeal, and reliable quality for retail packs and food service recipes.",
+      "Our mixed vegetables combine green peas, carrots, green cut beans, and cauliflower in a balanced IQF blend. They are prepared in a clean, controlled facility with careful grading and process checks, offering convenience, visual appeal, and reliable quality for retail packs and food service recipes.",
     image: "/products/mixed_veggies.png",
     gradient: "from-green-300 via-lime-300 to-emerald-400",
     bgColor: "#E9F8E7",
@@ -238,6 +270,8 @@ export const products = [
     features: ["Colorful Blend", "Consistent Grade", "Convenient Use", "Export Quality"],
     specifications: {
       Product: "IQF Mixed Vegetables",
+      Ingredients:
+        "Mix of: green peas, carrots, green cut beans, cauliflower",
       Brix: "N/A",
       Quality: "Free of Insects, Pest Infestation and Foreign matter",
       Processing: "Cleaned, Graded, IQF",
@@ -378,37 +412,6 @@ export const products = [
       { title: "Export shipment", image: "/photos/Industrial warehouse with forklift operation.png" },
     ] satisfies ProductApplication[],
   },
-  {
-    name: "Retort Corn",
-    shortName: "Retort Corn",
-    slug: "retort-corn",
-    tagline: "Shelf-Stable Corn Format",
-    description: "Retort-processed corn for ambient storage and reliable distribution.",
-    longDescription:
-      "Our retort corn line is designed for shelf-stable convenience while maintaining quality and taste. It is ideal for broad distribution where ambient handling and long shelf life are key requirements.",
-    image: "/products/frozen-retort-corn.png",
-    gradient: "from-yellow-300 via-amber-300 to-orange-300",
-    bgColor: "#FFF7D6",
-    color: "red" as const,
-    features: ["Shelf Stable", "Convenient Format", "Heat and Serve", "Retail Friendly"],
-    specifications: {
-      Product: "Retort Processed Corn",
-      Brix: "Min 9",
-      Quality: "Free of Insects, Pest Infestation and Foreign matter",
-      Processing: "Retort Thermal Processing",
-      Storage: "Ambient",
-      "Shelf Life": "18 months",
-      Packaging: "4 cobs x 12 pkt = 48 cobs / carton\nAvailable as per customer requirement",
-      Certifications: "HACCP, ISO 22000",
-    },
-    applications: [
-      { title: "Retail convenience packs", image: "/photos/Strawberry sorting in a modern factory.png" },
-      { title: "Ambient distribution", image: "/photos/Warehouse worker managing boxed cargo.png" },
-      { title: "Export orders", image: "/photos/Industrial warehouse with forklift operation.png" },
-      { title: "Processed food channels", image: "/photos/Industrial food processing machine in factory.png" },
-      { title: "Quality inspection flow", image: "/photos/Modern food processing facility inspection.png" },
-    ] satisfies ProductApplication[],
-  },
 ];
 
 export const infrastructure = [
@@ -473,7 +476,7 @@ export const contactInfo = {
   companyName: "BRK Agro",
   address:
     "A/P, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
-  contactName: "Mr. Shrikant Magar VP Marketing",
+  contactName: "Mr. Shrikant Magar Vice President - Sales & Marketing",
   phone: "+91 70309 22272",
   email: "customercare@brkagro.com",
   directEmail: "shrikant.magar@brkagro.com",
@@ -485,6 +488,12 @@ export const socialLinks = {
   instagram: "#",
   linkedin: "#",
 };
+
+/** Product catalogue PDF served from /public */
+export const brochureAsset = {
+  href: "/BRK-Brochure.pdf",
+  fileName: "BRK-Brochure.pdf",
+} as const;
 
 export const enquiryTypes = [
   "Product Enquiry",

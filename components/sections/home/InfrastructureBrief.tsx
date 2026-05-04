@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer } from "@/lib/animations";
-import { SITE_VIDEOS } from "@/lib/siteMedia";
 import { Snowflake, ShieldCheck, Thermometer, ArrowRight } from "lucide-react";
 
 const highlights = [
@@ -147,16 +146,6 @@ export function InfrastructureBrief() {
                 className="relative overflow-hidden rounded-3xl p-8 lg:p-10"
                 style={{ backgroundColor: "#2A4E1E" }}
               >
-                <video
-                  className="absolute inset-0 h-full w-full object-cover opacity-35"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src={SITE_VIDEOS.facilityProcessingMp4} type="video/mp4" />
-                </video>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1f3a16]/88 via-[#27451c]/84 to-[#2A4E1E]/88" />
                 {/* Inner texture */}
                 <div

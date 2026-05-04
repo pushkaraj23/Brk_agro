@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
+import { brochureAsset } from "@/lib/constants";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -110,6 +111,15 @@ function HeroCopy({
         </Button>
         <Button href="/contact" variant="accent">
           Get in Touch
+        </Button>
+        <Button
+          href={brochureAsset.href}
+          download={brochureAsset.fileName}
+          variant="secondary"
+          size="sm"
+          iconRight={<FileDown size={15} />}
+        >
+          Product brochure
         </Button>
       </motion.div>
     </motion.div>

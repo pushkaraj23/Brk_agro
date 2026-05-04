@@ -13,6 +13,8 @@ interface ButtonBaseProps {
   iconRight?: ReactNode;
   children: ReactNode;
   className?: string;
+  /** When `href` is set, passed to the anchor for file downloads (e.g. PDF brochure). */
+  download?: string;
 }
 
 interface ButtonAsButton extends ButtonBaseProps {
@@ -50,6 +52,7 @@ export function Button({
   variant = "primary",
   size = "md",
   href,
+  download,
   icon,
   iconRight,
   children,
@@ -71,6 +74,7 @@ export function Button({
     return (
       <motion.a
         href={href}
+        download={download}
         className={classes}
         onClick={onClick}
         whileHover={{ scale: 1.03 }}

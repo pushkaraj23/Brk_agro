@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navLinks, contactInfo } from "@/lib/constants";
-import { X, ArrowRight, Phone, Mail } from "lucide-react";
+import { brochureAsset, navLinks, contactInfo } from "@/lib/constants";
+import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
+import { X, ArrowRight, Phone, Mail, FileDown } from "lucide-react";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -129,7 +130,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </p>
               <div className="space-y-2">
                 <a
-                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                  href={phoneTelHref(contactInfo.phone)}
                   className="flex items-center gap-2.5 text-xs font-medium text-text-muted transition-colors hover:text-brand-green"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-soft-green">
@@ -138,7 +139,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   {contactInfo.phone}
                 </a>
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={emailMailtoHref(contactInfo.email)}
                   className="flex items-center gap-2.5 text-xs font-medium text-text-muted transition-colors hover:text-brand-red"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-soft-red">
@@ -146,16 +147,33 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </span>
                   {contactInfo.email}
                 </a>
+                <a
+                  href={emailMailtoHref(contactInfo.directEmail)}
+                  className="flex items-center gap-2.5 text-xs font-medium text-text-muted transition-colors hover:text-brand-green"
+                >
+                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-soft-green">
+                    <Mail size={11} className="text-brand-green" />
+                  </span>
+                  {contactInfo.directEmail}
+                </a>
               </div>
             </motion.div>
 
-            {/* ── CTA button ── */}
+            {/* ── Brochure + CTA ── */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.48, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="px-6 pb-8 flex-shrink-0"
+              className="flex flex-shrink-0 flex-col gap-2.5 px-6 pb-8"
             >
+              <a
+                href={brochureAsset.href}
+                download={brochureAsset.fileName}
+                className="flex w-full items-center justify-center gap-2 rounded-2xl border border-brand-green/35 bg-brand-green/[.1] py-3.5 text-sm font-bold text-brand-green-dark transition-colors hover:bg-brand-green/[.16]"
+              >
+                <FileDown size={16} />
+                Download brochure (PDF)
+              </a>
               <Link
                 href="/contact"
                 onClick={onClose}

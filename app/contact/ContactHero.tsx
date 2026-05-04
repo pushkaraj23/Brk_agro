@@ -7,8 +7,9 @@ import { Container } from "@/components/ui/Container";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { Badge } from "@/components/ui/Badge";
 import { heroStagger, heroItem } from "@/lib/animations";
-import { contactInfo } from "@/lib/constants";
-import { ChevronRight, Clock, Phone } from "lucide-react";
+import { brochureAsset, contactInfo } from "@/lib/constants";
+import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
+import { ChevronRight, Clock, FileDown, Phone } from "lucide-react";
 
 export function ContactHero() {
   return (
@@ -76,10 +77,24 @@ export function ContactHero() {
                 <Clock size={14} />
                 Response within 24 hours
               </span>
-              <span className="inline-flex items-center gap-2 rounded-xl border border-brand-red/18 bg-brand-red/[.06] px-4 py-3 text-xs font-semibold text-brand-red-dark">
+              <a
+                href={phoneTelHref(contactInfo.phone)}
+                className="inline-flex items-center gap-2 rounded-xl border border-brand-red/18 bg-brand-red/[.06] px-4 py-3 text-xs font-semibold text-brand-red-dark underline-offset-2 transition-colors hover:bg-brand-red/[.1] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+              >
                 <Phone size={14} />
                 {contactInfo.phone}
-              </span>
+              </a>
+            </motion.div>
+
+            <motion.div variants={heroItem} className="mt-3">
+              <a
+                href={brochureAsset.href}
+                download={brochureAsset.fileName}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-green-dark underline-offset-2 transition-colors hover:text-brand-green hover:underline"
+              >
+                <FileDown size={16} />
+                Download product brochure (PDF)
+              </a>
             </motion.div>
           </motion.div>
 
@@ -107,13 +122,23 @@ export function ContactHero() {
               </div>
 
               <div className="grid grid-cols-2 gap-3 p-4 sm:p-5">
-                <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Customer care</p>
-                  <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.email}</p>
-                </div>
                 <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
                   <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Direct email</p>
-                  <p className="mt-1 text-sm font-semibold text-text-dark">{contactInfo.directEmail}</p>
+                  <a
+                    href={emailMailtoHref(contactInfo.directEmail)}
+                    className="mt-1 block text-sm font-semibold text-text-dark underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+                  >
+                    {contactInfo.directEmail}
+                  </a>
+                </div>
+                <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Customer care</p>
+                  <a
+                    href={emailMailtoHref(contactInfo.email)}
+                    className="mt-1 block text-sm font-semibold text-text-dark underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+                  >
+                    {contactInfo.email}
+                  </a>
                 </div>
               </div>
 

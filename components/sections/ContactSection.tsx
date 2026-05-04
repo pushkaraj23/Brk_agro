@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { Button } from "@/components/ui/Button";
-import { contactInfo, enquiryTypes } from "@/lib/constants";
+import { brochureAsset, contactInfo, enquiryTypes } from "@/lib/constants";
+import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
 import { staggerContainer, fadeUp } from "@/lib/animations";
-import { MapPin, Phone, Mail, Globe, Send, CheckCircle, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, Send, CheckCircle, MessageSquare, FileDown } from "lucide-react";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -201,21 +202,39 @@ export function ContactSection() {
                     label="Phone"
                     color="green"
                   >
-                    {contactInfo.phone} ({contactInfo.contactName})
+                    <a
+                      href={phoneTelHref(contactInfo.phone)}
+                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+                    >
+                      {contactInfo.phone}
+                    </a>{" "}
+                    <span className="font-normal text-text-muted">
+                      ({contactInfo.contactName})
+                    </span>
                   </InfoRow>
                   <InfoRow
                     icon={<Mail size={18} />}
                     label="Direct email"
                     color="green"
                   >
-                    {contactInfo.directEmail}
+                    <a
+                      href={emailMailtoHref(contactInfo.directEmail)}
+                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+                    >
+                      {contactInfo.directEmail}
+                    </a>
                   </InfoRow>
                   <InfoRow
                     icon={<Mail size={18} />}
                     label="Email"
                     color="red"
                   >
-                    {contactInfo.email}
+                    <a
+                      href={emailMailtoHref(contactInfo.email)}
+                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+                    >
+                      {contactInfo.email}
+                    </a>
                   </InfoRow>
                   <InfoRow
                     icon={<Globe size={18} />}
@@ -223,6 +242,19 @@ export function ContactSection() {
                     color="green"
                   >
                     {contactInfo.website}
+                  </InfoRow>
+                  <InfoRow
+                    icon={<FileDown size={18} />}
+                    label="Product catalogue"
+                    color="red"
+                  >
+                    <a
+                      href={brochureAsset.href}
+                      download={brochureAsset.fileName}
+                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+                    >
+                      Download brochure (PDF)
+                    </a>
                   </InfoRow>
                 </div>
               </div>

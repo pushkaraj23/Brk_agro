@@ -6,8 +6,9 @@ import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { staggerContainer } from "@/lib/animations";
-import { ArrowRight, Mail, Phone } from "lucide-react";
-import { contactInfo } from "@/lib/constants";
+import { ArrowRight, FileDown, Mail, Phone } from "lucide-react";
+import { brochureAsset, contactInfo } from "@/lib/constants";
+import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
 
 export function CTASection() {
   return (
@@ -76,7 +77,7 @@ export function CTASection() {
               {/* Contact info */}
               <div className="mb-6 flex flex-col gap-3">
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={emailMailtoHref(contactInfo.email)}
                   className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.05] px-4 py-3 transition-colors duration-200 hover:bg-white/[.10]"
                 >
                   <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-green/20 text-brand-green">
@@ -87,7 +88,7 @@ export function CTASection() {
                   </span>
                 </a>
                 <a
-                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                  href={phoneTelHref(contactInfo.phone)}
                   className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.05] px-4 py-3 transition-colors duration-200 hover:bg-white/[.10]"
                 >
                   <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-red/20 text-brand-red">
@@ -117,6 +118,14 @@ export function CTASection() {
                 >
                   View Product Range
                 </Link>
+                <a
+                  href={brochureAsset.href}
+                  download={brochureAsset.fileName}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/[.04] px-6 py-3.5 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/[.1] hover:text-white"
+                >
+                  <FileDown size={15} className="opacity-90" />
+                  Download brochure (PDF)
+                </a>
               </div>
             </motion.div>
 

@@ -9,6 +9,7 @@ import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSecti
 import { CTASection } from "@/components/sections/CTASection";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { siteConfig, contactInfo } from "@/lib/constants";
+import { phoneDialString } from "@/lib/contactLinks";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const homeTitle = "Frozen Corn & Retort Corn Exporter from India";
@@ -67,7 +68,7 @@ export default function HomePage() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: contactInfo.phone.replace(/\s/g, ""),
+      telephone: phoneDialString(contactInfo.phone),
       email: contactInfo.email,
       contactType: "customer service",
       areaServed: "Worldwide",

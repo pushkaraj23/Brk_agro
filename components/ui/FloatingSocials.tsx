@@ -1,7 +1,9 @@
 "use client";
 
+import type { ComponentType } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { socialLinks } from "@/lib/constants";
+import { FileDown } from "lucide-react";
+import { brochureAsset, socialLinks } from "@/lib/constants";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -36,25 +38,52 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
-const socialItems = [
+type FabIcon = ComponentType<{ className?: string }>;
+
+type FabItem = {
+  key: string;
+  href: string;
+  label: string;
+  className: string;
+  Icon: FabIcon;
+  download?: string;
+  external?: boolean;
+};
+
+const fabItems: FabItem[] = [
   {
+    key: "whatsapp",
     href: socialLinks.whatsapp,
     label: "WhatsApp",
-    icon: WhatsAppIcon,
+    Icon: WhatsAppIcon,
+    external: true,
     className:
       "border-[#25D366]/35 bg-gradient-to-br from-[#25D366]/12 to-[#128C7E]/8 text-[#128C7E] shadow-[0_4px_14px_rgba(37,211,102,0.2)] hover:border-[#25D366]/60 hover:from-[#25D366] hover:to-[#20BD5A] hover:text-white hover:shadow-[0_8px_28px_rgba(37,211,102,0.45)]",
   },
   {
+    key: "brochure",
+    href: brochureAsset.href,
+    label: "Download product brochure PDF",
+    Icon: FileDown,
+    download: brochureAsset.fileName,
+    className:
+      "border-amber-600/35 bg-gradient-to-br from-amber-500/14 to-amber-700/10 text-amber-900 shadow-[0_4px_14px_rgba(217,119,6,0.18)] hover:border-amber-500/55 hover:from-amber-500 hover:to-amber-700 hover:text-white hover:shadow-[0_8px_28px_rgba(217,119,6,0.35)]",
+  },
+  {
+    key: "instagram",
     href: socialLinks.instagram,
     label: "Instagram",
-    icon: InstagramIcon,
+    Icon: InstagramIcon,
+    external: true,
     className:
       "border-fuchsia-300/40 bg-gradient-to-br from-fuchsia-500/12 via-rose-400/10 to-amber-400/12 text-rose-600 shadow-[0_4px_14px_rgba(236,72,153,0.18)] hover:border-transparent hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#bc1888] hover:text-white hover:shadow-[0_8px_28px_rgba(225,48,108,0.35)]",
   },
   {
+    key: "linkedin",
     href: socialLinks.linkedin,
     label: "LinkedIn",
-    icon: LinkedInIcon,
+    Icon: LinkedInIcon,
+    external: true,
     className:
       "border-[#0A66C2]/35 bg-gradient-to-br from-[#0A66C2]/12 to-[#004182]/10 text-[#0A66C2] shadow-[0_4px_14px_rgba(10,102,194,0.22)] hover:border-[#0A66C2]/70 hover:from-[#0A66C2] hover:to-[#004182] hover:text-white hover:shadow-[0_8px_28px_rgba(10,102,194,0.45)]",
   },
@@ -71,13 +100,15 @@ export function FloatingSocials() {
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="flex flex-row items-center gap-2 rounded-[1.35rem] sm:gap-2.5 ">
-        {socialItems.map(({ href, label, icon: Icon, className }, index) => (
+        {fabItems.map(({ key, href, label, Icon, className, download, external }, index) => (
           <motion.a
-            key={label}
+            key={key}
             href={href}
             aria-label={label}
-            target="_blank"
-            rel="noopener noreferrer"
+            download={download}
+            {...(external
+              ? { target: "_blank" as const, rel: "noopener noreferrer" }
+              : {})}
             initial={shouldReduceMotion ? false : { x: 10, scale: 0.92 }}
             animate={shouldReduceMotion ? undefined : { x: 0, scale: 1 }}
             transition={{
@@ -101,5 +132,5 @@ export function FloatingSocials() {
         ))}
       </div>
     </motion.aside>
-  );  
+  );
 }
