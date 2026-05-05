@@ -14,7 +14,8 @@ export const defaultOgImage: OgImageSpec = {
   url: "/brk_logo.png",
   width: 1200,
   height: 630,
-  alt: "BRK Agro — frozen corn and retort corn manufacturer from India",
+  alt:
+    "BRK Agro — leading processor and exporter of premium quality frozen food from India",
 };
 
 /**

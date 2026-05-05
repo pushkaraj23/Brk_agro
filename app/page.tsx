@@ -12,9 +12,10 @@ import { siteConfig, contactInfo } from "@/lib/constants";
 import { phoneDialString } from "@/lib/contactLinks";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const homeTitle = "Frozen Corn & Retort Corn Exporter from India";
+const homeTitle =
+  "BRK Agro | Leading Processor & Exporter of Frozen Food from India";
 const homeDescription =
-  "Premium Frozen Corn and Retort Corn from Pune district, Maharashtra, India — IQF kernels, retort corn on the cob, hygienic processing, solar-installed infrastructure, and cold room rental support.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. IQF kernels, retort corn, mixed vegetables and more — hygienic Pune district facility, export-ready packaging, and cold room rental support.";
 
 export const metadata: Metadata = {
   title: homeTitle,

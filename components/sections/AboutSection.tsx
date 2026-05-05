@@ -34,8 +34,8 @@ export function AboutSection() {
         <SectionLeafAccents />
 
         <Container className="relative">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24">
-            {/* ── LEFT — Content ── */}
+          {/* Row 1: text + image */}
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -54,55 +54,11 @@ export function AboutSection() {
                 {aboutContent.headline}
               </h2>
 
-              <p className="mb-8 text-base leading-relaxed text-text-muted lg:text-lg">
+              <p className="text-base leading-relaxed text-text-muted lg:text-lg">
                 {aboutContent.description}
               </p>
-
-              {/* Feature cards */}
-              <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-30px" }}
-                className="grid grid-cols-1 gap-3 sm:grid-cols-2"
-              >
-                {aboutContent.features.map((feature, i) => {
-                  const Icon = featureIcons[i];
-                  const isGreen = featureColors[i] === "green";
-                  return (
-                    <motion.div
-                      key={feature.title}
-                      variants={fadeUp}
-                      className={`group flex items-start gap-3 rounded-2xl border p-4 transition-all duration-300 ${
-                        isGreen
-                          ? "border-brand-green/15 bg-brand-green/[.05] hover:bg-brand-green/[.10]"
-                          : "border-brand-red/12 bg-brand-red/[.04] hover:bg-brand-red/[.08]"
-                      }`}
-                    >
-                      <div
-                        className={`mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
-                          isGreen
-                            ? "bg-brand-green/15 text-brand-green group-hover:bg-brand-green group-hover:text-white"
-                            : "bg-brand-red/15 text-brand-red group-hover:bg-brand-red group-hover:text-white"
-                        }`}
-                      >
-                        <Icon size={16} />
-                      </div>
-                      <div>
-                        <h3 className="font-display mb-0.5 text-sm font-bold text-text-dark">
-                          {feature.title}
-                        </h3>
-                        <p className="text-xs leading-relaxed text-text-muted">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
             </motion.div>
 
-            {/* ── RIGHT — Image ── */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -110,15 +66,16 @@ export function AboutSection() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="relative"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-elevated sm:aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-3xl shadow-elevated">
                 <Image
-                  src="/photos/Industrial food processing machine in factory.png"
-                  alt="BRK Agro processing facility"
-                  fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src="/photos/company-gate-refined.png"
+                  alt="BRK Agro company gate"
+                  width={1400}
+                  height={933}
+                  className="h-auto w-full object-contain transition-transform duration-700 hover:scale-[1.02]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
 
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="inline-flex items-center gap-2 rounded-xl bg-white/15 px-4 py-2 backdrop-blur-sm">
@@ -130,32 +87,6 @@ export function AboutSection() {
                 </div>
               </div>
 
-              {/* Floating IQF badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 16, scale: 0.92 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.45,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl border border-border-soft bg-warm-white p-4 shadow-elevated sm:-left-6"
-              >
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                  <span className="font-display text-sm font-black text-brand-green">
-                    IQF
-                  </span>
-                </div>
-                <div className="pr-1">
-                  <p className="text-sm font-bold text-text-dark">
-                    Advanced Freezing
-                  </p>
-                  <p className="text-xs text-text-muted">JBT Technology</p>
-                </div>
-              </motion.div>
-
-              {/* Accent dot */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -165,6 +96,49 @@ export function AboutSection() {
               />
             </motion.div>
           </div>
+
+          {/* Row 2: feature cards */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-30px" }}
+            className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {aboutContent.features.map((feature, i) => {
+              const Icon = featureIcons[i];
+              const isGreen = featureColors[i] === "green";
+              return (
+                <motion.div
+                  key={feature.title}
+                  variants={fadeUp}
+                  className={`group flex items-start gap-3 rounded-2xl border p-4 transition-all duration-300 ${
+                    isGreen
+                      ? "border-brand-green/15 bg-brand-green/[.05] hover:bg-brand-green/[.10]"
+                      : "border-brand-red/12 bg-brand-red/[.04] hover:bg-brand-red/[.08]"
+                  }`}
+                >
+                  <div
+                    className={`mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
+                      isGreen
+                        ? "bg-brand-green/15 text-brand-green group-hover:bg-brand-green group-hover:text-white"
+                        : "bg-brand-red/15 text-brand-red group-hover:bg-brand-red group-hover:text-white"
+                    }`}
+                  >
+                    <Icon size={16} />
+                  </div>
+                  <div>
+                    <h3 className="font-display mb-0.5 text-sm font-bold text-text-dark">
+                      {feature.title}
+                    </h3>
+                    <p className="text-xs leading-relaxed text-text-muted">
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </Container>
       </div>
     </section>

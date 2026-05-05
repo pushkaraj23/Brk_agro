@@ -1,35 +1,22 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
 import { ArrowRight, FileDown } from "lucide-react";
-import { brochureAsset } from "@/lib/constants";
+import { brochureAsset, heroContent } from "@/lib/constants";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-const floatingImages = [
-  {
-    src: "/products/sweet_corn.png",
-    alt: "Sweet corn product",
-    desktopClass: "absolute top-[6%] left-[4%] z-[1] md:w-40 lg:w-52 xl:w-64",
-    animation: "animate-float-slow",
-    animStyle: { animationDuration: "8s", animationDelay: "0.5s" },
-    imageDelay: 0.52,
-    rotate: "rotate-6",
-  },
-  {
-    src: "/products/mixed_veggies.png",
-    alt: "Mixed vegetables product",
-    desktopClass: "absolute bottom-[6%] right-[4%] z-[1] md:w-36 lg:w-48 xl:w-60",
-    animation: "animate-float-delayed",
-    animStyle: { animationDuration: "7s", animationDelay: "2s" },
-    imageDelay: 0.64,
-    rotate: "-rotate-3",
-  },
-];
+const carouselImages = [
+  { src: "/photos/company-gate-refined.png", alt: "BRK Agro company gate" },
+  { src: "/photos/group-food-photo.png", alt: "Group food display" },
+  { src: "/photos/company-building-refined.png", alt: "BRK Agro company building" },
+  { src: "/photos/cold-storage.png", alt: "Cold storage facility" },
+] as const;
 
 function buildHeroVariants(reduceMotion: boolean | null): {
   root: Variants;
@@ -86,7 +73,7 @@ function HeroCopy({
       className={className}
     >
       <motion.p variants={item} className="font-display mb-2 text-base font-medium italic text-text-muted sm:text-lg">
-        Premium
+        Premium Export Quality
       </motion.p>
 
       <motion.div variants={item} className="mb-5">
@@ -102,14 +89,14 @@ function HeroCopy({
       </motion.div>
 
       <motion.p variants={item} className="mb-7 max-w-md text-sm leading-relaxed text-text-muted sm:text-base lg:text-lg">
-        Export-ready corn products — Frozen Corn and Retort Corn, processed with advanced IQF and retort technology.
+        {heroContent.description}
       </motion.p>
 
-      <motion.div variants={item} className="flex flex-wrap gap-3">
-        <Button href="/products" iconRight={<ArrowRight size={16} />}>
+      <motion.div variants={item} className="flex flex-wrap gap-3 md:flex-nowrap">
+        <Button href="/products" size="sm" className="whitespace-nowrap" iconRight={<ArrowRight size={16} />}>
           Explore Products
         </Button>
-        <Button href="/contact" variant="accent">
+        <Button href="/contact" variant="accent" size="sm" className="whitespace-nowrap">
           Get in Touch
         </Button>
         <Button
@@ -117,6 +104,7 @@ function HeroCopy({
           download={brochureAsset.fileName}
           variant="secondary"
           size="sm"
+          className="whitespace-nowrap"
           iconRight={<FileDown size={15} />}
         >
           Product brochure
@@ -126,12 +114,70 @@ function HeroCopy({
   );
 }
 
+function HeroCarousel({ reduceMotion }: { reduceMotion: boolean | null }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (reduceMotion) return undefined;
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 3200);
+
+    return () => window.clearInterval(timer);
+  }, [reduceMotion]);
+
+  return (
+    <div className="relative overflow-hidden rounded-[1.75rem] border border-border-soft/70 bg-white/70 p-2 shadow-elevated backdrop-blur-sm">
+      <div className="relative h-[18rem] overflow-hidden rounded-2xl sm:h-[20rem] lg:h-[24rem] xl:h-[28rem]">
+        <motion.div
+          className="flex h-full"
+          animate={{ x: `${-activeIndex * 100}%` }}
+          transition={reduceMotion ? { duration: 0 } : { duration: 0.7, ease }}
+        >
+          {carouselImages.map((img, idx) => (
+            <div key={img.src} className="relative h-full w-full flex-shrink-0">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={idx === 0}
+              />
+            </div>
+          ))}
+        </motion.div>
+
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+        <div className="absolute bottom-4 left-4 rounded-full border border-white/25 bg-black/35 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur-sm">
+          {carouselImages[activeIndex]?.alt}
+        </div>
+      </div>
+
+      <div className="mt-3 flex items-center justify-center gap-2">
+        {carouselImages.map((img, idx) => (
+          <button
+            key={`dot-${img.src}`}
+            type="button"
+            aria-label={`Show slide ${idx + 1}`}
+            onClick={() => setActiveIndex(idx)}
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              idx === activeIndex ? "w-8 bg-brand-green" : "w-2.5 bg-border"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function HeroSection() {
   const reduceMotion = useReducedMotion();
   const v = buildHeroVariants(reduceMotion);
 
   return (
-    <section className="relative flex min-h-[100dvh] flex-col justify-center overflow-hidden pt-16 pb-10 md:min-h-[min(100dvh,1000px)] md:pt-[5.25rem] md:pb-14">
+    <section className="relative overflow-hidden pt-16 pb-12 md:pt-[5.25rem] md:pb-14">
       <div className="absolute inset-0 bg-cream">
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -159,60 +205,17 @@ export function HeroSection() {
         }
       />
 
-      <Container className="relative z-10 w-full py-2 md:py-0">
-        <div className="hidden md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] md:items-center md:gap-8 lg:gap-12 xl:gap-14">
-          <HeroCopy variants={v.root} item={v.item} className="flex max-w-xl flex-col justify-center pr-2 lg:pr-4" />
-
-          <div className="relative flex min-h-[280px] w-full items-center justify-center md:min-h-[360px] lg:min-h-[420px] xl:min-h-[460px]">
-            {floatingImages.map((img) => (
-              <motion.div
-                key={img.src + "-desktop"}
-                initial={reduceMotion ? false : { opacity: 0, y: 28, scale: 0.94 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{
-                  duration: reduceMotion ? 0 : 0.72,
-                  ease,
-                  delay: reduceMotion ? 0 : img.imageDelay,
-                }}
-                className={`${img.desktopClass} ${img.rotate}`}
-              >
-                <div className={`${img.animation} drop-shadow-[0_24px_48px_rgba(0,0,0,0.14)]`} style={img.animStyle}>
-                  <Image src={img.src} alt={img.alt} width={320} height={320} className="h-auto w-full object-contain" priority />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile: DOM order = copy first (a11y); visual order = gallery on top */}
-        <div className="flex flex-col md:hidden">
-          <HeroCopy
-            variants={v.root}
-            item={v.item}
-            className="order-2 flex shrink-0 flex-col justify-end pb-2 pt-6"
-          />
-
-          <div className="order-1 flex min-h-[38vh] flex-1 flex-col justify-center sm:min-h-[40vh]">
-            <div className="grid grid-cols-2 gap-x-3 gap-y-1">
-              {floatingImages.map((img, i) => (
-                <motion.div
-                  key={img.src + "-mobile"}
-                  initial={reduceMotion ? false : { opacity: 0, y: 24, scale: 0.94 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{
-                    duration: reduceMotion ? 0 : 0.68,
-                    ease,
-                    delay: reduceMotion ? 0 : 0.1 + img.imageDelay * 0.4 + i * 0.05,
-                  }}
-                  className={`flex items-end justify-center ${img.rotate} ${i >= 2 ? "-mt-12 sm:-mt-14" : ""}`}
-                >
-                  <div className={`${img.animation} w-full drop-shadow-[0_14px_28px_rgba(0,0,0,0.12)]`} style={img.animStyle}>
-                    <Image src={img.src} alt={img.alt} width={200} height={200} className="h-auto w-full object-contain" priority />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+      <Container className="relative z-10 py-3 md:py-6">
+        <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] md:gap-10 lg:gap-14">
+          <HeroCopy variants={v.root} item={v.item} className="flex max-w-xl flex-col justify-center" />
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 24, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: reduceMotion ? 0 : 0.72, ease, delay: reduceMotion ? 0 : 0.18 }}
+            className="w-full"
+          >
+            <HeroCarousel reduceMotion={reduceMotion} />
+          </motion.div>
         </div>
       </Container>
     </section>

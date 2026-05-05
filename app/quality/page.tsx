@@ -4,9 +4,9 @@ import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "Quality Standards - Frozen Corn & Retort Corn";
+const title = "Quality Standards — Frozen Food | BRK Agro";
 const description =
-  "BRK Agro quality systems for Frozen Corn and Retort Corn: microbiological testing, process control, traceability, documentation, and export-aligned food safety practices.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Quality systems cover microbiological testing, process control, traceability, documentation, and export-aligned food safety.";
 
 export const metadata: Metadata = {
   title,

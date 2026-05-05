@@ -82,7 +82,7 @@ export function AboutHero() {
               className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated"
             >
               <Image
-                src="/photos/company-building.jpeg"
+                src="/photos/company-building-refined.png"
                 alt="BRK Agro company building"
                 fill
                 className="object-cover"
@@ -98,82 +98,6 @@ export function AboutHero() {
                     Farm-to-Freeze Processing
                   </span>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Floating Retort Corn — top left */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.7,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="absolute -top-6 -left-4 z-10 hidden sm:block lg:-top-8 lg:-left-8"
-            >
-              <div
-                className="animate-float-slow -rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                style={{ animationDuration: "8s" }}
-              >
-                <Image
-                  src="/photos/company-gate.jpeg"
-                  alt="BRK Agro company gate"
-                  width={140}
-                  height={140}
-                  className="h-20 w-20 rounded-xl object-cover sm:h-24 sm:w-24 lg:h-28 lg:w-28"
-                />
-              </div>
-            </motion.div>
-
-            {/* Floating Frozen Corn — bottom right */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.85,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="absolute -bottom-6 -right-2 z-10 hidden sm:block lg:-bottom-8 lg:-right-6"
-            >
-              <div
-                className="animate-float-delayed rotate-6 drop-shadow-[0_12px_28px_rgba(0,0,0,0.13)]"
-                style={{ animationDuration: "7s", animationDelay: "1s" }}
-              >
-                <Image
-                  src="/products/sweet_corn.png"
-                  alt="Frozen Corn"
-                  width={140}
-                  height={140}
-                  className="h-20 w-20 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
-                />
-              </div>
-            </motion.div>
-
-            {/* IQF floating badge — top right */}
-            <motion.div
-              initial={{ opacity: 0, y: -12, scale: 0.92 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                delay: 0.95,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="absolute -top-3 right-4 flex items-center gap-2.5 rounded-2xl border border-border-soft bg-warm-white p-3 shadow-elevated sm:right-8 sm:p-4"
-            >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                <span className="font-display text-xs font-black text-brand-green sm:text-sm">
-                  IQF
-                </span>
-              </div>
-              <div className="pr-1">
-                <p className="text-xs font-bold text-text-dark sm:text-sm">
-                  Export Ready
-                </p>
-                <p className="text-[10px] text-text-muted sm:text-xs">
-                  Global Quality
-                </p>
               </div>
             </motion.div>
 

@@ -64,9 +64,9 @@ export function ContactHero() {
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              Connect with our team for product specs, packaging formats,
-              commercial details, and shipment planning. We respond quickly and
-              share clear next steps.
+              BRK Agro is a leading processor and exporter of premium quality frozen food from
+              India — connect with our team for specs, packaging, commercial terms, and
+              shipment planning. We respond quickly with clear next steps.
             </motion.p>
 
             <motion.div

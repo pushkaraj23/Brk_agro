@@ -64,9 +64,10 @@ export function InfrastructureHero() {
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              A modern, hygienic, and technology-driven facility built around IQF
-              Frozen Corn and Retort Corn — engineered to meet demanding
-              international food safety and quality expectations.
+              BRK Agro is a leading processor and exporter of premium quality frozen food
+              from India — a modern, hygienic, technology-driven Pune facility built
+              for IQF, retort capability, and demanding international food safety and
+              quality expectations.
             </motion.p>
           </motion.div>
 

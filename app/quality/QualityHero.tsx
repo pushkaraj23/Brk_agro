@@ -62,9 +62,9 @@ export function QualityHero() {
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              From trusted farm sourcing to reliable global delivery —
-              certifications, traceability, and consistent standards in every
-              batch.
+              BRK Agro is a leading processor and exporter of premium quality frozen food
+              from India — from trusted farm sourcing to reliable global delivery,
+              with certifications, traceability, and consistent standards in every batch.
             </motion.p>
           </motion.div>
 
@@ -96,11 +96,11 @@ export function QualityHero() {
                   style={{ animationDuration: "8s" }}
                 >
                   <Image
-                    src="/products/mixed_veggies.png"
-                    alt="Premium frozen vegetables"
+                    src="/photos/Modern food packaging in action.png"
+                    alt="Modern food packaging in action"
                     width={320}
                     height={320}
-                    className="h-44 w-44 object-contain sm:h-56 sm:w-56 lg:h-64 lg:w-64"
+                    className="h-44 w-44 object-cover sm:h-56 sm:w-56 lg:h-64 lg:w-64"
                     priority
                   />
                 </div>
@@ -121,7 +121,7 @@ export function QualityHero() {
                   style={{ animationDuration: "7s", animationDelay: "0.5s" }}
                 >
                   <Image
-                    src="/products/green_peas.png"
+                    src="/products/green-peas-refined.png"
                     alt="Green peas"
                     width={120}
                     height={120}
@@ -145,7 +145,7 @@ export function QualityHero() {
                   style={{ animationDuration: "8.5s", animationDelay: "0.3s" }}
                 >
                   <Image
-                    src="/products/sweet_corn.png"
+                    src="/products/sweet-corn-refined.png"
                     alt="Sweet corn"
                     width={120}
                     height={120}

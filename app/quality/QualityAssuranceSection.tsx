@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
+import { SectionWhiteGlow } from "@/components/decorative/SectionWhiteGlow";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import {
   QUALITY_LAB_VIDEO_POSTER,
@@ -68,7 +69,7 @@ const pillars = [
   },
   {
     icon: Recycle,
-    title: "Less waste",
+    title: "Reduced waste",
     desc: "Tighter controls and shelf-life focus reduce avoidable loss.",
     tone: "red" as const,
   },
@@ -106,7 +107,7 @@ const assuranceRows = [
 
 /** Wave fills = destination section bg. Use hex in SVG fill (matches globals.css) — avoids var() quirks. Parent section paints behind the SVG’s transparent band. */
 const WAVE = {
-  toForestGreen: "#2A4E1E",
+  toSectionGreen: "#67B84F",
 } as const;
 
 export function QualityAssuranceSection() {
@@ -328,7 +329,7 @@ export function QualityAssuranceSection() {
       {/* ─── Lab & systems (dark) ─── */}
       <section
         className="relative pb-0 pt-16 lg:pt-24"
-        style={{ backgroundColor: WAVE.toForestGreen }}
+        style={{ backgroundColor: WAVE.toSectionGreen }}
         aria-label="Testing and digital oversight"
       >
         <div
@@ -365,8 +366,9 @@ export function QualityAssuranceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-3xl border border-white/12 bg-[#142610] p-8 shadow-[0_40px_80px_rgba(0,0,0,0.35)] sm:min-h-[360px] lg:min-h-full"
+              className="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-3xl border border-white/45 bg-[var(--color-section-green-bg)] p-8 shadow-[0_0_160px_rgba(255,255,255,0.52),0_0_80px_rgba(255,255,255,0.35),0_40px_80px_rgba(103,184,79,0.22)] ring-1 ring-inset ring-white/50 sm:min-h-[360px] lg:min-h-full"
             >
+              <SectionWhiteGlow />
               <video
                 className="absolute inset-0 h-full w-full object-cover"
                 autoPlay
@@ -378,16 +380,16 @@ export function QualityAssuranceSection() {
               >
                 <source src={SITE_VIDEOS.facilityProcessingMp4} type="video/mp4" />
               </video>
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#1d3416]/55 via-[#2A4E1E]/65 to-[#0f1f0c]/92" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-green/50 via-brand-green-dark/55 to-text-dark/88" />
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-green/25 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-brand-red/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
 
               <div className="relative z-[1] mb-6 flex justify-center gap-4">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/15 bg-white/[0.07] shadow-inner backdrop-blur-sm">
                   <Microscope className="h-9 w-9 text-brand-green" strokeWidth={1.75} />
                 </div>
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/15 bg-white/[0.07] shadow-inner backdrop-blur-sm">
-                  <FlaskConical className="h-9 w-9 text-brand-red" strokeWidth={1.75} />
+                  <FlaskConical className="h-9 w-9 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.95),0_0_40px_rgba(255,255,255,0.5)]" strokeWidth={1.75} />
                 </div>
               </div>
               <div className="relative z-[1] space-y-2 text-center">
@@ -402,7 +404,7 @@ export function QualityAssuranceSection() {
                 {["JBT MACHINES", "IQF FACILITY", "RETORT FACILITY"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-brand-red/30 bg-brand-red/15 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white"
+                    className="rounded-full border border-white/50 bg-white/22 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-[0_0_28px_rgba(255,255,255,0.55),0_0_14px_rgba(255,255,255,0.35)]"
                   >
                     {tag}
                   </span>

@@ -8,9 +8,9 @@ import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "Infrastructure - IQF & Retort Corn Processing Facility";
+const title = "Infrastructure — Frozen Food Processing Facility | BRK Agro";
 const description =
-  "BRK Agro processing infrastructure in Pune district: JBT IQF lines for Frozen Corn, retort systems for vacuum-packed corn on the cob, hygienic zones, solar-installed utilities, and cold room rental capacity.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Our Pune district plant features latest IQF technology, advanced retort systems, hygienic processing, strict grading, temperature-controlled storage, and export-ready packaging.";
 
 export const metadata: Metadata = {
   title,

@@ -5,6 +5,8 @@
   --color-brand-green: #67B84F;
   --color-brand-green-dark: #3E7F2E;
   --color-brand-green-light: #8ED47A;
+  /** Full-bleed section backgrounds — logo “agro” green (do not use forest #2A4E1E). */
+  --color-section-green-bg: #67B84F;
   --color-brand-red: #ED1C24;
   --color-brand-red-dark: #C5161D;
   --color-brand-red-light: #F4565C;
@@ -85,6 +87,12 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 ::selection {

@@ -14,7 +14,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 const featured = products.slice(0, 6).map((product, index) => ({
   name: product.name,
   tag: product.tagline,
-  image: product.image ?? "/products/sweet_corn.png",
+  image: product.image ?? "/products/sweet-corn-refined.png",
   color: product.color,
   animDuration: `${7 + index * 0.45}s`,
   animDelay: `${index * 0.15}s`,
@@ -73,7 +73,7 @@ export function ProductsBrief() {
               <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              From IQF vegetables to processed formats, discover export-ready products built for consistent quality.
+              As a leading processor and exporter of premium quality frozen food from India, we offer IQF vegetables and processed formats — export-ready and built for consistent quality.
             </p>
           </div>
         </motion.div>

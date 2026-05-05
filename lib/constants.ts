@@ -1,8 +1,11 @@
+/** Canonical company line — reuse or lightly rephrase across the site. */
+export const companyDescription =
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India.";
+
 export const siteConfig = {
   name: "BRK Agro",
-  tagline: "Frozen Corn & Retort Corn — From Farm to Export",
-  description:
-    "BRK Agro is an India-based manufacturer and exporter of Frozen Corn and Retort Corn — advanced IQF processing, retort technology, hygienic infrastructure, and export-ready packaging for global buyers.",
+  tagline: "Premium Frozen Food — From Farm to Global Markets",
+  description: `${companyDescription} We operate with advanced freezing technology, hygienic infrastructure, and export-ready packaging for global buyers.`,
   phone: "+91 70309 22272",
   email: "customercare@brkagro.com",
   website: "www.brkagro.com",
@@ -21,12 +24,12 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  badge: "Trusted Manufacturer & Exporter",
+  badge: "Leading Processor & Exporter",
   headlineTop: "Premium Frozen",
   headlineBottom: "Corn Products",
   subheadline: "Frozen with Care, Delivered with Trust",
   description:
-    "Export-ready Frozen Corn and Retort Corn from trusted farm sourcing — advanced IQF and retort processing that preserves taste, color, and nutrition.",
+    `${companyDescription} Export-ready IQF and retort formats from trusted farm sourcing — processing that preserves taste, color, and nutrition.`,
   primaryCta: "Explore Products",
   secondaryCta: "Get in Touch",
   stats: [
@@ -40,15 +43,14 @@ export const heroContent = {
 export const aboutContent = {
   badge: "About BRK Agro",
   headline:
-    "Leading Processor & Exporter of Premium Frozen Corn & Retort Corn",
+    "Leading Processor & Exporter of Premium Quality Frozen Food from India",
   /** Short line for the About page hero */
-  heroIntro:
-    "With dedicated IQF and retort lines and a quality-first culture, BRK Agro supplies export-grade Frozen Corn and Retort Corn to distributors, brands, and food service partners worldwide.",
+  heroIntro: companyDescription,
   /** Home “About” teaser */
   briefLead:
-    "From trusted Indian farms to global buyers — we specialize in Frozen Corn and Retort Corn using JBT IQF and advanced retort systems that lock in sweetness, color, and food safety at scale.",
+    "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology to retain natural taste, fresh color, nutritional value, and long shelf life.",
   description:
-    "BRK Agro is a focused processor and exporter of Frozen Corn and Retort Corn from India. Our Pune district facility combines hygienic handling, JBT IQF freezing for kernels, and retort technology for shelf-stable corn on the cob — so every batch meets consistent export specifications, traceability, and international food safety expectations.",
+    "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology. Our commitment to quality, hygiene, and international standards makes us a reliable partner for global buyers.",
   features: [
     {
       title: "Natural Taste",
@@ -63,7 +65,7 @@ export const aboutContent = {
     {
       title: "Nutritional Value",
       description:
-        "Minimal, well-controlled processing helps retain the nutritional appeal buyers expect from quality frozen and retort corn.",
+        "Processing controls are designed to help preserve the nutritional value expected from premium quality frozen food.",
     },
     {
       title: "Long Shelf Life",
@@ -78,12 +80,12 @@ export const missionContent = {
   mission: {
     title: "Our Mission",
     description:
-      "To supply Frozen Corn and Retort Corn that meet rigorous international standards for quality, safety, and consistency — while growing transparent, long-term relationships with farmers and customers worldwide.",
+      "To deliver farm-fresh vegetables to global markets with uncompromised quality and consistency.",
   },
   vision: {
     title: "Our Vision",
     description:
-      "To be a globally trusted name in value-added corn for food manufacturing and retail — recognized for dependable supply, disciplined process control, and continuous improvement in IQF and retort processing.",
+      "To become a trusted global brand in frozen food exports.",
   },
 };
 
@@ -96,7 +98,7 @@ export const whyBrkFeatures = [
   {
     title: "Advanced Freezing Technology",
     description:
-      "JBT IQF lines freeze kernels individually for free-flowing, export-grade Frozen Corn with reliable texture and appearance.",
+      "JBT IQF lines freeze kernels piece-by-piece for free-flowing, export-grade Frozen Corn with reliable texture and appearance.",
   },
   {
     title: "Hygienic Processing",
@@ -133,10 +135,10 @@ export const products = [
     slug: "sweet-corn",
     tagline: "Golden & Naturally Sweet",
     description:
-      "Premium frozen sweet corn kernels, individually quick frozen to preserve natural sweetness and bright color.",
+      "Premium frozen sweet corn kernels, IQF-processed to preserve natural sweetness and bright color.",
     longDescription:
       "Our sweet corn is sourced from trusted farming partners and harvested at peak maturity for ideal flavor. Kernels are processed and frozen quickly for export-grade consistency, delivering a free-flowing product with appealing texture and dependable quality across shipments.",
-    image: "/products/sweet_corn.png",
+    image: "/products/sweet-corn-refined.png",
     gradient: "from-amber-300 via-yellow-400 to-amber-500",
     bgColor: "#FEF3C7",
     color: "green" as const,
@@ -146,7 +148,7 @@ export const products = [
       "Variety": "Super Sweet",
       "Brix": "Min 9",
       "Quality": "Free of Insects, Pest Infestation and Foreign matter",
-      "Processing": "Individual Quick Freezing (IQF)",
+      "Processing": "IQF",
       "Storage Temp": "-18°C or below",
       "Shelf Life": "24 months",
       "Packaging": "400 g x 20 pkt = 8 kg / carton\n2.5 kg x 4 pkt = 10 kg / carton\n30 kg bulk PP bags\nAvailable as per customer requirement",
@@ -184,7 +186,7 @@ export const products = [
       "Whole corn cobs processed for excellent taste, texture, and convenience in international retail and food service channels.",
     longDescription:
       "Our corn on cobs are selected for uniformity and sweetness, then processed in a hygienic, quality-controlled facility. Designed for reliable export performance, they are suitable for modern retail, food service, and value-added meal solutions.",
-    image: "/products/corn-on-cobs.png",
+    image: "/products/corn-on-cobs-refined.png",
     gradient: "from-yellow-300 via-amber-400 to-yellow-500",
     bgColor: "#FEF9C3",
     color: "red" as const,
@@ -219,7 +221,7 @@ export const products = [
       },
       {
         title: "Export markets",
-        image: "/photos/Industrial warehouse with forklift operation.png",
+        image: "/photos/Industrial warehouse with forklift operation refined.png",
       },
     ] satisfies ProductApplication[],
   },
@@ -231,7 +233,7 @@ export const products = [
     description: "Retort-processed corn for ambient storage and reliable distribution.",
     longDescription:
       "Our retort corn line is designed for shelf-stable convenience while maintaining quality and taste. It is ideal for broad distribution where ambient handling and long shelf life are key requirements.",
-    image: "/products/frozen-retort-corn.png",
+    image: "/products/frozen-retort-corn-refined.png",
     gradient: "from-yellow-300 via-amber-300 to-orange-300",
     bgColor: "#FFF7D6",
     color: "red" as const,
@@ -249,7 +251,7 @@ export const products = [
     applications: [
       { title: "Retail convenience packs", image: "/photos/Strawberry sorting in a modern factory.png" },
       { title: "Ambient distribution", image: "/photos/Warehouse worker managing boxed cargo.png" },
-      { title: "Export orders", image: "/photos/Industrial warehouse with forklift operation.png" },
+      { title: "Export orders", image: "/photos/Industrial warehouse with forklift operation refined.png" },
       { title: "Processed food channels", image: "/photos/Industrial food processing machine in factory.png" },
       { title: "Quality inspection flow", image: "/photos/Modern food processing facility inspection.png" },
     ] satisfies ProductApplication[],
@@ -263,7 +265,7 @@ export const products = [
       "A colorful blend of green peas, carrots, green cut beans, and cauliflower—frozen for versatile cooking applications.",
     longDescription:
       "Our mixed vegetables combine green peas, carrots, green cut beans, and cauliflower in a balanced IQF blend. They are prepared in a clean, controlled facility with careful grading and process checks, offering convenience, visual appeal, and reliable quality for retail packs and food service recipes.",
-    image: "/products/mixed_veggies.png",
+    image: "/products/mixed-veggies-refined.png",
     gradient: "from-green-300 via-lime-300 to-emerald-400",
     bgColor: "#E9F8E7",
     color: "green" as const,
@@ -296,7 +298,7 @@ export const products = [
     description: "Tender green peas frozen quickly to preserve color, shape, and natural taste.",
     longDescription:
       "Our green peas are processed with attention to freshness and consistency at every stage. Controlled handling and freezing help preserve their bright appearance and eating quality for domestic and export markets.",
-    image: "/products/green_peas.png",
+    image: "/products/green-peas-refined.png",
     gradient: "from-emerald-300 via-green-400 to-lime-400",
     bgColor: "#E6F8EC",
     color: "green" as const,
@@ -315,7 +317,7 @@ export const products = [
       { title: "Retail frozen packs", image: "/photos/Fresh peas packing in sterile facility.png" },
       { title: "Prepared foods", image: "/photos/Frozen vegetable processing line in action.png" },
       { title: "Food manufacturing", image: "/photos/Industrial food processing machine in factory.png" },
-      { title: "Export cartons", image: "/photos/Industrial warehouse with forklift operation.png" },
+      { title: "Export cartons", image: "/photos/Industrial warehouse with forklift operation refined.png" },
       { title: "Cold chain logistics", image: "/photos/Cold storage inventory check close-up.png" },
     ] satisfies ProductApplication[],
   },
@@ -327,7 +329,7 @@ export const products = [
     description: "Cleaned and frozen green beans with consistent cut and texture.",
     longDescription:
       "Our green beans are selected and processed for shape consistency and product appeal. Hygienic handling and strict quality checks support dependable performance in foodservice and retail.",
-    image: "/products/green-beans.png",
+    image: "/products/green-beans-refined.png",
     gradient: "from-green-300 via-emerald-300 to-teal-300",
     bgColor: "#EAF8F1",
     color: "green" as const,
@@ -358,7 +360,7 @@ export const products = [
     description: "Neatly diced frozen carrots prepared for fast, consistent use in recipes.",
     longDescription:
       "Our diced carrots are processed to maintain shape consistency and bright appearance. This format helps reduce prep time while ensuring dependable quality for institutional and retail applications.",
-    image: "/products/diced-carrots.png",
+    image: "/products/diced-carrots-refined.png",
     gradient: "from-orange-300 via-amber-300 to-yellow-300",
     bgColor: "#FFF1E5",
     color: "red" as const,
@@ -378,7 +380,7 @@ export const products = [
       { title: "Frozen meal manufacturing", image: "/photos/Frozen vegetable processing line in action.png" },
       { title: "Retail frozen packs", image: "/photos/Modern food packaging in action.png" },
       { title: "Industrial processing", image: "/photos/Industrial food processing machine in factory.png" },
-      { title: "Export cartons", image: "/photos/Industrial warehouse with forklift operation.png" },
+      { title: "Export cartons", image: "/photos/Industrial warehouse with forklift operation refined.png" },
     ] satisfies ProductApplication[],
   },
   {
@@ -389,7 +391,7 @@ export const products = [
     description: "Carefully selected cauliflower processed for consistency and clean presentation.",
     longDescription:
       "Our cauliflower products are processed under hygienic conditions with grading standards that support uniformity. They are suitable for premium frozen packs, meal manufacturing, and foodservice channels.",
-    image: "/products/cauliflower.png",
+    image: "/products/cauliflower-refined.png",
     gradient: "from-stone-200 via-amber-100 to-yellow-100",
     bgColor: "#FFFDF2",
     color: "green" as const,
@@ -409,16 +411,16 @@ export const products = [
       { title: "Foodservice prep", image: "/photos/Industrial food processing in action.png" },
       { title: "Meal production lines", image: "/photos/Food processing in a clean factory setting.png" },
       { title: "Cold storage handling", image: "/photos/Cold storage inventory check close-up.png" },
-      { title: "Export shipment", image: "/photos/Industrial warehouse with forklift operation.png" },
+      { title: "Export shipment", image: "/photos/Industrial warehouse with forklift operation refined.png" },
     ] satisfies ProductApplication[],
   },
 ];
 
 export const infrastructure = [
   {
-    title: "JBT's Advanced IQF Technology",
+    title: "JBT's Advance Technology Latest IQF",
     description:
-      "Our facility is equipped with JBT's latest Individual Quick Freezing technology, ensuring each piece is frozen individually for premium quality and free-flowing product.",
+      "Our facility is equipped with JBT's latest IQF technology, ensuring each piece is frozen separately for premium quality and free-flowing product.",
   },
   {
     title: "Advanced Retort Technology",
@@ -438,7 +440,7 @@ export const infrastructure = [
   {
     title: "Export-Ready Packaging",
     description:
-      "Multi-format packaging solutions designed for international markets — from bulk packs to retail-ready formats, meeting global compliance.",
+      "Multi-format export-ready packagings designed for international markets, from bulk packs to retail-ready formats.",
   },
   {
     title: "Strict Sorting & Grading",
@@ -451,7 +453,7 @@ export const processSteps = [
   { step: 1, title: "Farm Sourcing", description: "Sweet corn sourced directly from trusted farming partners at the right maturity." },
   { step: 2, title: "Sorting & Grading", description: "Rigorous selection to ensure only premium quality raw material." },
   { step: 3, title: "Processing", description: "Cleaned, cut, and prepared in our hygienic facility." },
-  { step: 4, title: "Freezing", description: "Individual Quick Freezing using advanced IQF technology." },
+  { step: 4, title: "Freezing", description: "Advanced IQF technology for rapid, piece-by-piece freezing." },
   { step: 5, title: "Packaging", description: "Export-standard packaging for quality preservation." },
   { step: 6, title: "Cold Storage & Dispatch", description: "Temperature-controlled storage and timely global dispatch." },
 ];
@@ -484,7 +486,7 @@ export const contactInfo = {
 };
 
 export const socialLinks = {
-  whatsapp: "https://wa.me/919703922272",
+  whatsapp: "https://wa.me/917030922272",
   instagram: "#",
   linkedin: "#",
 };

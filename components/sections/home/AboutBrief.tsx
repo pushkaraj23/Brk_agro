@@ -13,7 +13,7 @@ import { aboutContent } from "@/lib/constants";
 const features = [
   { icon: Leaf,    label: "Natural Taste",      color: "green" },
   { icon: Palette, label: "Fresh Color",         color: "red"   },
-  { icon: Heart,   label: "Full Nutrition",       color: "green" },
+  { icon: Heart,   label: "Nutritional Value",    color: "green" },
   { icon: Clock,   label: "Long Shelf Life",      color: "red"   },
 ];
 
@@ -53,7 +53,7 @@ export function AboutBrief() {
             {/* Main image */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-elevated sm:aspect-[3/4]">
               <Image
-                src="/photos/company-building.jpeg"
+                src="/photos/company-building-refined.png"
                 alt="BRK Agro company building"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -72,42 +72,6 @@ export function AboutBrief() {
                 </div>
               </div>
             </div>
-
-            {/* Inset company gate image */}
-            <motion.div
-              initial={{ opacity: 0, y: 16, scale: 0.92 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -left-4 top-5 hidden overflow-hidden rounded-2xl border border-border-soft bg-warm-white p-1.5 shadow-elevated sm:block lg:-left-6"
-            >
-              <div className="relative h-24 w-36 overflow-hidden rounded-xl lg:h-28 lg:w-44">
-                <Image
-                  src="/photos/company-gate.jpeg"
-                  alt="BRK Agro company gate"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 144px, 176px"
-                />
-              </div>
-            </motion.div>
-
-            {/* Floating badge — bottom right */}
-            <motion.div
-              initial={{ opacity: 0, y: 16, scale: 0.92 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-4 -bottom-6 flex items-center gap-3 rounded-2xl border border-border-soft bg-warm-white p-4 shadow-elevated sm:-right-6"
-            >
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                <span className="font-display text-sm font-black text-brand-green">IQF</span>
-              </div>
-              <div className="pr-1">
-                <p className="text-sm font-bold text-text-dark">Advanced Freezing</p>
-                <p className="text-xs text-text-muted">JBT Technology</p>
-              </div>
-            </motion.div>
 
             {/* Small accent dot — top left */}
             <motion.div

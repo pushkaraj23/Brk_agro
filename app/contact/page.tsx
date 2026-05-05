@@ -4,9 +4,9 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "Contact BRK Agro - Frozen Corn Export Enquiries";
+const title = "Contact BRK Agro — Frozen Food Export Enquiries";
 const description =
-  "Contact BRK Agro for Frozen Corn and Retort Corn export enquiries, samples, pricing, specifications, and distribution partnerships in India and overseas.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Contact us for export enquiries, samples, pricing, specs, and distribution partnerships.";
 
 export const metadata: Metadata = {
   title,

@@ -51,7 +51,7 @@ export function PartnershipApproach() {
         <SectionHeading
           badge="Our Approach"
           title="How We Partner with You"
-          subtitle="A structured partnership model focused on continuity, clarity, and business growth."
+          subtitle="As a leading processor and exporter of premium quality frozen food from India, we offer a partnership model focused on continuity, clarity, and business growth."
         />
 
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:items-start">
@@ -98,7 +98,7 @@ export function PartnershipApproach() {
               <div className="relative overflow-hidden rounded-3xl border border-border-soft bg-warm-white shadow-elevated">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/photos/Industrial warehouse with forklift operation.png"
+                  src="/photos/Industrial warehouse with forklift operation refined.png"
                   alt="Export warehouse and distribution support"
                   fill
                   className="object-cover"

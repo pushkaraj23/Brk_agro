@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
+import { SectionWhiteGlow } from "@/components/decorative/SectionWhiteGlow";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import {
   ShieldCheck,
@@ -72,12 +73,13 @@ const cardVariants = {
 export function ProductQuality() {
   return (
     <section className="relative overflow-hidden bg-warm-white">
-      <WaveDivider fill="#2A4E1E" />
+      <WaveDivider fill="var(--color-section-green-bg)" />
 
       <div
-        className="relative py-20 lg:py-28"
-        style={{ backgroundColor: "#2A4E1E" }}
+        className="relative py-20 lg:py-28 ring-1 ring-inset ring-white/50 shadow-[0_0_200px_rgba(255,255,255,0.58),0_0_100px_rgba(255,255,255,0.4),inset_0_0_180px_rgba(255,255,255,0.28)]"
+        style={{ backgroundColor: "var(--color-section-green-bg)" }}
       >
+        <SectionWhiteGlow />
         {/* Dot texture */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -88,7 +90,7 @@ export function ProductQuality() {
           }}
         />
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
+        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-white/25 blur-[80px]" />
         <SectionLeafAccents />
 
         <Container className="relative">
@@ -101,19 +103,19 @@ export function ProductQuality() {
             className="mb-12 text-center lg:mb-14"
           >
             <div className="mb-4 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-white/30" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+              <span className="h-px w-8 bg-text-dark/20" />
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-text-dark/55">
                 Quality Standards
               </span>
-              <span className="h-px w-8 bg-white/30" />
+              <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Quality You Can{" "}
-              <span className="text-brand-red">Trust</span>
+              <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">Trust</span>
             </h2>
 
-            <p className="mx-auto max-w-xl text-base leading-relaxed text-white/60">
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-text-dark/80">
               Every product meets rigorous international standards from farm to
               final packaging.
             </p>
@@ -143,23 +145,23 @@ export function ProductQuality() {
                       damping: 22,
                     },
                   }}
-                  className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[.06] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-white/20 hover:bg-white/[.10]"
+                  className="group flex items-start gap-4 rounded-2xl border border-border-soft bg-warm-white/95 p-5 shadow-card backdrop-blur-sm transition-colors duration-300 hover:border-brand-green/25 hover:shadow-elevated"
                 >
                   <div
                     className={`mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
                       isRed
-                        ? "bg-brand-red/25 text-brand-red group-hover:bg-brand-red group-hover:text-white"
-                        : "bg-white/10 text-white/70 group-hover:bg-white/20 group-hover:text-white"
+                        ? "border border-white/25 bg-white/20 text-white group-hover:bg-white/35 group-hover:text-text-dark"
+                        : "bg-brand-green/15 text-brand-green-dark group-hover:bg-brand-green group-hover:text-white"
                     }`}
                   >
                     <Icon size={18} />
                   </div>
 
                   <div>
-                    <h3 className="font-display mb-1 text-sm font-bold text-white lg:text-base">
+                    <h3 className="font-display mb-1 text-sm font-bold text-text-dark lg:text-base">
                       {f.title}
                     </h3>
-                    <p className="text-xs leading-relaxed text-white/55 sm:text-sm">
+                    <p className="text-xs leading-relaxed text-text-muted sm:text-sm">
                       {f.description}
                     </p>
                   </div>

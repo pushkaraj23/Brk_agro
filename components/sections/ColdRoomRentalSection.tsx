@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -16,23 +17,43 @@ const rentalHighlights = [
 
 const rentalPhotos = [
   {
-    src: "/photos/Solar-powered facility in rural landscape.png",
-    alt: "Solar-powered cold storage facility in rural landscape",
-    label: "Solar-powered operations",
+    src: "/photos/cold-storage.png",
+    alt: "Cold storage exterior",
+    label: "Cold storage facility",
   },
   {
-    src: "/photos/Industrial landscape with solar energy fields.png",
-    alt: "Industrial cold storage landscape with solar energy fields",
-    label: "Energy-efficient infrastructure",
+    src: "/photos/cold-storage-interior-1.png",
+    alt: "Cold storage interior section one",
+    label: "Cold storage interior",
+  },
+  {
+    src: "/photos/cold-storage-interior-2.png",
+    alt: "Cold storage interior section two",
+    label: "Temperature controlled rooms",
+  },
+  {
+    src: "/photos/cold-storage-interior3.png",
+    alt: "Cold storage interior section three",
+    label: "Operational storage lines",
   },
   {
     src: "/photos/Industrial compound with modern architecture.png",
-    alt: "Modern industrial compound for cold room rental services",
+    alt: "Modern industrial compound for cold storage operations",
     label: "Modern rental-ready facility",
   },
 ] as const;
 
 export function ColdRoomRentalSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % rentalPhotos.length);
+    }, 3200);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-cream">
       <WaveDivider fill="var(--color-warm-white)" />
@@ -64,10 +85,8 @@ export function ColdRoomRentalSection() {
                 <span className="text-brand-green">Rooms</span>
               </h2>
               <p className="mb-7 max-w-2xl text-base leading-relaxed text-text-muted lg:text-lg">
-                BRK Agro now offers cold room rental for businesses that need
-                dependable frozen and chilled storage. Our facility combines
-                large capacity, modern handling systems, and solar-installed
-                infrastructure for reliable and energy-conscious operations.
+                Cold storage rooms are available on rent for frozen and chilled
+                products.
               </p>
 
               <ul className="grid gap-2.5 sm:grid-cols-2">
@@ -95,43 +114,42 @@ export function ColdRoomRentalSection() {
               </div>
             </div>
 
-            <div className="space-y-4 lg:space-y-5">
-              <div className="group relative overflow-hidden rounded-3xl border border-border-soft bg-white p-1.5 shadow-elevated">
-                <div className="relative aspect-[16/10] overflow-hidden rounded-[1.15rem]">
-                  <Image
-                    src={rentalPhotos[0].src}
-                    alt={rentalPhotos[0].alt}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 rounded-full border border-white/25 bg-black/45 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur-md">
-                    {rentalPhotos[0].label}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {rentalPhotos.slice(1).map((photo) => (
-                  <div
-                    key={photo.src}
-                    className="group relative overflow-hidden rounded-2xl border border-border-soft bg-white p-1.5 shadow-card"
-                  >
-                    <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
+            <div className="relative overflow-hidden rounded-3xl border border-border-soft bg-white p-2 shadow-elevated">
+              <div className="relative h-[18rem] overflow-hidden rounded-[1.15rem] sm:h-[20rem] lg:h-[24rem]">
+                <div
+                  className="flex h-full transition-transform duration-700 ease-out"
+                  style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                >
+                  {rentalPhotos.map((photo, idx) => (
+                    <div key={photo.src} className="relative h-full w-full flex-shrink-0">
                       <Image
                         src={photo.src}
                         alt={photo.alt}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 24vw"
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 45vw"
+                        priority={idx === 0}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-                      <div className="absolute bottom-3 left-3 rounded-full border border-white/25 bg-black/45 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white backdrop-blur-md">
-                        {photo.label}
-                      </div>
                     </div>
-                  </div>
+                  ))}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+                <div className="absolute bottom-4 left-4 rounded-full border border-white/25 bg-black/45 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur-md">
+                  {rentalPhotos[activeIndex]?.label}
+                </div>
+              </div>
+
+              <div className="mt-3 flex items-center justify-center gap-2">
+                {rentalPhotos.map((photo, idx) => (
+                  <button
+                    key={`rental-dot-${photo.src}`}
+                    type="button"
+                    aria-label={`Show cold storage image ${idx + 1}`}
+                    onClick={() => setActiveIndex(idx)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      idx === activeIndex ? "w-8 bg-brand-green" : "w-2.5 bg-border"
+                    }`}
+                  />
                 ))}
               </div>
             </div>

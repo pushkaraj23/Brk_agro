@@ -28,10 +28,10 @@ const icons: ReactNode[] = [
 
 const featureImages = [
   "/photos/Handshake in the golden cornfield.png",
-  "/photos/Frozen vegetable processing line in action.png",
+  "https://jbtmarel.com/media/dbzm0uun/flofreeze-a.jpg",
   "/photos/Food processing in a clean factory setting.png",
   "/photos/Modern food packaging in action.png",
-  "/photos/Modern food processing facility inspection.png",
+  "/photos/Industrial warehouse with forklift operation refined.png",
   "/photos/Cold storage inventory check close-up.png",
 ] as const;
 
@@ -78,7 +78,8 @@ export function WhyBrkSection() {
             </h2>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-text-muted">
-              Backed by modern infrastructure, strict quality standards, and a
+              Partner with a leading processor and exporter of premium quality frozen food
+              from India — modern infrastructure, strict quality standards, and a
               farm-to-export supply chain you can rely on.
             </p>
           </motion.div>

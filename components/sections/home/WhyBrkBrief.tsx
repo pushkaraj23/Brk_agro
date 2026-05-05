@@ -6,12 +6,13 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
+import { SectionWhiteGlow } from "@/components/decorative/SectionWhiteGlow";
 import { staggerContainer } from "@/lib/animations";
 import { Sprout, Snowflake, ShieldCheck, Package, BarChart3, Award, ArrowRight } from "lucide-react";
 
 const features = [
   { icon: Sprout,      title: "Trusted Farm Sourcing",        desc: "Direct relationships with growers for sweet corn harvested at the right stage for IQF or retort.",     color: "white" },
-  { icon: Snowflake,   title: "Advanced Freezing Technology",  desc: "JBT's latest IQF technology — individual quick freezing at peak freshness.",  color: "red"   },
+  { icon: Snowflake,   title: "Advanced Freezing Technology",  desc: "JBT's latest IQF technology — peak freshness and reliable texture.",  color: "red"   },
   { icon: ShieldCheck, title: "Hygienic Processing",           desc: "State-of-the-art sanitized facility with strict hygiene protocols.",           color: "white" },
   { icon: Package,     title: "Export-Ready Packaging",        desc: "International-standard packaging for safe transit and extended shelf life.",   color: "red"   },
   { icon: BarChart3,   title: "Strict Sorting & Grading",      desc: "Sorting and grading so only suitable cobs and kernels move forward in the line.",      color: "white" },
@@ -20,11 +21,11 @@ const features = [
 
 const featureImages = [
   "/photos/Handshake in the golden cornfield.png",
-  "/photos/Frozen vegetable processing line in action.png",
-  "/photos/Sterile industrial food processing facility.png",
+  "https://jbtmarel.com/media/dbzm0uun/flofreeze-a.jpg",
+  "/photos/Strawberry sorting in a modern factory.png",
   "/photos/Modern food packaging in action.png",
-  "/photos/Modern food processing facility inspection.png",
-  "/photos/Industrial warehouse with forklift operation.png",
+  "/photos/Industrial warehouse with forklift operation refined.png",
+  "/photos/Fresh peas packing in sterile facility.png",
 ] as const;
 
 const cardVariants = {
@@ -38,9 +39,13 @@ const cardVariants = {
 export function WhyBrkBrief() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      <WaveDivider fill="#2A4E1E" />
+      <WaveDivider fill="var(--color-section-green-bg)" />
 
-      <div className="relative py-20 lg:py-24" style={{ backgroundColor: "#2A4E1E" }}>
+      <div
+        className="relative py-20 lg:py-24 ring-1 ring-inset ring-white/50 shadow-[0_0_200px_rgba(255,255,255,0.58),0_0_100px_rgba(255,255,255,0.4),inset_0_0_180px_rgba(255,255,255,0.28)]"
+        style={{ backgroundColor: "var(--color-section-green-bg)" }}
+      >
+        <SectionWhiteGlow />
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -49,7 +54,7 @@ export function WhyBrkBrief() {
           }}
         />
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
+        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-white/25 blur-[80px]" />
         <SectionLeafAccents />
 
         <Container className="relative">
@@ -61,20 +66,20 @@ export function WhyBrkBrief() {
             className="mb-12 text-center lg:mb-14"
           >
             <div className="mb-4 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-white/30" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+              <span className="h-px w-8 bg-text-dark/20" />
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-text-dark/55">
                 Why Choose Us
               </span>
-              <span className="h-px w-8 bg-white/30" />
+              <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Why Partner with{" "}
-              <span className="text-brand-green">BRK Agro</span>
+              <span className="text-white drop-shadow-[0_0_28px_rgba(255,255,255,0.85),0_0_56px_rgba(255,255,255,0.45)]">BRK Agro</span>
             </h2>
 
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/60">
-              A cleaner supply chain, modern processing, and dependable execution from sourcing to shipment.
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-text-dark/80">
+              BRK Agro is a leading processor and exporter of premium quality frozen food from India — a cleaner supply chain, modern processing, and dependable execution from sourcing to shipment.
             </p>
           </motion.div>
 

@@ -18,7 +18,7 @@ export function ProductsSection() {
         <SectionHeading
           badge="Our Products"
           title="Frozen Corn & Retort Corn"
-          subtitle="Export-grade IQF kernels and retort corn on the cob — processed for consistent quality, shelf life, and nutrition retention."
+          subtitle="BRK Agro is a leading processor and exporter of premium quality frozen food from India — including export-grade IQF kernels and retort corn, processed for consistent quality, shelf life, and nutrition retention."
         />
 
         <motion.div

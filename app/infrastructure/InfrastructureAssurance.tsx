@@ -7,7 +7,7 @@ import { TrustConsistencyContent } from "@/components/sections/TrustConsistencyC
 
 export function InfrastructureAssurance() {
   return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: "#2A4E1E" }}>
+    <section className="relative overflow-hidden" style={{ backgroundColor: "var(--color-section-green-bg)" }}>
       <WaveDivider fill="var(--color-cream-dark)" />
 
       <div className="relative bg-cream-dark py-20 lg:py-28">

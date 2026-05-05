@@ -5,14 +5,15 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
+import { SectionWhiteGlow } from "@/components/decorative/SectionWhiteGlow";
 import { staggerContainer } from "@/lib/animations";
 import { Snowflake, ShieldCheck, Thermometer, ArrowRight } from "lucide-react";
 
 const highlights = [
   {
     icon: Snowflake,
-    title: "JBT's Advanced IQF Technology",
-    desc: "Each piece frozen individually for free-flowing, premium-quality output.",
+    title: "JBT's Advance Technology Latest IQF",
+    desc: "IQF freezes each piece separately for free-flowing, premium-quality output.",
     color: "green",
   },
   {
@@ -38,9 +39,10 @@ const capabilities = [
 export function InfrastructureBrief() {
   return (
     <section
-      className="relative overflow-hidden"
-      style={{ backgroundColor: "#2A4E1E" }}
+      className="relative overflow-hidden ring-1 ring-inset ring-white/45 shadow-[0_0_160px_rgba(255,255,255,0.48),0_0_80px_rgba(255,255,255,0.3)]"
+      style={{ backgroundColor: "var(--color-section-green-bg)" }}
     >
+      <SectionWhiteGlow />
       <WaveDivider fill="var(--color-cream-dark)" />
 
       <div className="relative bg-cream-dark py-20 lg:py-24">
@@ -75,11 +77,17 @@ export function InfrastructureBrief() {
                 <span className="h-px w-8 bg-brand-green/40" />
               </div>
 
-              <h2 className="font-display mb-8 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.4rem]">
+              <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.4rem]">
                 World-Class{" "}
                 <span className="text-brand-green">Processing</span>{" "}
                 Capabilities
               </h2>
+
+              <p className="mb-8 max-w-xl text-sm leading-relaxed text-text-muted lg:text-base">
+                BRK Agro is a leading processor and exporter of premium quality frozen food
+                from India — backed by disciplined infrastructure and export-ready
+                capacity.
+              </p>
 
               <motion.div
                 variants={staggerContainer}
@@ -143,10 +151,10 @@ export function InfrastructureBrief() {
               className="relative"
             >
               <div
-                className="relative overflow-hidden rounded-3xl p-8 lg:p-10"
-                style={{ backgroundColor: "#2A4E1E" }}
+                className="relative overflow-hidden rounded-3xl border border-white/45 bg-[var(--color-section-green-bg)] p-8 shadow-[0_0_160px_rgba(255,255,255,0.52),0_0_80px_rgba(255,255,255,0.35),inset_0_0_140px_rgba(255,255,255,0.24)] ring-1 ring-inset ring-white/50 lg:p-10"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1f3a16]/88 via-[#27451c]/84 to-[#2A4E1E]/88" />
+                <SectionWhiteGlow />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-brand-green-light/25 to-brand-green/40" />
                 {/* Inner texture */}
                 <div
                   className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -156,15 +164,15 @@ export function InfrastructureBrief() {
                   }}
                 />
                 <div className="absolute top-0 right-0 h-48 w-48 rounded-full bg-brand-green/30 blur-3xl" />
-                <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-black/20 blur-2xl" />
+                <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/30 blur-2xl" />
 
                 {/* Large display text */}
                 <div className="relative mb-8">
-                  <p className="font-display text-[5rem] font-black leading-none tracking-tighter text-white/10 lg:text-[7rem]">
+                  <p className="font-display text-[5rem] font-black leading-none tracking-tighter text-text-dark/10 lg:text-[7rem]">
                     IQF
                   </p>
                   <div className="-mt-6 lg:-mt-8">
-                    <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-white/40">
+                    <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-text-dark/50">
                       JBT Advanced Technology
                     </p>
                   </div>
@@ -177,16 +185,16 @@ export function InfrastructureBrief() {
                       key={cap.label}
                       className={`rounded-2xl border p-4 text-center ${
                         i === 1
-                          ? "border-brand-red/25 bg-brand-red/15"
-                          : "border-white/10 bg-white/[.06]"
+                          ? "border-white/35 bg-white/15"
+                          : "border-border-soft bg-warm-white/90"
                       }`}
                     >
                       <p className={`font-display text-2xl font-black leading-none lg:text-3xl ${
-                        i === 1 ? "text-brand-red" : "text-white"
+                        i === 1 ? "text-white drop-shadow-[0_0_18px_rgba(255,255,255,0.85),0_0_36px_rgba(255,255,255,0.4)]" : "text-text-dark"
                       }`}>
                         {cap.value}
                       </p>
-                      <p className="mt-1 text-[10px] font-medium uppercase tracking-wider text-white/50">
+                      <p className="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-muted">
                         {cap.label}
                       </p>
                     </div>
@@ -194,16 +202,16 @@ export function InfrastructureBrief() {
                 </div>
 
                 {/* Export ready badge */}
-                <div className="relative inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/15 px-4 py-2">
+                <div className="relative inline-flex items-center gap-2 rounded-full border border-brand-green-dark/25 bg-warm-white/90 px-4 py-2">
                   <span className="h-2 w-2 rounded-full bg-brand-green animate-pulse-soft" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-brand-green">
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-green-dark">
                     Export-Ready Facility
                   </span>
                 </div>
               </div>
 
               {/* Accent dot */}
-              <div className="absolute -top-3 -right-3 h-6 w-6 rounded-full bg-brand-red/30 ring-4 ring-brand-red/10" />
+              <div className="absolute -top-3 -right-3 h-6 w-6 rounded-full bg-white/65 ring-4 ring-white/45 shadow-[0_0_28px_rgba(255,255,255,0.85)]" />
             </motion.div>
 
           </div>

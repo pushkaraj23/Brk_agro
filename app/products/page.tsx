@@ -5,9 +5,9 @@ import { SectionEdgeOrnament } from "@/components/decorative/SectionEdgeOrnament
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "Products - Frozen Corn & Retort Corn";
+const title = "Products — Frozen Food Range | BRK Agro";
 const description =
-  "BRK Agro product range: IQF Frozen Corn kernels and Retort Corn on the cob — specifications, packaging options, and export-focused quality.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Explore IQF vegetables, Frozen Corn kernels, Retort Corn, and more — specs, packaging, and export-focused quality.";
 
 export const metadata: Metadata = {
   title,

@@ -93,7 +93,7 @@ export function CompanyStats() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundColor: "#2A4E1E" }}
+      style={{ backgroundColor: "var(--color-section-green-bg)" }}
     >
       <WaveDivider fill="var(--color-cream-dark)" />
 

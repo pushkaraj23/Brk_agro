@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
+import { SectionWhiteGlow } from "@/components/decorative/SectionWhiteGlow";
 import { Button } from "@/components/ui/Button";
 import { heroStagger, heroItem, staggerContainer, fadeUp } from "@/lib/animations";
 import { ChevronRight, Check, Snowflake, Mail, FileDown } from "lucide-react";
@@ -369,11 +370,12 @@ export function ProductDetail({ product }: { product: Product }) {
           APPLICATIONS — Dark panel
       ═══════════════════════════════ */}
           <section className="relative mb-10">
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-[#2A4E1E] shadow-[0_28px_90px_rgba(20,40,15,0.35)] ring-1 ring-white/10 sm:rounded-3xl">
+            <div className="overflow-hidden rounded-2xl border border-white/45 bg-[var(--color-section-green-bg)] shadow-[0_0_160px_rgba(255,255,255,0.52),0_0_80px_rgba(255,255,255,0.35),0_28px_90px_rgba(103,184,79,0.22)] ring-1 ring-inset ring-white/50 sm:rounded-3xl">
               <div
                 className="relative px-5 py-14 sm:px-7 sm:py-16 lg:px-9 xl:px-10"
-                style={{ backgroundColor: "#2A4E1E" }}
+                style={{ backgroundColor: "var(--color-section-green-bg)" }}
               >
+                <SectionWhiteGlow />
                 <div
                   className="pointer-events-none absolute inset-0 opacity-[0.06]"
                   style={{
@@ -383,7 +385,7 @@ export function ProductDetail({ product }: { product: Product }) {
                   }}
                 />
                 <div className="pointer-events-none absolute top-0 right-0 h-72 w-72 rounded-full bg-brand-green/30 blur-[100px]" />
-                <div className="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-black/20 blur-[80px]" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-white/25 blur-[80px]" />
 
                 <motion.div
                   initial={{ opacity: 0, x: -24 }}
@@ -395,18 +397,18 @@ export function ProductDetail({ product }: { product: Product }) {
                   }}
                 >
                   <div className="mb-4 flex items-center gap-3">
-                    <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+                    <span className="text-xs font-bold uppercase tracking-[0.22em] text-text-dark/55">
                       Applications
                     </span>
-                    <span className="h-px w-8 bg-white/25" />
+                    <span className="h-px w-8 bg-text-dark/20" />
                   </div>
 
-                  <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
+                  <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl">
                     Where It&apos;s{" "}
-                    <span className="text-brand-red">Used</span>
+                    <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">Used</span>
                   </h2>
 
-                  <p className="mb-10 max-w-2xl text-base leading-relaxed text-white/60">
+                  <p className="mb-10 max-w-2xl text-base leading-relaxed text-text-dark/80">
                     Our {product.shortName} is trusted across diverse markets worldwide.
                     Each use case below is paired with a visual snapshot so you can scan
                     where your product fits.
@@ -427,7 +429,7 @@ export function ProductDetail({ product }: { product: Product }) {
                         <motion.article
                           key={app.title}
                           variants={fadeUp}
-                          className={`group overflow-hidden rounded-2xl border border-white/10 bg-white/[.05] shadow-[0_20px_50px_rgba(0,0,0,0.2)] backdrop-blur-sm transition-shadow duration-300 hover:border-white/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.28)] ${
+                          className={`group overflow-hidden rounded-2xl border border-border-soft bg-warm-white/50 shadow-card backdrop-blur-sm transition-shadow duration-300 hover:border-brand-green/30 hover:shadow-elevated ${
                             lastOdd ? "sm:col-span-2 sm:mx-auto sm:max-w-lg" : ""
                           }`}
                         >
@@ -439,7 +441,7 @@ export function ProductDetail({ product }: { product: Product }) {
                               className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f0c]/95 via-[#0f1f0c]/35 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
                             <div className="absolute left-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg bg-black/35 text-[11px] font-bold text-white ring-1 ring-white/15 backdrop-blur-sm">
                               {String(i + 1).padStart(2, "0")}
                             </div>

@@ -48,8 +48,7 @@ export function WhyBrkHero() {
             </motion.h1>
 
             <motion.p variants={heroItem} className="mt-5 max-w-2xl text-base leading-relaxed text-text-muted lg:text-lg">
-              We combine disciplined sourcing, modern processing, and export-first execution so distributors and food
-              brands can scale with confidence.
+              BRK Agro is a leading processor and exporter of premium quality frozen food from India — combining disciplined sourcing, modern processing, and export-first execution so distributors and food brands scale with confidence.
             </motion.p>
 
             <motion.div variants={heroItem} className="mt-7 grid max-w-xl grid-cols-3 gap-3">

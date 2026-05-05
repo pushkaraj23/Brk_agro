@@ -64,9 +64,9 @@ export function ProductsHero() {
               variants={heroItem}
               className="mt-5 max-w-lg text-base leading-relaxed text-text-muted lg:text-lg"
             >
-              Explore our export-focused range including IQF vegetables and
-              processed formats, packed for dependable performance across retail
-              and foodservice channels.
+              BRK Agro is a leading processor and exporter of premium quality frozen food from
+              India — explore IQF vegetables and processed formats, packed for
+              dependable retail and foodservice performance.
             </motion.p>
 
             <motion.div
@@ -138,7 +138,7 @@ export function ProductsHero() {
               <div className="grid grid-cols-3 gap-3 p-4 sm:p-5">
                 <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
                   <Image
-                    src="/products/sweet_corn.png"
+                    src="/products/sweet-corn-refined.png"
                     alt="Sweet corn"
                     width={38}
                     height={38}
@@ -148,7 +148,7 @@ export function ProductsHero() {
                 </div>
                 <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
                   <Image
-                    src="/products/mixed_veggies.png"
+                    src="/products/mixed-veggies-refined.png"
                     alt="Mixed vegetables"
                     width={38}
                     height={38}
@@ -158,7 +158,7 @@ export function ProductsHero() {
                 </div>
                 <div className="flex items-center gap-2 rounded-xl border border-border-soft bg-cream/60 px-3 py-2.5">
                   <Image
-                    src="/products/green_peas.png"
+                    src="/products/green-peas-refined.png"
                     alt="Green peas"
                     width={38}
                     height={38}

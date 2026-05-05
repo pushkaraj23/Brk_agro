@@ -26,12 +26,12 @@ const icons: ReactNode[] = [
 ];
 
 const infrastructureImages = [
-  "/photos/Industrial food processing machine in factory.png",
-  "/photos/Modern food processing facility inspection.png",
+  "https://jbtmarel.com/media/dbzm0uun/flofreeze-a.jpg",
+  "https://www.retort-machine.com/uploadfiles/128.1.164.27/webid2313/newsimg/202501/6791d00ef034e.jpg",
   "/photos/Sterile industrial food processing facility.png",
   "/photos/Cold storage inventory check close-up.png",
   "/photos/Industrial food packaging in action.png",
-  "/photos/Industrial warehouse with forklift operation.png",
+  "/photos/Industrial warehouse with forklift operation refined.png",
 ] as const;
 
 export function InfrastructureSection() {
@@ -73,7 +73,9 @@ export function InfrastructureSection() {
             </h2>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-text-muted">
-              A world-class facility built for precision, hygiene, and quality.
+              As a leading processor and exporter of premium quality frozen food from India,
+              we invest in infrastructure built for precision, hygiene, and consistent
+              export quality.
             </p>
           </motion.div>
 

@@ -8,9 +8,9 @@ import { CTASection } from "@/components/sections/CTASection";
 import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSection";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "About BRK Agro - Frozen Corn Processing Company";
+const title = "About BRK Agro — Leading Frozen Food Processor & Exporter";
 const description =
-  "Learn about BRK Agro — Frozen Corn and Retort Corn processor in Pune district, Maharashtra, India — mission, vision, IQF and retort focus, solar-installed infrastructure, cold room rental services, hygiene, and export partnerships.";
+  "Learn about BRK Agro — a leading processor and exporter of premium quality frozen food from India — mission, vision, and commitment to uncompromised quality for global consistency.";
 
 export const metadata: Metadata = {
   title,

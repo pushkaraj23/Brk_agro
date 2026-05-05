@@ -8,9 +8,9 @@ import { ColdRoomRentalSection } from "@/components/sections/ColdRoomRentalSecti
 import { CTASection } from "@/components/sections/CTASection";
 import { pageSocialMetadata } from "@/lib/seo";
 
-const title = "Why BRK Agro - Trusted Corn Export Partner";
+const title = "Why BRK Agro — Leading Frozen Food Processor & Exporter";
 const description =
-  "Why buyers choose BRK Agro for Frozen Corn and Retort Corn: farm-linked sourcing, IQF and retort capability, solar-installed facilities, cold room rental options, documentation support, and dependable export execution.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Buyers choose us for farm-linked sourcing, IQF and retort capability, solar-installed facilities, cold room rental, documentation support, and dependable export execution.";
 
 export const metadata: Metadata = {
   title,

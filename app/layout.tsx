@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CursorFollower } from "@/components/ui/CursorFollower";
 import { FloatingSocials } from "@/components/ui/FloatingSocials";
+import { ImageProtection } from "@/components/ui/ImageProtection";
 import { siteConfig } from "@/lib/constants";
 import { defaultOgImage } from "@/lib/seo";
 import "./globals.css";
@@ -27,7 +28,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.brkagro.com"),
   title: {
-    default: "BRK Agro | Frozen Corn & Retort Corn Manufacturer from India",
+    default: "BRK Agro | Premium Frozen Food from India",
     template: "%s | BRK Agro",
   },
   description: siteConfig.description,
@@ -53,16 +54,16 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.brkagro.com",
     siteName: "BRK Agro",
-    title: "BRK Agro | Frozen Corn & Retort Corn Manufacturer from India",
+    title: "BRK Agro | Premium Frozen Food from India",
     description:
-      "Trusted processor and exporter of Frozen Corn and Retort Corn with advanced IQF and retort technology.",
+      "BRK Agro is a leading processor and exporter of premium quality frozen food from India — trusted processing infrastructure and export-ready operations.",
     images: [defaultOgImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BRK Agro | Frozen Corn & Retort Corn Manufacturer",
+    title: "BRK Agro | Premium Frozen Food from India",
     description:
-      "Premium Frozen Corn and Retort Corn for global buyers, distributors, and HoReCa partners.",
+      "Premium quality frozen food for global buyers, distributors, and food service partners — from a leading processor and exporter in India.",
     images: [defaultOgImage.url],
   },
   robots: {
@@ -92,6 +93,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-screen flex-col">
+        <ImageProtection />
         <CursorFollower />
         <FloatingSocials />
         <Header />
