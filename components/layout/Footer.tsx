@@ -169,7 +169,7 @@ export function Footer() {
               &copy; {year} {siteConfig.name}. All rights reserved.
             </p>
             <p className="min-w-0 flex-1 px-1 text-center text-[9px] leading-tight text-white/25 sm:text-[11px] sm:leading-snug md:px-2 md:text-xs lg:text-sm">
-              Designed and Developed by{" "}
+              Designed & Developed by{" "}
               <a
                 href="https://fibonce.com"
                 target="_blank"

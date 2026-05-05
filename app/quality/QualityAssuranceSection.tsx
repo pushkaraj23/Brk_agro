@@ -11,7 +11,6 @@ import { staggerContainer, fadeUp } from "@/lib/animations";
 import {
   QUALITY_LAB_VIDEO_POSTER,
   QUALITY_PILLAR_IMAGES,
-  SITE_VIDEOS,
 } from "@/lib/siteMedia";
 import {
   FlaskConical,
@@ -76,12 +75,12 @@ const pillars = [
 ];
 
 const microbiologyTests = [
-  "Aerobic Plate Count",
-  "Anaerobic Plate Count",
-  "Coliforms",
-  "Lactic Acid Bacteria",
-  "E. coli",
-  "Enterobacteriaceae",
+  "Raw material quality screening",
+  "In-process quality verification",
+  "Finished batch quality review",
+  "Packaging integrity checks",
+  "Storage and handling compliance",
+  "Dispatch readiness checks",
 ];
 
 const assuranceRows = [
@@ -109,6 +108,8 @@ const assuranceRows = [
 const WAVE = {
   toSectionGreen: "#67B84F",
 } as const;
+
+const QUALITY_SECTION_VIDEO_URL = "https://www.pexels.com/download/video/8490428/";
 
 export function QualityAssuranceSection() {
   return (
@@ -366,7 +367,7 @@ export function QualityAssuranceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-3xl border border-white/45 bg-[var(--color-section-green-bg)] p-8 shadow-[0_0_160px_rgba(255,255,255,0.52),0_0_80px_rgba(255,255,255,0.35),0_40px_80px_rgba(103,184,79,0.22)] ring-1 ring-inset ring-white/50 sm:min-h-[360px] lg:min-h-full"
+              className="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-3xl border border-white/30 bg-[var(--color-section-green-bg)] p-8 shadow-[0_24px_64px_rgba(15,32,13,0.32)] ring-1 ring-inset ring-white/25 sm:min-h-[360px] lg:min-h-full"
             >
               <SectionWhiteGlow />
               <video
@@ -378,18 +379,18 @@ export function QualityAssuranceSection() {
                 preload="metadata"
                 poster={QUALITY_LAB_VIDEO_POSTER}
               >
-                <source src={SITE_VIDEOS.facilityProcessingMp4} type="video/mp4" />
+                <source src={QUALITY_SECTION_VIDEO_URL} type="video/mp4" />
               </video>
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-green/50 via-brand-green-dark/55 to-text-dark/88" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-green/35 via-brand-green-dark/45 to-text-dark/82" />
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-green/25 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-white/12 blur-3xl" />
 
               <div className="relative z-[1] mb-6 flex justify-center gap-4">
-                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/15 bg-white/[0.07] shadow-inner backdrop-blur-sm">
+                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/20 bg-white/[0.08] shadow-inner backdrop-blur-sm">
                   <Microscope className="h-9 w-9 text-brand-green" strokeWidth={1.75} />
                 </div>
-                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/15 bg-white/[0.07] shadow-inner backdrop-blur-sm">
-                  <FlaskConical className="h-9 w-9 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.95),0_0_40px_rgba(255,255,255,0.5)]" strokeWidth={1.75} />
+                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/20 bg-white/[0.08] shadow-inner backdrop-blur-sm">
+                  <FlaskConical className="h-9 w-9 text-white" strokeWidth={1.75} />
                 </div>
               </div>
               <div className="relative z-[1] space-y-2 text-center">
@@ -404,7 +405,7 @@ export function QualityAssuranceSection() {
                 {["JBT MACHINES", "IQF FACILITY", "RETORT FACILITY"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/50 bg-white/22 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-[0_0_28px_rgba(255,255,255,0.55),0_0_14px_rgba(255,255,255,0.35)]"
+                    className="rounded-full border border-white/35 bg-white/16 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white"
                   >
                     {tag}
                   </span>
@@ -418,17 +419,17 @@ export function QualityAssuranceSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="rounded-3xl border border-white/12 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md lg:p-7"
+                className="rounded-3xl border border-white/18 bg-gradient-to-br from-white/[0.15] to-white/[0.06] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md lg:p-7"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <Microscope className="h-5 w-5 text-brand-green" />
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/45">
-                    Microbiology
+                    Quality checks
                   </span>
                   <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent" />
                 </div>
                 <h3 className="font-display mb-5 text-xl font-black text-white sm:text-2xl">
-                  Batch-wise food safety checks
+                  Batch-wise food quality checks
                 </h3>
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {microbiologyTests.map((test, i) => {
@@ -457,7 +458,7 @@ export function QualityAssuranceSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.06, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="rounded-3xl border border-white/12 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-6 backdrop-blur-md lg:p-7"
+                className="rounded-3xl border border-white/18 bg-gradient-to-br from-white/[0.15] to-white/[0.06] p-6 backdrop-blur-md lg:p-7"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <MonitorCheck className="h-5 w-5 text-brand-red" />
@@ -470,8 +471,8 @@ export function QualityAssuranceSection() {
                   Digital monitoring for consistency
                 </h3>
                 <p className="mb-5 text-sm leading-relaxed text-white/65 sm:text-[15px]">
-                  From raw material to dispatch — analytics, traceable records, and faster corrective action when
-                  something drifts.
+                  From intake to dispatch - analytics, traceable records, and faster corrective action
+                  for steady output quality.
                 </p>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-black/25 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
