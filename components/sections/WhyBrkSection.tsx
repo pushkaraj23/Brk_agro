@@ -72,7 +72,7 @@ export function WhyBrkSection() {
               <span className="h-px w-8 bg-brand-red/40" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Why Partner with{" "}
               <span className="text-brand-green">BRK Agro</span>
             </h2>
@@ -114,7 +114,7 @@ export function WhyBrkSection() {
                     {icons[i]}
                   </div>
                 </div>
-                <h3 className="font-display mb-2 text-lg font-bold text-text-dark">
+                <h3 className="font-display mb-2 text-lg font-semibold text-text-dark">
                   {feature.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-text-muted">

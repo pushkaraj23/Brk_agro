@@ -55,7 +55,7 @@ export function ProductsSection() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-display mb-1.5 text-base font-bold text-text-dark">
+                <h3 className="font-display mb-1.5 text-base font-semibold text-text-dark">
                   {product.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-text-muted line-clamp-2">

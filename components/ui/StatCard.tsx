@@ -20,7 +20,7 @@ export function StatCard({ value, label, className = "" }: StatCardProps) {
       }}
       transition={{ duration: 0.3 }}
     >
-      <div className="font-display mb-1 text-3xl font-bold text-brand-green sm:text-4xl">
+      <div className="font-display mb-1 text-3xl font-semibold text-brand-green sm:text-4xl">
         {value}
       </div>
       <div className="text-sm font-medium text-text-muted">{label}</div>

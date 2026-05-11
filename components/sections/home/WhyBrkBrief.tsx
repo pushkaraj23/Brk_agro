@@ -25,7 +25,7 @@ const featureImages = [
   "/photos/Strawberry sorting in a modern factory.png",
   "/photos/Modern food packaging in action.png",
   "/photos/Industrial warehouse with forklift operation refined.png",
-  "/photos/Fresh peas packing in sterile facility.png",
+  "/photos/Fresh peas packing in sterile facility refined.png",
 ] as const;
 
 const cardVariants = {
@@ -73,7 +73,7 @@ export function WhyBrkBrief() {
               <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Why Partner with{" "}
               <span className="text-white drop-shadow-[0_0_28px_rgba(255,255,255,0.85),0_0_56px_rgba(255,255,255,0.45)]">BRK Agro</span>
             </h2>
@@ -120,7 +120,7 @@ export function WhyBrkBrief() {
                   </div>
 
                   <div className="p-5">
-                    <h3 className="font-display mb-2 text-base font-bold text-text-dark">
+                    <h3 className="font-display mb-2 text-base font-semibold text-text-dark">
                       {f.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-text-muted">{f.desc}</p>

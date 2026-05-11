@@ -79,7 +79,7 @@ function CountUp({
   return (
     <span
       ref={ref}
-      className={`font-display block text-5xl font-black leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
+      className={`font-display block text-5xl font-bold leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
         color === "green" ? "text-brand-green" : "text-brand-red"
       }`}
     >
@@ -127,7 +127,7 @@ export function CompanyStats() {
               </span>
               <span className="h-px w-8 bg-border/50" />
             </div>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Numbers That <span className="text-brand-green">Speak</span>
             </h2>
           </motion.div>
@@ -159,7 +159,7 @@ export function CompanyStats() {
                     />
                   ) : (
                     <span
-                      className={`font-display block text-5xl font-black leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
+                      className={`font-display block text-5xl font-bold leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
                         isGreen ? "text-brand-green" : "text-brand-red"
                       }`}
                     >
@@ -204,7 +204,7 @@ export function CompanyStats() {
               </span>
               <span className="h-px w-8 bg-border/50" />
             </div>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl">
               What <span className="text-brand-red">Drives</span> Us
             </h2>
           </motion.div>
@@ -247,7 +247,7 @@ export function CompanyStats() {
                     <CheckCircle size={18} />
                   </div>
                   <div>
-                    <h3 className="font-display mb-1 text-sm font-bold text-text-dark lg:text-base">
+                    <h3 className="font-display mb-1 text-sm font-semibold text-text-dark lg:text-base">
                       {v.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-text-muted">

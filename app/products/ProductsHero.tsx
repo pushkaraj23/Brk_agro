@@ -54,7 +54,7 @@ export function ProductsHero() {
 
             <motion.h1
               variants={heroItem}
-              className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
+              className="mt-4 font-display text-3xl font-semibold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
               Frozen &amp; Processed{" "}
               <span className="text-brand-red">Product Range</span>
@@ -74,15 +74,15 @@ export function ProductsHero() {
               className="mt-7 grid max-w-xl grid-cols-3 gap-3"
             >
               <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3 text-center">
-                <p className="font-display text-xl font-black text-brand-green-dark">9</p>
+                <p className="font-display text-xl font-bold text-brand-green-dark">9</p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Products</p>
               </div>
               <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3 text-center">
-                <p className="font-display text-xl font-black text-brand-red">IQF</p>
+                <p className="font-display text-xl font-bold text-brand-red">IQF</p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Tech Process</p>
               </div>
               <div className="rounded-xl border border-border-soft bg-cream/50 px-3 py-3 text-center">
-                <p className="font-display text-xl font-black text-text-dark">Global</p>
+                <p className="font-display text-xl font-bold text-text-dark">Global</p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Export Ready</p>
               </div>
             </motion.div>

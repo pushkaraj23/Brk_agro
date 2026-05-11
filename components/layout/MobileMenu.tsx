@@ -147,15 +147,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </span>
                   {contactInfo.email}
                 </a>
-                <a
-                  href={emailMailtoHref(contactInfo.directEmail)}
-                  className="flex items-center gap-2.5 text-xs font-medium text-text-muted transition-colors hover:text-brand-green"
-                >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-soft-green">
-                    <Mail size={11} className="text-brand-green" />
-                  </span>
-                  {contactInfo.directEmail}
-                </a>
               </div>
             </motion.div>
 

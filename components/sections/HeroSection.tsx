@@ -77,11 +77,11 @@ function HeroCopy({
       </motion.p>
 
       <motion.div variants={item} className="mb-5">
-        <h1 className="font-display font-black leading-[0.85] tracking-tighter text-text-dark">
+        <h1 className="font-display font-bold leading-[0.85] tracking-tighter text-text-dark">
           <span className="block text-[3.6rem] sm:text-[5rem] lg:text-[6rem] xl:text-[7rem]">FROZEN</span>
           <span className="mt-1 flex items-baseline gap-2 sm:gap-3">
             <span className="text-[2.8rem] sm:text-[3.8rem] lg:text-[4.8rem] xl:text-[5.8rem] text-brand-green">&amp;</span>
-            <span className="text-[2rem] sm:text-[2.6rem] lg:text-[3.2rem] xl:text-[3.8rem] font-bold text-brand-red">
+            <span className="text-[2rem] sm:text-[2.6rem] lg:text-[3.2rem] xl:text-[3.8rem] font-semibold text-brand-red">
               FRESH
             </span>
           </span>

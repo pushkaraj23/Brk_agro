@@ -110,7 +110,7 @@ export function ProductQuality() {
               <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Quality You Can{" "}
               <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">Trust</span>
             </h2>
@@ -158,7 +158,7 @@ export function ProductQuality() {
                   </div>
 
                   <div>
-                    <h3 className="font-display mb-1 text-sm font-bold text-text-dark lg:text-base">
+                    <h3 className="font-display mb-1 text-sm font-semibold text-text-dark lg:text-base">
                       {f.title}
                     </h3>
                     <p className="text-xs leading-relaxed text-text-muted sm:text-sm">

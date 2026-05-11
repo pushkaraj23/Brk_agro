@@ -40,7 +40,7 @@ export function WhyBrkHero() {
 
             <motion.h1
               variants={heroItem}
-              className="mt-4 font-display text-3xl font-black leading-[1.08] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
+              className="mt-4 font-display text-3xl font-semibold leading-[1.08] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
               A reliable processing partner for{" "}
               <span className="text-brand-green">global frozen food</span>{" "}
@@ -61,7 +61,7 @@ export function WhyBrkHero() {
                       : "border-brand-green/20 bg-brand-green/[.06]"
                   }`}
                 >
-                  <p className={`font-display text-xl font-black ${i === 1 ? "text-brand-red" : "text-brand-green-dark"}`}>
+                  <p className={`font-display text-xl font-bold ${i === 1 ? "text-brand-red" : "text-brand-green-dark"}`}>
                     {s.value}
                   </p>
                   <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted">{s.label}</p>

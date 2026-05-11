@@ -68,7 +68,7 @@ export function ProductsBrief() {
             <span className="h-px w-8 bg-brand-red/50" />
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Explore Our{" "}
               <span className="text-brand-red">Product Range</span>
             </h2>
@@ -144,7 +144,7 @@ export function ProductsBrief() {
                     </span>
 
                     {/* Name */}
-                    <h3 className="font-display text-sm font-bold leading-snug text-text-dark sm:text-base">
+                    <h3 className="font-display text-sm font-semibold leading-snug text-text-dark sm:text-base">
                       {product.name}
                     </h3>
                   </div>

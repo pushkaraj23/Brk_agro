@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { SectionLeafAccents } from "@/components/decorative/SectionLeafAccents";
-import { siteConfig, navLinks, contactInfo, products } from "@/lib/constants";
+import { siteConfig, navLinks, contactInfo, products, socialLinks } from "@/lib/constants";
 import { BrochureDownloadLink } from "@/components/ui/BrochureDownloadLink";
 import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
@@ -138,23 +138,12 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail size={15} className="flex-shrink-0 text-brand-red" />
-                  <span className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
-                    <a
-                      href={emailMailtoHref(contactInfo.email)}
-                      className="transition-colors hover:text-brand-green"
-                    >
-                      {contactInfo.email}
-                    </a>
-                    <span className="text-white/35" aria-hidden>
-                      ·
-                    </span>
-                    <a
-                      href={emailMailtoHref(contactInfo.directEmail)}
-                      className="transition-colors hover:text-brand-green"
-                    >
-                      {contactInfo.directEmail}
-                    </a>
-                  </span>
+                  <a
+                    href={emailMailtoHref(contactInfo.email)}
+                    className="transition-colors hover:text-brand-green"
+                  >
+                    {contactInfo.email}
+                  </a>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Globe size={15} className="flex-shrink-0 text-brand-green" />
@@ -182,7 +171,9 @@ export function Footer() {
             </p>
             <div className="flex shrink-0 items-center gap-2.5 sm:gap-4">
               <a
-                href="#"
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="inline-flex rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
               >

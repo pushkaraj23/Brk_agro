@@ -80,7 +80,7 @@ export function ProductEnquiryForm({
           <p className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
             Enquiry
           </p>
-          <p className="font-display text-base font-bold leading-snug text-text-dark">
+          <p className="font-display text-base font-semibold leading-snug text-text-dark">
             {productShortName}
           </p>
           <p className="mt-1 text-xs leading-relaxed text-text-muted">
@@ -94,7 +94,7 @@ export function ProductEnquiryForm({
           <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-soft-green ring-4 ring-brand-green/15">
             <CheckCircle size={28} className="text-brand-green" />
           </div>
-          <h3 className="font-display mb-1.5 text-lg font-bold text-text-dark">
+          <h3 className="font-display mb-1.5 text-lg font-semibold text-text-dark">
             Thank you!
           </h3>
           <p className="max-w-[240px] text-sm text-text-muted">

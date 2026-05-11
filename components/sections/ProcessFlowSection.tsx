@@ -56,7 +56,7 @@ export function ProcessFlowSection() {
                     {step.step}
                   </span>
                 </div>
-                <h3 className="font-display mb-1 text-sm font-bold text-text-dark">{step.title}</h3>
+                <h3 className="font-display mb-1 text-sm font-semibold text-text-dark">{step.title}</h3>
                 <p className="text-xs leading-relaxed text-text-muted">{step.description}</p>
               </motion.div>
             ))}

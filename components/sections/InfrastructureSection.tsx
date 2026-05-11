@@ -67,7 +67,7 @@ export function InfrastructureSection() {
               <span className="h-px w-8 bg-brand-green/40" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               State-of-the-Art{" "}
               <span className="text-brand-green">Processing</span>
             </h2>
@@ -120,7 +120,7 @@ export function InfrastructureSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className="font-display mb-2 text-lg font-bold text-text-dark">
+                <h3 className="font-display mb-2 text-lg font-semibold text-text-dark">
                   {item.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-text-muted">

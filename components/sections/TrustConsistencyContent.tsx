@@ -28,7 +28,7 @@ export function TrustConsistencyContent() {
             <span className="h-1.5 w-1.5 rounded-full bg-brand-red shadow-[0_0_12px_rgba(237,28,36,0.45)]" />
           </div>
 
-          <h2 className="font-display text-[1.65rem] font-black leading-[1.12] tracking-tight text-text-dark sm:text-4xl lg:text-[2.65rem]">
+          <h2 className="font-display text-[1.65rem] font-semibold leading-[1.12] tracking-tight text-text-dark sm:text-4xl lg:text-[2.65rem]">
             Built on{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-br from-brand-green to-brand-green-dark bg-clip-text text-transparent">
@@ -84,7 +84,7 @@ export function TrustConsistencyContent() {
                 />
 
                 <div
-                  className={`font-display mb-2 bg-clip-text tabular-nums text-[2rem] font-black tracking-tight text-transparent sm:text-4xl lg:text-[2.75rem] ${
+                  className={`font-display mb-2 bg-clip-text tabular-nums text-[2rem] font-bold tracking-tight text-transparent sm:text-4xl lg:text-[2.75rem] ${
                     isGreen
                       ? "bg-gradient-to-br from-brand-green-dark to-brand-green"
                       : "bg-gradient-to-br from-brand-red-dark to-brand-red"

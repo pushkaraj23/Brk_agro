@@ -55,7 +55,7 @@ export function ContactSection() {
               </span>
               <span className="h-px w-8 bg-brand-green/40" />
             </div>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Let&apos;s Build a{" "}
               <span className="text-brand-red">Partnership</span>
             </h2>
@@ -84,7 +84,7 @@ export function ContactSection() {
                   <p className="text-xs font-bold uppercase tracking-wider text-text-muted">
                     Enquiry Form
                   </p>
-                  <p className="font-display text-lg font-bold text-text-dark">
+                  <p className="font-display text-lg font-semibold text-text-dark">
                     Send us a message
                   </p>
                 </div>
@@ -95,7 +95,7 @@ export function ContactSection() {
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-soft-green ring-4 ring-brand-green/15">
                     <CheckCircle size={32} className="text-brand-green" />
                   </div>
-                  <h3 className="font-display mb-2 text-2xl font-bold text-text-dark">
+                  <h3 className="font-display mb-2 text-2xl font-semibold text-text-dark">
                     Thank You!
                   </h3>
                   <p className="max-w-sm text-text-muted">
@@ -186,7 +186,7 @@ export function ContactSection() {
 
             <motion.div variants={fadeUp} className="space-y-6 lg:col-span-2">
               <div className="rounded-3xl border border-border-soft bg-gradient-to-br from-warm-white to-cream/80 p-7 shadow-card sm:p-8">
-                <h3 className="font-display mb-6 text-lg font-bold text-text-dark">
+                <h3 className="font-display mb-6 text-lg font-semibold text-text-dark">
                   Contact Information
                 </h3>
                 <div className="space-y-5">
@@ -202,36 +202,25 @@ export function ContactSection() {
                     label="Phone"
                     color="green"
                   >
-                    <a
-                      href={phoneTelHref(contactInfo.phone)}
-                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
-                    >
-                      {contactInfo.phone}
-                    </a>{" "}
-                    <span className="font-normal text-text-muted">
-                      ({contactInfo.contactName})
-                    </span>
-                  </InfoRow>
-                  <InfoRow
-                    icon={<Mail size={18} />}
-                    label="Direct email"
-                    color="green"
-                  >
-                    <a
-                      href={emailMailtoHref(contactInfo.directEmail)}
-                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
-                    >
-                      {contactInfo.directEmail}
-                    </a>
+                    <div className="flex flex-col gap-0.5">
+                      <a
+                        href={phoneTelHref(contactInfo.phone)}
+                        className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+                      >
+                        {contactInfo.phone}
+                      </a>
+                      <span>{contactInfo.contactName}</span>
+                      <span className="text-text-muted">{contactInfo.contactTitle}</span>
+                    </div>
                   </InfoRow>
                   <InfoRow
                     icon={<Mail size={18} />}
                     label="Email"
-                    color="red"
+                    color="green"
                   >
                     <a
                       href={emailMailtoHref(contactInfo.email)}
-                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+                      className="underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
                     >
                       {contactInfo.email}
                     </a>

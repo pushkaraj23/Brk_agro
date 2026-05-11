@@ -50,7 +50,7 @@ export function AboutSection() {
                 <span className="h-px w-8 bg-brand-green" />
               </div>
 
-              <h2 className="font-display mb-5 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+              <h2 className="font-display mb-5 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
                 {aboutContent.headline}
               </h2>
 
@@ -128,7 +128,7 @@ export function AboutSection() {
                     <Icon size={16} />
                   </div>
                   <div>
-                    <h3 className="font-display mb-0.5 text-sm font-bold text-text-dark">
+                    <h3 className="font-display mb-0.5 text-sm font-semibold text-text-dark">
                       {feature.title}
                     </h3>
                     <p className="text-xs leading-relaxed text-text-muted">

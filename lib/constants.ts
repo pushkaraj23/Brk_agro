@@ -7,7 +7,7 @@ export const siteConfig = {
   tagline: "Premium Frozen Food — From Farm to Global Markets",
   description: `${companyDescription} We operate with advanced freezing technology, hygienic infrastructure, and export-ready packaging for global buyers.`,
   phone: "+91 70309 22272",
-  email: "customercare@brkagro.com",
+  email: "shrikant.magar@brkagro.com",
   website: "www.brkagro.com",
   address:
     "A/P, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
@@ -314,7 +314,7 @@ export const products = [
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
-      { title: "Retail frozen packs", image: "/photos/Fresh peas packing in sterile facility.png" },
+      { title: "Retail frozen packs", image: "/photos/Fresh peas packing in sterile facility refined.png" },
       { title: "Prepared foods", image: "/photos/Frozen vegetable processing line in action.png" },
       { title: "Food manufacturing", image: "/photos/Industrial food processing machine in factory.png" },
       { title: "Export cartons", image: "/photos/Industrial warehouse with forklift operation refined.png" },
@@ -478,17 +478,18 @@ export const contactInfo = {
   companyName: "BRK Agro",
   address:
     "A/P, Shikrapur, Tal. Shirur, Dist. Pune - 412208, Maharashtra, India",
-  contactName: "Mr. Shrikant Magar Vice President - Sales & Marketing",
+  contactName: "Mr. Shrikant Magar",
+  contactTitle: "Vice President - Sales & Marketing",
   phone: "+91 70309 22272",
-  email: "customercare@brkagro.com",
-  directEmail: "shrikant.magar@brkagro.com",
+  email: "shrikant.magar@brkagro.com",
   website: "www.brkagro.com",
 };
 
 export const socialLinks = {
   whatsapp: "https://wa.me/917030922272",
   instagram: "#",
-  linkedin: "#",
+  linkedin:
+    "https://in.linkedin.com/company/brk-agro-cold-storage-plant-and-warehouse-in-pune",
 };
 
 /** Product catalogue PDF served from /public */

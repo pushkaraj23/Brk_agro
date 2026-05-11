@@ -76,7 +76,7 @@ export function PartnershipApproach() {
                   <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted">
                     Step {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mb-1 text-base font-bold text-text-dark">
+                  <h3 className="mb-1 text-base font-semibold text-text-dark">
                     {a.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-text-muted">
@@ -113,11 +113,11 @@ export function PartnershipApproach() {
 
               <div className="grid grid-cols-2 gap-3 p-4 sm:p-5">
                 <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3 text-center">
-                  <p className="font-display text-xl font-black text-brand-green-dark">50+</p>
+                  <p className="font-display text-xl font-bold text-brand-green-dark">50+</p>
                   <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Global Partners</p>
                 </div>
                 <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3 text-center">
-                  <p className="font-display text-xl font-black text-brand-red">24/7</p>
+                  <p className="font-display text-xl font-bold text-brand-red">24/7</p>
                   <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Support Window</p>
                 </div>
               </div>

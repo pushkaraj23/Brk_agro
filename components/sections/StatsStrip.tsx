@@ -43,7 +43,7 @@ function CountUp({
   return (
     <span
       ref={ref}
-      className={`font-display block text-5xl font-black leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
+      className={`font-display block text-5xl font-bold leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
         color === "green" ? "text-brand-green" : "text-brand-red"
       }`}
     >
@@ -99,7 +99,7 @@ export function StatsStrip() {
                   <CountUp to={stat.numericTo} suffix={stat.suffix} color={stat.color} />
                 ) : (
                   <span
-                    className={`font-display block text-5xl font-black leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
+                    className={`font-display block text-5xl font-bold leading-none tracking-tighter sm:text-6xl lg:text-7xl ${
                       isGreen ? "text-brand-green" : "text-brand-red"
                     }`}
                   >

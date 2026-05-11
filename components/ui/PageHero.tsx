@@ -57,7 +57,7 @@ export function PageHero({ badge, title, subtitle, breadcrumb }: PageHeroProps) 
 
           <motion.h1
             variants={heroItem}
-            className="mt-4 font-display text-4xl leading-[1.1] font-bold tracking-tight text-text-dark sm:text-5xl lg:text-6xl"
+            className="mt-4 font-display text-4xl leading-[1.1] font-semibold tracking-tight text-text-dark sm:text-5xl lg:text-6xl"
           >
             {title}
           </motion.h1>

@@ -103,7 +103,7 @@ export function AboutBrief() {
             </div>
 
             {/* Headline */}
-            <h2 className="font-display mb-5 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-5 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               {aboutContent.headline}
             </h2>
 

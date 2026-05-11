@@ -54,7 +54,7 @@ export function ContactHero() {
 
             <motion.h1
               variants={heroItem}
-              className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
+              className="mt-4 font-display text-3xl font-semibold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
               Let&apos;s build your next{" "}
               <span className="text-brand-green">export order</span>
@@ -121,18 +121,9 @@ export function ContactHero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
               </div>
 
-              <div className="grid grid-cols-2 gap-3 p-4 sm:p-5">
-                <div className="rounded-xl border border-brand-red/20 bg-brand-red/[.05] px-3 py-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Direct email</p>
-                  <a
-                    href={emailMailtoHref(contactInfo.directEmail)}
-                    className="mt-1 block text-sm font-semibold text-text-dark underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
-                  >
-                    {contactInfo.directEmail}
-                  </a>
-                </div>
+              <div className="p-4 sm:p-5">
                 <div className="rounded-xl border border-brand-green/20 bg-brand-green/[.06] px-3 py-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Customer care</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-text-muted">Email</p>
                   <a
                     href={emailMailtoHref(contactInfo.email)}
                     className="mt-1 block text-sm font-semibold text-text-dark underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"

@@ -54,7 +54,7 @@ export function InfrastructureHero() {
 
             <motion.h1
               variants={heroItem}
-              className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
+              className="mt-4 font-display text-3xl font-semibold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
             >
               World-Class{" "}
               <span className="text-brand-green">Processing</span> Facility

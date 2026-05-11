@@ -77,7 +77,7 @@ export function InfrastructureBrief() {
                 <span className="h-px w-8 bg-brand-green/40" />
               </div>
 
-              <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.4rem]">
+              <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.4rem]">
                 World-Class{" "}
                 <span className="text-brand-green">Processing</span>{" "}
                 Capabilities
@@ -116,10 +116,10 @@ export function InfrastructureBrief() {
                         <Icon size={18} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-display mb-1 text-sm font-bold text-text-dark lg:text-base">{h.title}</h3>
+                        <h3 className="font-display mb-1 text-sm font-semibold text-text-dark lg:text-base">{h.title}</h3>
                         <p className="text-sm leading-relaxed text-text-muted">{h.desc}</p>
                       </div>
-                      <span className={`hidden font-display text-xs font-black opacity-15 group-hover:opacity-50 transition-opacity sm:block ${isGreen ? "text-brand-green" : "text-brand-red"}`}>
+                      <span className={`hidden font-display text-xs font-semibold opacity-15 group-hover:opacity-50 transition-opacity sm:block ${isGreen ? "text-brand-green" : "text-brand-red"}`}>
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </motion.div>
@@ -168,11 +168,11 @@ export function InfrastructureBrief() {
 
                 {/* Large display text */}
                 <div className="relative mb-8">
-                  <p className="font-display text-[5rem] font-black leading-none tracking-tighter text-text-dark/10 lg:text-[7rem]">
+                  <p className="font-display text-[5rem] font-semibold leading-none tracking-tighter text-text-dark/10 lg:text-[7rem]">
                     IQF
                   </p>
                   <div className="-mt-6 lg:-mt-8">
-                    <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-text-dark/50">
+                    <p className="font-display text-sm font-medium uppercase tracking-[0.2em] text-text-dark/50">
                       JBT Advanced Technology
                     </p>
                   </div>
@@ -189,7 +189,7 @@ export function InfrastructureBrief() {
                           : "border-border-soft bg-warm-white/90"
                       }`}
                     >
-                      <p className={`font-display text-2xl font-black leading-none lg:text-3xl ${
+                      <p className={`font-display text-2xl font-bold leading-none lg:text-3xl ${
                         i === 1 ? "text-white drop-shadow-[0_0_18px_rgba(255,255,255,0.85),0_0_36px_rgba(255,255,255,0.4)]" : "text-text-dark"
                       }`}>
                         {cap.value}

@@ -106,7 +106,7 @@ export function ProductShowcase() {
                             }`}
                           >
                             <span
-                              className={`font-display text-2xl font-black ${
+                              className={`font-display text-2xl font-bold ${
                                 isGreen
                                   ? "text-brand-green"
                                   : "text-brand-red"
@@ -116,7 +116,7 @@ export function ProductShowcase() {
                             </span>
                           </div>
                           <span
-                            className={`font-display text-4xl font-black opacity-[.08] lg:text-5xl ${
+                            className={`font-display text-4xl font-semibold opacity-[.08] lg:text-5xl ${
                               isGreen
                                 ? "text-brand-green"
                                 : "text-brand-red"
@@ -179,7 +179,7 @@ export function ProductShowcase() {
                     </div>
 
                     {/* Name */}
-                    <h2 className="font-display mb-4 text-2xl font-black leading-tight tracking-tight text-text-dark sm:text-3xl lg:text-4xl">
+                    <h2 className="font-display mb-4 text-2xl font-semibold leading-tight tracking-tight text-text-dark sm:text-3xl lg:text-4xl">
                       {product.name}
                     </h2>
 

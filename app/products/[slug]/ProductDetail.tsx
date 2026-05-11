@@ -76,7 +76,7 @@ export function ProductDetail({ product }: { product: Product }) {
 
               <motion.h1
                 variants={heroItem}
-                className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
+                className="mt-4 font-display text-3xl font-semibold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-5xl"
               >
                 {product.name}
               </motion.h1>
@@ -166,7 +166,7 @@ export function ProductDetail({ product }: { product: Product }) {
                       />
                     </div>
                     <span
-                      className={`font-display text-5xl font-black opacity-[.08] ${
+                      className={`font-display text-5xl font-semibold opacity-[.08] ${
                         isGreen
                           ? "text-brand-green"
                           : "text-brand-red"
@@ -190,7 +190,7 @@ export function ProductDetail({ product }: { product: Product }) {
                 className="absolute -bottom-4 -left-2 flex items-center gap-2.5 rounded-2xl border border-border-soft bg-warm-white p-3 shadow-elevated sm:-left-4 sm:p-4"
               >
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-soft-green">
-                  <span className="font-display text-xs font-black text-brand-green sm:text-sm">
+                  <span className="font-display text-xs font-semibold text-brand-green sm:text-sm">
                     IQF
                   </span>
                 </div>
@@ -266,7 +266,7 @@ export function ProductDetail({ product }: { product: Product }) {
                   />
                 </div>
 
-                <h2 className="font-display mb-5 text-2xl font-black leading-tight tracking-tight text-text-dark sm:text-3xl">
+                <h2 className="font-display mb-5 text-2xl font-semibold leading-tight tracking-tight text-text-dark sm:text-3xl">
                   About This{" "}
                   <span
                     className={
@@ -403,7 +403,7 @@ export function ProductDetail({ product }: { product: Product }) {
                     <span className="h-px w-8 bg-text-dark/20" />
                   </div>
 
-                  <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl">
+                  <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl">
                     Where It&apos;s{" "}
                     <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">Used</span>
                   </h2>
@@ -449,7 +449,7 @@ export function ProductDetail({ product }: { product: Product }) {
                               <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/55">
                                 Application
                               </p>
-                              <h3 className="font-display text-base font-bold leading-snug text-white sm:text-lg">
+                              <h3 className="font-display text-base font-semibold leading-snug text-white sm:text-lg">
                                 {app.title}
                               </h3>
                             </div>

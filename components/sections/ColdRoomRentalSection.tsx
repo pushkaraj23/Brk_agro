@@ -132,7 +132,7 @@ export function ColdRoomRentalSection() {
 
           <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
             <div>
-              <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl">
+              <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl">
                 Rent Our Cold Storage{" "}
                 <span className="text-brand-green">Rooms</span>
               </h2>
@@ -236,7 +236,7 @@ export function ColdRoomRentalSection() {
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-green">
                 Cold Storage Rental
               </p>
-              <h3 className="font-display mt-2 text-2xl font-black tracking-tight text-text-dark sm:text-[2rem]">
+              <h3 className="font-display mt-2 text-2xl font-semibold tracking-tight text-text-dark sm:text-[2rem]">
                 Rental enquiry options
               </h3>
               <p className="mt-2 max-w-2xl text-sm text-text-muted sm:text-base">
@@ -247,7 +247,7 @@ export function ColdRoomRentalSection() {
             <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.02fr_1fr] lg:gap-8">
               <div className="rounded-2xl border border-brand-green/20 bg-gradient-to-b from-brand-green/[0.08] to-white p-5 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-text-muted">Option 1</p>
-                <h4 className="mt-2 font-display text-xl font-black text-text-dark">Enquire by direct call</h4>
+                <h4 className="mt-2 font-display text-xl font-semibold text-text-dark">Enquire by direct call</h4>
                 <p className="mt-2 text-sm leading-relaxed text-text-muted">
                   For quick availability and pricing updates, call us directly.
                 </p>
@@ -262,7 +262,7 @@ export function ColdRoomRentalSection() {
 
                 <div className="mt-5 space-y-4">
                   <div className="rounded-xl border border-border-soft bg-white p-4">
-                    <p className="text-base font-extrabold text-text-dark">Plant I</p>
+                    <p className="text-base font-semibold text-text-dark">Plant I</p>
                     <p className="mt-1 text-sm text-text-muted">A/P Panwadi, Shikrapur, Tal. Shirur, Dist. Pune-412208.</p>
                     <a href="mailto:operationbrkagro@gmail.com" className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-brand-green-dark">
                       <Mail className="h-4 w-4" />
@@ -273,7 +273,7 @@ export function ColdRoomRentalSection() {
                     </a>
                   </div>
                   <div className="rounded-xl border border-border-soft bg-white p-4">
-                    <p className="text-base font-extrabold text-text-dark">Plant II</p>
+                    <p className="text-base font-semibold text-text-dark">Plant II</p>
                     <p className="mt-1 text-sm text-text-muted">A/P Kondhapuri, Tal. Shirur, Dist. Pune-412209.</p>
                     <a href="mailto:brkcoldkondhapuri@gmail.com" className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-brand-green-dark">
                       <Mail className="h-4 w-4" />
@@ -288,7 +288,7 @@ export function ColdRoomRentalSection() {
 
               <div className="rounded-2xl border border-border-soft bg-white p-5 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-text-muted">Option 2</p>
-                <h4 className="mt-2 font-display text-xl font-black text-text-dark">Brief enquiry form</h4>
+                <h4 className="mt-2 font-display text-xl font-semibold text-text-dark">Brief enquiry form</h4>
                 <p className="mt-2 text-sm text-text-muted">
                   Share the basics and we will follow up with suitable cold room rental details.
                 </p>

@@ -151,7 +151,7 @@ export function QualityAssuranceSection() {
               </span>
             </div>
 
-            <h1 className="font-display text-[1.75rem] font-black leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-[2.8rem]">
+            <h1 className="font-display text-[1.75rem] font-semibold leading-[1.1] tracking-tight text-text-dark sm:text-4xl lg:text-[2.8rem]">
               Quality, testing &amp;{" "}
               <span className="bg-gradient-to-br from-brand-red to-brand-red-dark bg-clip-text text-transparent">
                 assurance
@@ -187,7 +187,7 @@ export function QualityAssuranceSection() {
                     }`}
                   />
                   <p
-                    className={`font-display text-xl font-black tabular-nums sm:text-2xl ${
+                    className={`font-display text-xl font-bold tabular-nums sm:text-2xl ${
                       green ? "text-brand-green-dark" : "text-brand-red"
                     }`}
                   >
@@ -256,7 +256,7 @@ export function QualityAssuranceSection() {
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-text-muted">
               What we optimize
             </span>
-            <h2 className="font-display mt-3 text-2xl font-black text-text-dark sm:text-3xl lg:text-[2.15rem]">
+            <h2 className="font-display mt-3 text-2xl font-semibold text-text-dark sm:text-3xl lg:text-[2.15rem]">
               Built for{" "}
               <span className="text-brand-green">precision</span>
               {" "}at every step
@@ -315,7 +315,7 @@ export function QualityAssuranceSection() {
                     }`}
                   />
                   <div className="p-5 sm:p-6">
-                    <h3 className="font-display text-lg font-bold text-text-dark">{item.title}</h3>
+                    <h3 className="font-display text-lg font-semibold text-text-dark">{item.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-text-muted">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -352,7 +352,7 @@ export function QualityAssuranceSection() {
                 In-house capability
               </span>
             </div>
-            <h2 className="font-display text-2xl font-black text-white sm:text-3xl lg:text-[2.25rem]">
+            <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl lg:text-[2.25rem]">
               Testing &amp;{" "}
               <span className="text-brand-red">digital oversight</span>
             </h2>
@@ -394,7 +394,7 @@ export function QualityAssuranceSection() {
                 </div>
               </div>
               <div className="relative z-[1] space-y-2 text-center">
-                <p className="font-display text-xl font-bold text-white sm:text-2xl">
+                <p className="font-display text-xl font-semibold text-white sm:text-2xl">
                   Lab-grade rigour
                 </p>
                 <p className="text-sm leading-relaxed text-white/55">
@@ -405,7 +405,7 @@ export function QualityAssuranceSection() {
                 {["JBT MACHINES", "IQF FACILITY", "RETORT FACILITY"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/35 bg-white/16 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white"
+                    className="rounded-full border border-white/35 bg-white/16 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white"
                   >
                     {tag}
                   </span>
@@ -428,7 +428,7 @@ export function QualityAssuranceSection() {
                   </span>
                   <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent" />
                 </div>
-                <h3 className="font-display mb-5 text-xl font-black text-white sm:text-2xl">
+                <h3 className="font-display mb-5 text-xl font-semibold text-white sm:text-2xl">
                   Batch-wise food quality checks
                 </h3>
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -467,7 +467,7 @@ export function QualityAssuranceSection() {
                   </span>
                   <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent" />
                 </div>
-                <h3 className="font-display mb-3 text-xl font-black text-white sm:text-2xl">
+                <h3 className="font-display mb-3 text-xl font-semibold text-white sm:text-2xl">
                   Digital monitoring for consistency
                 </h3>
                 <p className="mb-5 text-sm leading-relaxed text-white/65 sm:text-[15px]">
@@ -522,7 +522,7 @@ export function QualityAssuranceSection() {
                 Your trust, our promise
               </span>
             </div>
-            <h3 className="font-display relative mt-4 max-w-2xl text-2xl font-black leading-tight text-text-dark sm:text-3xl">
+            <h3 className="font-display relative mt-4 max-w-2xl text-2xl font-semibold leading-tight text-text-dark sm:text-3xl">
               Certifications &amp; discipline that{" "}
               <span className="text-brand-green">travel</span> with every shipment
             </h3>
@@ -560,7 +560,7 @@ export function QualityAssuranceSection() {
                     >
                       <Icon className="h-5 w-5" strokeWidth={2} />
                     </div>
-                    <p className="font-display text-sm font-bold text-text-dark sm:text-base">{row.title}</p>
+                    <p className="font-display text-sm font-semibold text-text-dark sm:text-base">{row.title}</p>
                     <div
                       className={`mt-4 h-1.5 overflow-hidden rounded-full ${
                         isG ? "bg-brand-green/20" : isR ? "bg-brand-red/20" : "bg-border-soft"

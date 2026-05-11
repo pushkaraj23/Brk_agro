@@ -67,7 +67,7 @@ export function InfrastructureProcess() {
               <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               From Farm to{" "}
               <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">Your Market</span>
             </h2>
@@ -121,7 +121,7 @@ export function InfrastructureProcess() {
                       {step.step}
                     </span>
                   </div>
-                  <h3 className="font-display mb-1 text-xs font-bold text-text-dark sm:text-sm">
+                  <h3 className="font-display mb-1 text-xs font-semibold text-text-dark sm:text-sm">
                     {step.title}
                   </h3>
                   <p className="text-[11px] leading-relaxed text-text-muted sm:text-xs">

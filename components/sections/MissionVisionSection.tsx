@@ -49,7 +49,7 @@ export function MissionVisionSection() {
               <span className="h-px w-8 bg-text-dark/20" />
             </div>
 
-            <h2 className="font-display mb-4 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
+            <h2 className="font-display mb-4 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-[2.6rem]">
               Our Mission <span className="text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.9),0_0_48px_rgba(255,255,255,0.5)]">&amp;</span> Vision
             </h2>
 
@@ -66,24 +66,28 @@ export function MissionVisionSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            className="grid gap-4 lg:grid-cols-2 lg:gap-6"
+            className="grid gap-5 items-stretch sm:gap-6 lg:grid-cols-2 lg:gap-8"
           >
             {/* Mission */}
             <motion.div
               variants={fadeUp}
               whileHover={{
-                y: -5,
-                transition: { type: "spring", stiffness: 300, damping: 22 },
+                y: -6,
+                transition: { type: "spring", stiffness: 320, damping: 24 },
               }}
-              className="group rounded-3xl border border-border-soft bg-warm-white/95 p-8 shadow-card backdrop-blur-sm transition-colors duration-300 hover:border-brand-green/30 hover:shadow-elevated lg:p-10"
+              className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/70 bg-gradient-to-b from-warm-white to-cream-light/90 p-8 shadow-[0_12px_48px_rgba(45,42,30,0.08),0_2px_12px_rgba(45,42,30,0.04)] ring-1 ring-black/[0.04] backdrop-blur-sm transition-all duration-300 hover:border-brand-green/35 hover:shadow-[0_20px_56px_rgba(103,184,79,0.14),0_8px_24px_rgba(45,42,30,0.06)] lg:p-10"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/20 text-brand-green transition-all duration-300 group-hover:bg-brand-green group-hover:text-white group-hover:shadow-glow-green">
-                <Target size={26} />
+              <div
+                className="absolute left-0 right-0 top-0 h-[3px] bg-gradient-to-r from-brand-green via-brand-green-light to-brand-green/30 opacity-90"
+                aria-hidden
+              />
+              <div className="mb-6 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-green/15 text-brand-green-dark ring-1 ring-brand-green/25 transition-all duration-300 group-hover:bg-brand-green group-hover:text-white group-hover:shadow-[0_8px_28px_rgba(103,184,79,0.4)] group-hover:ring-brand-green/50">
+                <Target size={26} strokeWidth={2.25} aria-hidden />
               </div>
-              <h3 className="font-display mb-3 text-2xl font-bold text-text-dark">
+              <h3 className="font-display mb-3 text-xl font-semibold tracking-tight text-text-dark sm:text-2xl">
                 {missionContent.mission.title}
               </h3>
-              <p className="text-base leading-relaxed text-text-muted">
+              <p className="flex-1 text-[15px] leading-[1.65] text-text-body sm:text-base">
                 {missionContent.mission.description}
               </p>
             </motion.div>
@@ -92,18 +96,22 @@ export function MissionVisionSection() {
             <motion.div
               variants={fadeUp}
               whileHover={{
-                y: -5,
-                transition: { type: "spring", stiffness: 300, damping: 22 },
+                y: -6,
+                transition: { type: "spring", stiffness: 320, damping: 24 },
               }}
-              className="group rounded-3xl border border-border-soft bg-warm-white/95 p-8 shadow-card backdrop-blur-sm transition-colors duration-300 hover:border-brand-green/30 hover:shadow-elevated lg:p-10"
+              className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/70 bg-gradient-to-b from-warm-white to-cream-light/90 p-8 shadow-[0_12px_48px_rgba(45,42,30,0.08),0_2px_12px_rgba(45,42,30,0.04)] ring-1 ring-black/[0.04] backdrop-blur-sm transition-all duration-300 hover:border-brand-red/30 hover:shadow-[0_20px_56px_rgba(237,28,36,0.12),0_8px_24px_rgba(45,42,30,0.06)] lg:p-10"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/45 bg-white/30 text-white shadow-[0_0_32px_rgba(255,255,255,0.55)] transition-all duration-300 group-hover:bg-white group-hover:text-brand-green-dark group-hover:shadow-[0_0_48px_rgba(255,255,255,0.75)]">
-                <Eye size={26} />
+              <div
+                className="absolute left-0 right-0 top-0 h-[3px] bg-gradient-to-r from-brand-red via-brand-red-light to-brand-red/30 opacity-90"
+                aria-hidden
+              />
+              <div className="mb-6 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-red/12 text-brand-red-dark ring-1 ring-brand-red/20 transition-all duration-300 group-hover:bg-brand-red group-hover:text-white group-hover:shadow-[0_8px_28px_rgba(237,28,36,0.35)] group-hover:ring-brand-red/45">
+                <Eye size={26} strokeWidth={2.25} aria-hidden />
               </div>
-              <h3 className="font-display mb-3 text-2xl font-bold text-text-dark">
+              <h3 className="font-display mb-3 text-xl font-semibold tracking-tight text-text-dark sm:text-2xl">
                 {missionContent.vision.title}
               </h3>
-              <p className="text-base leading-relaxed text-text-muted">
+              <p className="flex-1 text-[15px] leading-[1.65] text-text-body sm:text-base">
                 {missionContent.vision.description}
               </p>
             </motion.div>

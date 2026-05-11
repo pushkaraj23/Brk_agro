@@ -59,7 +59,7 @@ export function CTASection() {
                 <span className="h-px w-8 bg-text-dark/20" />
               </div>
 
-              <h2 className="font-display mb-6 text-3xl font-black leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-5xl">
+              <h2 className="font-display mb-6 text-3xl font-semibold leading-tight tracking-tight text-text-dark sm:text-4xl lg:text-5xl">
                 Ready to Partner with{" "}
                 <span className="text-white drop-shadow-[0_0_28px_rgba(255,255,255,0.85),0_0_56px_rgba(255,255,255,0.45)]">BRK Agro?</span>
               </h2>
@@ -94,13 +94,17 @@ export function CTASection() {
                 </a>
                 <a
                   href={phoneTelHref(contactInfo.phone)}
-                  className="group flex items-center gap-3 rounded-xl border border-border-soft bg-cream-light/80 px-4 py-3 transition-colors duration-200 hover:border-brand-red/25 hover:bg-soft-red/40"
+                  className="group flex items-start gap-3 rounded-xl border border-border-soft bg-cream-light/80 px-4 py-3 transition-colors duration-200 hover:border-brand-red/25 hover:bg-soft-red/40"
                 >
-                  <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-red/20 text-brand-red">
+                  <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-red/20 text-brand-red">
                     <Phone size={15} />
                   </div>
-                  <span className="text-sm font-medium text-text-dark group-hover:text-brand-red-dark">
-                    {contactInfo.phone} · {contactInfo.contactName}
+                  <span className="flex min-w-0 flex-1 flex-col gap-0.5 text-left text-sm font-medium text-text-dark group-hover:text-brand-red-dark">
+                    <span className="block">{contactInfo.phone}</span>
+                    <span className="block">{contactInfo.contactName}</span>
+                    <span className="block text-text-muted font-normal">
+                      {contactInfo.contactTitle}
+                    </span>
                   </span>
                 </a>
               </div>
