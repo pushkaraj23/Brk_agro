@@ -283,7 +283,7 @@ export const products = [
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
-      { title: "Ready meal production", image: "/photos/Fresh frozen vegetables processing area.png" },
+      { title: "Ready meal production", image: "/photos/Fresh frozen vegetables processing area refined.png" },
       { title: "Frozen food packs", image: "/photos/Frozen mixed vegetables in packaging display.png" },
       { title: "Foodservice recipes", image: "/photos/Food processing in a clean factory setting.png" },
       { title: "Retail private label", image: "/photos/Modern food packaging in action.png" },
@@ -345,7 +345,7 @@ export const products = [
       Certifications: "HACCP, ISO 22000",
     },
     applications: [
-      { title: "Prepared meal kits", image: "/photos/Fresh frozen vegetables processing area.png" },
+      { title: "Prepared meal kits", image: "/photos/Fresh frozen vegetables processing area refined.png" },
       { title: "Retail frozen blends", image: "/photos/Frozen mixed vegetables in packaging display.png" },
       { title: "Foodservice kitchens", image: "/photos/Industrial food processing in action.png" },
       { title: "Packhouse distribution", image: "/photos/Industrial food packaging in action.png" },
