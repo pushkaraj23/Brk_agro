@@ -487,9 +487,8 @@ export const contactInfo = {
 
 export const socialLinks = {
   whatsapp: "https://wa.me/917030922272",
-  instagram: "#",
-  linkedin:
-    "https://in.linkedin.com/company/brk-agro-cold-storage-plant-and-warehouse-in-pune",
+  instagram: "https://www.instagram.com/brkagro/",
+  linkedin: "https://www.linkedin.com/company/brk-agro-frozen-foods/",
 };
 
 /** Product catalogue PDF served from /public */
