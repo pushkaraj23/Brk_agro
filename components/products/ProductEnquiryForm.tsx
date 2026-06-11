@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Send, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { enquiryTypes } from "@/lib/constants";
+import { readEnquiryFormData, submitEnquiry } from "@/lib/submitEnquiry";
 
 type ProductEnquiryFormProps = {
   productName: string;
@@ -51,10 +52,26 @@ export function ProductEnquiryForm({
   variant = "green",
 }: ProductEnquiryFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const isGreen = variant === "green";
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError(null);
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const fields = readEnquiryFormData(form);
+    const result = await submitEnquiry({ ...fields, source: "product" });
+
+    setIsSubmitting(false);
+    if (!result.ok) {
+      setSubmitError(result.error);
+      return;
+    }
+
+    form.reset();
     setSubmitted(true);
   };
 
@@ -111,6 +128,14 @@ export function ProductEnquiryForm({
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-3.5">
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            className="pointer-events-none absolute h-0 w-0 opacity-0"
+            aria-hidden
+          />
           <input type="hidden" name="product" value={productName} />
           <InputField
             label="Full Name"
@@ -165,14 +190,20 @@ export function ProductEnquiryForm({
               required
             />
           </div>
+          {submitError && (
+            <p className="text-sm font-medium text-brand-red" role="alert">
+              {submitError}
+            </p>
+          )}
           <Button
             type="submit"
             size="md"
             variant={isGreen ? "primary" : "accent"}
             iconRight={<Send size={15} />}
             className="w-full"
+            disabled={isSubmitting}
           >
-            Send enquiry
+            {isSubmitting ? "Sending…" : "Send enquiry"}
           </Button>
         </form>
       )}

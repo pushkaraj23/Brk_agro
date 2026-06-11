@@ -21,6 +21,7 @@ interface ButtonAsButton extends ButtonBaseProps {
   href?: undefined;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 interface ButtonAsLink extends ButtonBaseProps {
@@ -85,13 +86,16 @@ export function Button({
     );
   }
 
+  const { type, disabled } = rest as ButtonAsButton;
+
   return (
     <motion.button
-      className={classes}
+      className={`${classes}${disabled ? " pointer-events-none opacity-60" : ""}`}
       onClick={onClick}
-      type={(rest as ButtonAsButton).type ?? "button"}
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      type={type ?? "button"}
+      disabled={disabled}
+      whileHover={disabled ? undefined : { scale: 1.03 }}
+      whileTap={disabled ? undefined : { scale: 0.97 }}
     >
       {inner}
     </motion.button>

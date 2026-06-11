@@ -263,7 +263,7 @@ export function ColdRoomRentalSection() {
                 <div className="mt-5 space-y-4">
                   <div className="rounded-xl border border-border-soft bg-white p-4">
                     <p className="text-base font-semibold text-text-dark">Plant I</p>
-                    <p className="mt-1 text-sm text-text-muted">A/P Panwadi, Shikrapur, Tal. Shirur, Dist. Pune-412208.</p>
+                    <p className="mt-1 text-sm text-text-muted">A/P Rautwadi, Shikrapur, Tal. Shirur, Dist. Pune-412208.</p>
                     <a href="mailto:operationbrkagro@gmail.com" className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-brand-green-dark">
                       <Mail className="h-4 w-4" />
                       operationbrkagro@gmail.com

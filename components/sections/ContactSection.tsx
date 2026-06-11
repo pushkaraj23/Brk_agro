@@ -7,17 +7,34 @@ import { WaveDivider } from "@/components/decorative/WaveDivider";
 import { Button } from "@/components/ui/Button";
 import { brochureAsset, contactInfo, enquiryTypes } from "@/lib/constants";
 import { emailMailtoHref, phoneTelHref } from "@/lib/contactLinks";
+import { readEnquiryFormData, submitEnquiry } from "@/lib/submitEnquiry";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { MapPin, Phone, Mail, Globe, Send, CheckCircle, MessageSquare, FileDown } from "lucide-react";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const mapLink = "https://maps.app.goo.gl/zo1KK8XeTcgkcdU19?g_st=ic";
   const mapEmbedUrl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.8446008052165!2d74.1499899!3d18.715774199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2d74ed2ef6595%3A0x5c60cb1d0b5d630!2sBRK%20Agro%20Cold%20Storages%20-%20Shikrapur%20Plant!5e0!3m2!1sen!2sin!4v1777272976661!5m2!1sen!2sin";
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError(null);
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const fields = readEnquiryFormData(form);
+    const result = await submitEnquiry({ ...fields, source: "contact" });
+
+    setIsSubmitting(false);
+    if (!result.ok) {
+      setSubmitError(result.error);
+      return;
+    }
+
+    form.reset();
     setSubmitted(true);
   };
 
@@ -112,6 +129,14 @@ export function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="pointer-events-none absolute h-0 w-0 opacity-0"
+                    aria-hidden
+                  />
                   <div className="grid gap-5 sm:grid-cols-2">
                     <InputField
                       label="Full Name"
@@ -172,13 +197,19 @@ export function ContactSection() {
                       required
                     />
                   </div>
+                  {submitError && (
+                    <p className="text-sm font-medium text-brand-red" role="alert">
+                      {submitError}
+                    </p>
+                  )}
                   <Button
                     type="submit"
                     size="lg"
                     iconRight={<Send size={16} />}
                     className="w-full sm:w-auto"
+                    disabled={isSubmitting}
                   >
-                    Send Enquiry
+                    {isSubmitting ? "Sending…" : "Send Enquiry"}
                   </Button>
                 </form>
               )}
