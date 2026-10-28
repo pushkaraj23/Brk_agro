@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.brkagro.com"),
   verification: {
-    google: "google-site-verification=ehRBIdaUGd-IYAdncrGDXg4boxobxYHk8qh5y-nwJS0",
+    google: "ehRBIdaUGd-IYAdncrGDXg4boxobxYHk8qh5y-nwJS0",
   },
   title: {
     default: "BRK Agro | Premium Frozen Food from India",
