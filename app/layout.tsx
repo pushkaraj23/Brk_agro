@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
@@ -96,9 +96,21 @@ export default function RootLayout({
         <FloatingSocials />
         <Header />
         <main className="flex-1 pt-7">{children}</main>
-        <Footer />
+       <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-N3WJQ16YBR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-N3WJQ16YBR');
+          `}
+        </Script>
       </body>
-      <GoogleAnalytics gaId="G-N3WJQ16YBR" />
     </html>
   );
 }
