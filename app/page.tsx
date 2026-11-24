@@ -15,7 +15,7 @@ import { pageSocialMetadata } from "@/lib/seo";
 const homeTitle =
   "BRK Agro | Leading Processor & Exporter of Frozen Food from India";
 const homeDescription =
-  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. IQF kernels, retort corn, mixed vegetables and more — hygienic Pune district facility, export-ready packaging, and cold room rental support.";
+  "BRK Agro is a leading processor and exporter of premium frozen food from India, offering IQF kernels, retort corn, mixed vegetables, export-ready packaging, and cold room rental.";
 
 export const metadata: Metadata = {
   title: homeTitle,
