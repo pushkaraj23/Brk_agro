@@ -79,7 +79,7 @@ export function WhyBrkBrief() {
             </h2>
 
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-text-dark/80">
-              BRK Agro is a leading processor and exporter of premium quality frozen food from India — a cleaner supply chain, modern processing, and dependable execution from sourcing to shipment.
+             We combine organised farm sourcing and advanced processing to supply IQF vegetables and frozen food products to domestic and international B2B buyers, including food processors and distributors.
             </p>
           </motion.div>
 
