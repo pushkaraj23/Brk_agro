@@ -84,9 +84,9 @@ export function InfrastructureBrief() {
               </h2>
 
               <p className="mb-8 max-w-xl text-sm leading-relaxed text-text-muted lg:text-base">
-                BRK Agro is a leading processor and exporter of premium quality frozen food
-                from India — backed by disciplined infrastructure and export-ready
-                capacity.
+                BRK Agro's frozen food processing operations 
+                are supported by disciplined infrastructure and 
+                export-ready capacity.
               </p>
 
               <motion.div
