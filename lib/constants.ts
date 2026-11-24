@@ -48,7 +48,7 @@ export const aboutContent = {
   heroIntro: companyDescription,
   /** Home “About” teaser */
   briefLead:
-    "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology to retain natural taste, fresh color, nutritional value, and long shelf life.",
+    "We source fresh produce directly from selected farms and process it using advanced freezing technology. This helps retain natural taste, fresh colour, and nutritional value while supporting consistent product quality.",
   description:
     "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology. Our commitment to quality, hygiene, and international standards makes us a reliable partner for global buyers.",
   features: [
