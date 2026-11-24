@@ -48,7 +48,7 @@ export const aboutContent = {
   heroIntro: companyDescription,
   /** Home “About” teaser */
   briefLead:
-    "We source fresh produce directly from selected farms and process it using advanced freezing technology. This helps retain natural taste, fresh colour, and nutritional value while supporting consistent product quality.",
+  "We work with selected farms to source fresh produce for our processing facility in Maharashtra. Our product range includes IQF vegetables and processed corn formats, prepared through controlled processing methods. From raw material selection to packaging and storage, each stage follows defined quality checks to support consistent products for foodservice, retail, and food-processing buyers.",
   description:
     "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology. Our commitment to quality, hygiene, and international standards makes us a reliable partner for global buyers.",
   features: [
