@@ -73,7 +73,7 @@ export function ProductsBrief() {
               <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              Our product range includes individually quick-frozen vegetables and processed corn formats for foodservice, retail, and food-processing businesses.
+              Our range includes frozen sweet corn kernels, corn on the cob, retort corn, and IQF vegetables. These products are developed for foodservice companies, retail suppliers, and food-processing businesses seeking consistent product specifications and dependable supply.
             </p>
           </div>
         </motion.div>
