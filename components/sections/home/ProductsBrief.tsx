@@ -73,7 +73,7 @@ export function ProductsBrief() {
               <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              Our range includes frozen sweet corn kernels, corn on the cob, retort corn, and IQF vegetables. These products are developed for foodservice companies, retail suppliers, and food-processing businesses seeking consistent product specifications and dependable supply.
+              We supply frozen sweet corn kernels, corn on the cob, retort corn, and IQF vegetables. Our products serve foodservice companies, retailers, and food-processing businesses that need reliable quality and supply.
             </p>
           </div>
         </motion.div>
