@@ -73,7 +73,7 @@ export function ProductsBrief() {
               <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              As a leading processor and exporter of premium quality frozen food from India, we offer IQF vegetables and processed formats — export-ready and built for consistent quality.
+              Our product range includes individually quick-frozen vegetables and processed corn formats for foodservice, retail, and food-processing businesses.
             </p>
           </div>
         </motion.div>
