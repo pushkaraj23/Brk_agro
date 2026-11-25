@@ -174,25 +174,20 @@ export function Footer() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Visit BRK Agro on LinkedIN"
                 className="inline-flex rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
               >
                 <LinkedInIcon className={socialIconClass} />
-              </a>
-              <a
-                href="#"
-                aria-label="X (Twitter)"
-                className="inline-flex rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
-              >
-                <XIcon className={socialIconClass} />
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="inline-flex rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
-              >
-                <InstagramIcon className={socialIconClass} />
-              </a>
+              
+             <a
+              href={socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit BRK Agro on Instagram"
+              className="inline-flex rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
+            >
+          <InstagramIcon className={socialIconClass} />
+          </a>
             </div>
           </div>
         </Container>
