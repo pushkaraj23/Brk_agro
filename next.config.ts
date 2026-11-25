@@ -32,22 +32,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: contentSecurityPolicy,
-          },
-        ],
-      },
-    ];
-  },
-
-  async headers() {
+async headers() {
   return [
     {
       source: "/(.*)",
@@ -59,6 +44,18 @@ const nextConfig: NextConfig = {
         {
           key: "X-Frame-Options",
           value: "SAMEORIGIN",
+        },
+        {
+          key: "X-Content-Type-Options",
+          value: "nosniff",
+        },
+        {
+          key: "Permissions-Policy",
+          value: "camera=(), microphone=(), geolocation=()",
+        },
+        {
+        key: "Referrer-Policy",
+        value: "strict-origin-when-cross-origin",
         },
       ],
     },
