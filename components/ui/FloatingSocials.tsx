@@ -128,6 +128,7 @@ export function FloatingSocials() {
             className={`group relative inline-flex h-[52px] w-[52px] items-center justify-center rounded-2xl border backdrop-blur-lg backdrop-saturate-150 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green sm:h-14 sm:w-14 ${className}`}
           >
             <Icon className="relative h-[22px] w-[22px] drop-shadow-sm sm:h-6 sm:w-6" />
+            <span className="sr-only">{label}</span>
           </motion.a>
         ))}
       </div>
