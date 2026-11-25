@@ -158,7 +158,7 @@ export function ProductsBrief() {
                         : "text-brand-red hover:text-brand-red-dark"
                     }`}
                   >
-                    Enquire
+                   Enquire about {product.name}
                     <ArrowUpRight
                       size={12}
                       className="transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
