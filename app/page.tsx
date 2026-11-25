@@ -13,7 +13,7 @@ import { phoneDialString } from "@/lib/contactLinks";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const homeTitle =
-  "BRK Agro | Frozen Food Processor & Exporter";
+  "Leading Processor & Exporter of Frozen Food from India";
 const homeDescription =
   "BRK Agro is a leading processor and exporter of premium quality frozen food from India. IQF kernels, retort corn, mixed vegetables and more — hygienic Pune district facility, export-ready packaging, and cold room rental support.";
 
