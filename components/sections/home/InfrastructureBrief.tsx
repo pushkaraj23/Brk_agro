@@ -12,8 +12,8 @@ import { Snowflake, ShieldCheck, Thermometer, ArrowRight } from "lucide-react";
 const highlights = [
   {
     icon: Snowflake,
-    title: "JBT's Advance Technology Latest IQF",
-    desc: "IQF freezes each piece separately for free-flowing, premium-quality output.",
+    title: "Advanced JBT Freezing System",
+    desc: "Individual freezing keeps each piece separate, helping maintain texture and product quality.",
     color: "green",
   },
   {
