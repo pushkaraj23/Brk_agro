@@ -182,6 +182,7 @@ export function ColdRoomRentalSection() {
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 45vw"
                         priority={idx === 0}
+                        loading={idx === 0 ? "eager" : "lazy"}
                       />
                     </div>
                   ))}
