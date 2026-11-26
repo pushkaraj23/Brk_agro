@@ -124,6 +124,7 @@ export function ProductsBrief() {
                       alt={product.name}
                       width={320}
                       height={320}
+                      sizes="(min-width: 1280px) 240px, (min-width: 1024px) 224px, (min-width: 640px) 208px, 176px"
                       className="h-44 w-44 object-contain sm:h-52 sm:w-52 lg:h-56 lg:w-56 xl:h-[15rem] xl:w-[15rem]"
                     />
                   </div>
