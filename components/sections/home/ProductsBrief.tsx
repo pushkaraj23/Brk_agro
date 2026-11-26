@@ -73,7 +73,7 @@ export function ProductsBrief() {
               <span className="text-brand-red">Product Range</span>
             </h2>
             <p className="max-w-sm text-sm leading-relaxed text-text-muted sm:text-right">
-              As a leading processor and exporter of premium quality frozen food from India, we offer IQF vegetables and processed formats — export-ready and built for consistent quality.
+              We supply frozen sweet corn kernels, corn on the cob, retort corn, and IQF vegetables. Our products serve foodservice companies, retailers, and food-processing businesses that need reliable quality and supply.
             </p>
           </div>
         </motion.div>
@@ -124,6 +124,7 @@ export function ProductsBrief() {
                       alt={product.name}
                       width={320}
                       height={320}
+                      sizes="(min-width: 1280px) 240px, (min-width: 1024px) 224px, (min-width: 640px) 208px, 176px"
                       className="h-44 w-44 object-contain sm:h-52 sm:w-52 lg:h-56 lg:w-56 xl:h-[15rem] xl:w-[15rem]"
                     />
                   </div>
@@ -158,7 +159,7 @@ export function ProductsBrief() {
                         : "text-brand-red hover:text-brand-red-dark"
                     }`}
                   >
-                    Enquire
+                   Enquire about {product.name}
                     <ArrowUpRight
                       size={12}
                       className="transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"

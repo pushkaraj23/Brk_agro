@@ -29,7 +29,7 @@ export const heroContent = {
   headlineBottom: "Corn Products",
   subheadline: "Frozen with Care, Delivered with Trust",
   description:
-    `${companyDescription} Export-ready IQF and retort formats from trusted farm sourcing — processing that preserves taste, color, and nutrition.`,
+  `${companyDescription} We offer IQF frozen vegetables, sweet corn kernels, corn on the cob, and retort corn. We work with farming partners and use controlled processing, freezing, and packaging methods to maintain product quality for buyers in India and abroad.`,
   primaryCta: "Explore Products",
   secondaryCta: "Get in Touch",
   stats: [
@@ -48,7 +48,7 @@ export const aboutContent = {
   heroIntro: companyDescription,
   /** Home “About” teaser */
   briefLead:
-    "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology to retain natural taste, fresh color, nutritional value, and long shelf life.",
+  "We work with selected farms to source fresh produce for our processing facility in Maharashtra. Our product range includes IQF vegetables and processed corn formats, prepared through controlled processing methods. From raw material selection to packaging and storage, each stage follows defined quality checks to support consistent products for foodservice, retail, and food-processing buyers.",
   description:
     "As a leading processor and exporter of premium quality frozen food from India, we specialize in sourcing fresh produce directly from trusted farms and processing it using advanced freezing technology. Our commitment to quality, hygiene, and international standards makes us a reliable partner for global buyers.",
   features: [

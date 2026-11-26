@@ -143,7 +143,7 @@ function HeroCarousel({ reduceMotion }: { reduceMotion: boolean | null }) {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority={idx === 0}
+                fetchPriority={idx === 0 ? "high" : "auto"}
               />
             </div>
           ))}

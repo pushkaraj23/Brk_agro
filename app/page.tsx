@@ -13,9 +13,9 @@ import { phoneDialString } from "@/lib/contactLinks";
 import { pageSocialMetadata } from "@/lib/seo";
 
 const homeTitle =
-  "BRK Agro | Frozen Food Processor & Exporter";
+  "Leading Processor & Exporter of Frozen Food from India";
 const homeDescription =
-  "BRK Agro is a leading processor and exporter of premium frozen food from India, offering IQF kernels, retort corn, mixed vegetables, export-ready packaging, and cold room rental.";
+  "BRK Agro is a leading processor and exporter of premium quality frozen food from India. Offering IQF vegetables, retort corn and export-ready packaging";
 
 export const metadata: Metadata = {
   title: homeTitle,

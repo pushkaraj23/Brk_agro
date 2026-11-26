@@ -120,7 +120,7 @@ export function ColdRoomRentalSection() {
           }}
         />
         <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-brand-green/[.05] blur-[80px]" />
-        <div className="absolute right-0 bottom-0 h-64 w-64 rounded-full bg-brand-red/[.04] blur-[70px]" />
+        
 
         <Container className="relative">
           <div className="mb-5 flex items-center gap-3">
@@ -182,6 +182,7 @@ export function ColdRoomRentalSection() {
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 45vw"
                         priority={idx === 0}
+                        loading={idx === 0 ? "eager" : "lazy"}
                       />
                     </div>
                   ))}
