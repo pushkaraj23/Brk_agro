@@ -29,7 +29,7 @@ export const heroContent = {
   headlineBottom: "Corn Products",
   subheadline: "Frozen with Care, Delivered with Trust",
   description:
-  `${companyDescription} Our range includes IQF frozen vegetables, sweet corn kernels, corn on the cob, and retort-processed corn. We work with farming partners and use controlled processing, freezing, and packaging methods to support consistent quality for domestic and international buyers.`,
+  `${companyDescription} We offer IQF frozen vegetables, sweet corn kernels, corn on the cob, and retort corn. We work with farming partners and use controlled processing, freezing, and packaging methods to maintain product quality for buyers in India and abroad.`,
   primaryCta: "Explore Products",
   secondaryCta: "Get in Touch",
   stats: [
